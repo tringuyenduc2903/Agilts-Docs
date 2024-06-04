@@ -2,86 +2,161 @@
   "openapi": "3.0.0",
   "info": {
     "title": "API Documentation",
-    "description": "See more:\n * [Project introduction](https://agilts.atlassian.net/wiki)\n * [Kanban board](https://agilts.atlassian.net/jira)",
+    "description": "Xem thêm:\n * [Giới thiệu dự án](https://agilts.atlassian.net/wiki)\n * [Kanban board](https://agilts.atlassian.net/jira)",
     "version": "1.0.0"
   },
   "servers": [
     {
       "url": "https://customer-api-fe.agilts.com",
-      "description": "For Front-end Developer"
+      "description": "Dành cho Lập trình viên"
     },
     {
       "url": "https://customer-api-staging.agilts.com",
-      "description": "Staging"
+      "description": "Dành cho Đối tác"
     },
     {
       "url": "https://customer-api.agilts.com",
-      "description": "Product"
+      "description": "Sản phẩm hoàn thiện"
     }
   ],
   "paths": {
     "/register": {
       "post": {
+        "description": "Đăng ký tài khoản",
         "tags": [
           "auth"
         ],
-        "operationId": "efb9a33c42af9be7e3d1c9d3f0561b91",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "properties": {
                   "name": {
-                    "title": "Name",
-                    "description": "Customer full name",
+                    "title": "Tên",
+                    "description": "Tên khách hàng",
+                    "type": "string",
                     "maxLength": 50,
-                    "example": "Nguyen Van Hai"
+                    "example": "Nguyễn Văn Hải"
                   },
                   "email": {
                     "title": "Email",
-                    "description": "Customer email",
+                    "description": "Email khách hàng",
+                    "type": "string",
                     "maxLength": 100,
                     "example": "nguyenvanhai@agilts.com"
                   },
                   "password": {
-                    "title": "Password",
-                    "description": "Password must contain lowercase letters, uppercase letters, special characters, and numbers. In addition, leaked passwords will be warned",
+                    "title": "Mật khẩu",
+                    "description": "Mật khẩu phải chứa chữ thường, chữ in hoa, ký tự đặc biệt và số. Ngoài ra, mật khẩu chưa bị rò rỉ trong các cuộc tấn công đã được công khai",
+                    "type": "string",
                     "maxLength": 20,
                     "minLength": 8,
                     "example": "NguyenVanHai825!"
                   },
                   "password_confirmation": {
-                    "title": "Password confirmation",
-                    "description": "Password must contain lowercase letters, uppercase letters, special characters, and numbers. In addition, leaked passwords will be warned",
+                    "title": "Xác nhận lại mật khẩu",
+                    "description": "Nhập chính xác mật khẩu trước đó",
+                    "type": "string",
                     "maxLength": 20,
                     "minLength": 8,
                     "example": "NguyenVanHai825!"
                   }
                 },
-                "type": "object"
+                "type": "object",
+                "required": [
+                  "name",
+                  "email",
+                  "password",
+                  "password_confirmation"
+                ]
               }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "Account successfully created"
+          "201": {
+            "description": "Đăng ký tài khoản thành công",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "description": "Dữ liệu trả về",
+                  "example": ""
+                }
+              }
+            }
           },
           "419": {
-            "description": "CORS Token is missing/incorrect or has expired"
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
           },
           "422": {
-            "description": "Data is not accepted"
+            "description": "Dữ liệu khách hàng đã nhập không được chấp nhận",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "example": "Trường tên là bắt buộc. (và 2 lỗi khác)"
+                    },
+                    "errors": {
+                      "properties": {
+                        "name": {
+                          "title": "Tên",
+                          "description": "Tên khách hàng",
+                          "example": [
+                            "Trường tên là bắt buộc."
+                          ],
+                          "type": "array"
+                        },
+                        "email": {
+                          "title": "Email",
+                          "description": "Email khách hàng",
+                          "example": [
+                            "Trường email là bắt buộc."
+                          ],
+                          "type": "array"
+                        },
+                        "password": {
+                          "title": "Mật khẩu",
+                          "description": "Mật khẩu khách hàng",
+                          "example": [
+                            "Trường mật khẩu là bắt buộc."
+                          ],
+                          "type": "array"
+                        }
+                      }
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
           }
         }
       }
     },
     "/login": {
       "post": {
+        "description": "Đăng nhập tài khoản",
         "tags": [
           "auth"
         ],
-        "operationId": "a4409d488af754f4fa0960dbadb13538",
         "requestBody": {
           "content": {
             "application/json": {
@@ -89,17 +164,19 @@
                 "properties": {
                   "email": {
                     "title": "Email",
-                    "description": "Customer email",
+                    "description": "Email khách hàng",
+                    "type": "string",
                     "example": "nguyenvanhai@agilts.com"
                   },
                   "password": {
-                    "title": "Password",
-                    "description": "Customer password",
+                    "title": "Mật khẩu",
+                    "description": "Mật khẩu khách hàng",
+                    "type": "string",
                     "example": "NguyenVanHai825!"
                   },
                   "remember": {
-                    "title": "Remember me",
-                    "description": "Save account for long-term use",
+                    "title": "Ghi nhớ tôi",
+                    "description": "Tài khoản không bị đăng xuất sau khoảng thời gian nhất định",
                     "type": "boolean",
                     "example": false
                   }
@@ -111,13 +188,77 @@
         },
         "responses": {
           "200": {
-            "description": "Account successfully logined"
+            "description": "Đăng nhập tài khoản thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "two_factor": {
+                      "title": "Xác thực 2 bước",
+                      "description": "Trạng thái xác thực 2 bước",
+                      "example": false,
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
           },
           "419": {
-            "description": "CORS Token is missing/incorrect or has expired"
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
           },
           "422": {
-            "description": "Data is not accepted"
+            "description": "Dữ liệu khách hàng đã nhập không được chấp nhận",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "example": "Trường email là bắt buộc. (và 1 lỗi)"
+                    },
+                    "errors": {
+                      "properties": {
+                        "email": {
+                          "title": "Email",
+                          "description": "Email khách hàng",
+                          "type": "array",
+                          "example": [
+                            "Trường email là bắt buộc."
+                          ]
+                        },
+                        "password": {
+                          "title": "Mật khẩu",
+                          "description": "Mật khẩu khách hàng",
+                          "type": "array",
+                          "example": [
+                            "Trường mật khẩu là bắt buộc."
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
           }
         }
       }
@@ -125,8 +266,8 @@
   },
   "tags": [
     {
-      "name": "auth",
-      "description": "Specifies how to identify users accessing the system"
+      "name": "Xác thực",
+      "description": "Chỉ định cách xác thực người dùng truy cập hệ thống"
     }
   ]
 }
