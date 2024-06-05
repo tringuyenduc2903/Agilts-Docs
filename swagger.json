@@ -28,7 +28,7 @@
       "get": {
         "description": "Lấy Token CORS",
         "tags": [
-          "auth"
+          "Xác thực"
         ],
         "responses": {
           "204": {
@@ -41,7 +41,7 @@
       "post": {
         "description": "Đăng ký tài khoản",
         "tags": [
-          "auth"
+          "Xác thực"
         ],
         "parameters": [
           {
@@ -63,21 +63,19 @@
               "schema": {
                 "properties": {
                   "name": {
-                    "title": "Tên",
-                    "description": "Tên khách hàng",
+                    "title": "Tên khách hàng",
                     "type": "string",
                     "maxLength": 50,
                     "example": "Nguyễn Văn Hải"
                   },
                   "email": {
-                    "title": "Email",
-                    "description": "Email khách hàng",
+                    "title": "Email khách hàng",
                     "type": "string",
                     "maxLength": 100,
                     "example": "nguyenvanhai@agilts.com"
                   },
                   "password": {
-                    "title": "Mật khẩu",
+                    "title": "Mật khẩu khách hàng",
                     "description": "Mật khẩu phải chứa chữ thường, chữ in hoa, ký tự đặc biệt và số. Ngoài ra, mật khẩu chưa bị rò rỉ trong các cuộc tấn công đã được công khai",
                     "type": "string",
                     "maxLength": 20,
@@ -148,24 +146,21 @@
                     "errors": {
                       "properties": {
                         "name": {
-                          "title": "Tên",
-                          "description": "Tên khách hàng",
+                          "title": "Tên khách hàng",
                           "example": [
                             "Trường tên là bắt buộc."
                           ],
                           "type": "array"
                         },
                         "email": {
-                          "title": "Email",
-                          "description": "Email khách hàng",
+                          "title": "Email khách hàng",
                           "example": [
                             "Trường email là bắt buộc."
                           ],
                           "type": "array"
                         },
                         "password": {
-                          "title": "Mật khẩu",
-                          "description": "Mật khẩu khách hàng",
+                          "title": "Mật khẩu khách hàng",
                           "example": [
                             "Trường mật khẩu là bắt buộc."
                           ],
@@ -186,7 +181,7 @@
       "post": {
         "description": "Đăng nhập tài khoản",
         "tags": [
-          "auth"
+          "Xác thực"
         ],
         "parameters": [
           {
@@ -208,14 +203,12 @@
               "schema": {
                 "properties": {
                   "email": {
-                    "title": "Email",
-                    "description": "Email khách hàng",
+                    "title": "Email khách hàng",
                     "type": "string",
                     "example": "nguyenvanhai@agilts.com"
                   },
                   "password": {
-                    "title": "Mật khẩu",
-                    "description": "Mật khẩu khách hàng",
+                    "title": "Mật khẩu khách hàng",
                     "type": "string",
                     "example": "NguyenVanHai825!"
                   },
@@ -282,16 +275,14 @@
                     "errors": {
                       "properties": {
                         "email": {
-                          "title": "Email",
-                          "description": "Email khách hàng",
+                          "title": "Email khách hàng",
                           "type": "array",
                           "example": [
                             "Trường email là bắt buộc."
                           ]
                         },
                         "password": {
-                          "title": "Mật khẩu",
-                          "description": "Mật khẩu khách hàng",
+                          "title": "Mật khẩu khách hàng",
                           "type": "array",
                           "example": [
                             "Trường mật khẩu là bắt buộc."
@@ -307,12 +298,122 @@
           }
         }
       }
+    },
+    "/api/user": {
+      "get": {
+        "description": "Lấy thông tin Khách hàng",
+        "tags": [
+          "Khách hàng"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lấy thông tin về Khách hàng thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "title": "Id khách hàng",
+                      "example": 1,
+                      "type": "number"
+                    },
+                    "name": {
+                      "title": "Tên khách hàng",
+                      "example": "Nguyễn Văn Hải",
+                      "type": "string"
+                    },
+                    "birthday": {
+                      "title": "Ngày sinh khách hàng",
+                      "example": "29/03/2003",
+                      "type": "string"
+                    },
+                    "gender": {
+                      "title": "Giới tính khách hàng",
+                      "example": 0,
+                      "type": "number"
+                    },
+                    "gender_preview": {
+                      "title": "Giới tính khách hàng",
+                      "description": "Hiển thị dưới dạng văn bản",
+                      "example": "Nam",
+                      "type": "string"
+                    },
+                    "email": {
+                      "title": "Email khách hàng",
+                      "example": "nguyenvanhai@agilts.com",
+                      "type": "string"
+                    },
+                    "email_verified_at": {
+                      "title": "Thời gian xác thực email",
+                      "example": "03-06-2024 13:53:15",
+                      "type": "string"
+                    },
+                    "phone_number": {
+                      "title": "Số điện thoại khách hàng",
+                      "example": "+84982213854",
+                      "type": "string"
+                    },
+                    "phone_number_verified_at": {
+                      "title": "Thời gian xác thực số điện thoại",
+                      "example": "03-06-2024 13:53:15",
+                      "type": "string"
+                    },
+                    "two_factor_confirmed_at": {
+                      "title": "Thời gian bật xác thực 2 bước",
+                      "example": "03-06-2024 13:53:15",
+                      "type": "string"
+                    },
+                    "deleted_at": {
+                      "title": "Thời gian xoá tài khoản",
+                      "example": "03-06-2024 13:53:15",
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "title": "Thời gian tạo tài khoản",
+                      "example": "03-06-2024 13:53:15",
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "title": "Thời gian cập nhật thông tin tài khoản",
+                      "example": "03-06-2024 13:53:15",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Khách hàng chưa đăng nhập",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "description": "Không được xác thực.",
+                      "example": "Unauthenticated.",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "tags": [
     {
       "name": "Xác thực",
-      "description": "Chỉ định cách xác thực người dùng truy cập hệ thống"
+      "description": "Chỉ định cách xác thực Khách hàng truy cập hệ thống"
+    },
+    {
+      "name": "Khách hàng",
+      "description": "Thông tin về Khách hàng, lịch sử hoạt động"
     }
   ]
 }
