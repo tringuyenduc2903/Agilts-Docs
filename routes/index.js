@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("/", (req, res, _) => {
-  res.redirect("api-docs");
+  res.redirect("swagger");
 });
 
 module.exports = router;

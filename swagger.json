@@ -1,11 +1,15 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "API Documentation",
+    "title": "Tài liệu API",
     "description": "Xem thêm:\n * [Giới thiệu dự án](https://agilts.atlassian.net/wiki)\n * [Kanban board](https://agilts.atlassian.net/jira)",
     "version": "1.0.0"
   },
   "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "Máy chủ địa phương"
+    },
     {
       "url": "https://customer-api-fe.agilts.com",
       "description": "Dành cho Lập trình viên"
@@ -20,11 +24,38 @@
     }
   ],
   "paths": {
+    "/sanctum/csrf-cookie": {
+      "get": {
+        "description": "Lấy Token CORS",
+        "tags": [
+          "auth"
+        ],
+        "responses": {
+          "204": {
+            "description": "Thiết lập Cookie CORS thành công"
+          }
+        }
+      }
+    },
     "/register": {
       "post": {
         "description": "Đăng ký tài khoản",
         "tags": [
           "auth"
+        ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "required": true
+          }
         ],
         "requestBody": {
           "content": {
@@ -77,7 +108,7 @@
           "201": {
             "description": "Đăng ký tài khoản thành công",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "description": "Dữ liệu trả về",
                   "example": ""
@@ -156,6 +187,20 @@
         "description": "Đăng nhập tài khoản",
         "tags": [
           "auth"
+        ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "required": true
+          }
         ],
         "requestBody": {
           "content": {
