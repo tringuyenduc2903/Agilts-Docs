@@ -110,7 +110,8 @@
               "application/json": {
                 "schema": {
                   "description": "Dữ liệu trả về",
-                  "example": ""
+                  "example": "",
+                  "type": "string"
                 }
               }
             }
@@ -305,6 +306,79 @@
         }
       }
     },
+    "/logout": {
+      "post": {
+        "description": "Đăng xuất tài khoản",
+        "tags": [
+          "Xác thực"
+        ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Đăng xuất tài khoản thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Dữ liệu trả về",
+                  "example": "",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Khách hàng chưa đăng nhập",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "description": "Không được xác thực.",
+                      "example": "Unauthenticated.",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/user": {
       "get": {
         "description": "Lấy thông tin tài khoản",
@@ -472,7 +546,8 @@
               "application/json": {
                 "schema": {
                   "description": "Dữ liệu trả về",
-                  "example": ""
+                  "example": "",
+                  "type": "string"
                 }
               }
             }
@@ -483,7 +558,8 @@
               "application/json": {
                 "schema": {
                   "description": "Dữ liệu trả về",
-                  "example": ""
+                  "example": "",
+                  "type": "string"
                 }
               }
             }
@@ -535,19 +611,6 @@
         ],
         "parameters": [
           {
-            "name": "X-Requested-With",
-            "in": "header",
-            "example": "XMLHttpRequest",
-            "required": true
-          },
-          {
-            "name": "X-CSRF-TOKEN",
-            "in": "header",
-            "description": "Token CORS",
-            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
-            "required": true
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "Id",
@@ -583,43 +646,8 @@
               "application/json": {
                 "schema": {
                   "description": "Dữ liệu trả về",
-                  "example": ""
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Khách hàng chưa đăng nhập",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "message": {
-                      "title": "Thông báo ngắn",
-                      "description": "Không được xác thực.",
-                      "example": "Unauthenticated.",
-                      "type": "string"
-                    }
-                  },
-                  "type": "object"
-                }
-              }
-            }
-          },
-          "419": {
-            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "message": {
-                      "title": "Thông báo ngắn",
-                      "type": "string",
-                      "description": "Token CSRF không khớp.",
-                      "example": "CSRF token mismatch."
-                    }
-                  },
-                  "type": "object"
+                  "example": "",
+                  "type": "string"
                 }
               }
             }
