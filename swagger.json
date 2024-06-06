@@ -221,7 +221,11 @@
                     "example": false
                   }
                 },
-                "type": "object"
+                "type": "object",
+                "required": [
+                  "email",
+                  "password"
+                ]
               }
             }
           }
@@ -303,7 +307,7 @@
     },
     "/api/user": {
       "get": {
-        "description": "Lấy thông tin Khách hàng",
+        "description": "Lấy thông tin tài khoản",
         "tags": [
           "Khách hàng"
         ],
@@ -442,7 +446,7 @@
     },
     "/email/verification-notification": {
       "post": {
-        "description": "Gửi thông báo xác minh email mới",
+        "description": "Gửi email xác minh địa chỉ email",
         "tags": [
           "Khách hàng"
         ],
@@ -463,7 +467,7 @@
         ],
         "responses": {
           "202": {
-            "description": "Khách hàng đã xác minh địa chỉ email thành công",
+            "description": "Đã gửi email thành công",
             "content": {
               "application/json": {
                 "schema": {
@@ -613,6 +617,113 @@
                       "type": "string",
                       "description": "Token CSRF không khớp.",
                       "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/forgot-password": {
+      "post": {
+        "description": "Gửi email lấy lại mật khẩu đã quên",
+        "tags": [
+          "Khách hàng"
+        ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "email": {
+                    "title": "Email khách hàng",
+                    "type": "string",
+                    "example": "nguyenvanhai@agilts.com"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "email"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Đã gửi email thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "example": "Chúng tôi đã gửi email liên kết đặt lại mật khẩu của bạn."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Dữ liệu khách hàng đã nhập không được chấp nhận",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "example": "Trường email là bắt buộc."
+                    },
+                    "errors": {
+                      "properties": {
+                        "email": {
+                          "title": "Email khách hàng",
+                          "example": [
+                            "Trường email là bắt buộc."
+                          ],
+                          "type": "array"
+                        }
+                      }
                     }
                   },
                   "type": "object"
