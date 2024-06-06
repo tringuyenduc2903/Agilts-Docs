@@ -54,6 +54,7 @@
             "name": "X-CSRF-TOKEN",
             "in": "header",
             "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
             "required": true
           }
         ],
@@ -194,6 +195,7 @@
             "name": "X-CSRF-TOKEN",
             "in": "header",
             "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
             "required": true
           }
         ],
@@ -316,6 +318,7 @@
             "name": "X-CSRF-TOKEN",
             "in": "header",
             "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
             "required": true
           }
         ],
@@ -454,6 +457,7 @@
             "name": "X-CSRF-TOKEN",
             "in": "header",
             "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
             "required": true
           }
         ],
@@ -471,6 +475,106 @@
           },
           "204": {
             "description": "Khách hàng đã xác minh địa chỉ email trước đó",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Dữ liệu trả về",
+                  "example": ""
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Khách hàng chưa đăng nhập",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "description": "Không được xác thực.",
+                      "example": "Unauthenticated.",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/email/verify/{id}/{hash}": {
+      "get": {
+        "description": "Xác minh email khách hàng",
+        "tags": [
+          "Khách hàng"
+        ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id",
+            "example": "1",
+            "required": true
+          },
+          {
+            "name": "hash",
+            "in": "path",
+            "description": "Mã băm",
+            "example": "31eec92b32865fe06edb8a303b35bcd60945d426",
+            "required": true
+          },
+          {
+            "name": "expires",
+            "in": "query",
+            "description": "Thời gian hết hạn",
+            "example": "1717666434",
+            "required": true
+          },
+          {
+            "name": "signature",
+            "in": "query",
+            "description": "Chữ ký",
+            "example": "a3288de9efeac065f1e95e0e4f69eccbc72812395cfbe166b02ce6dca924bb12",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Khách hàng đã xác minh địa chỉ email thành công",
             "content": {
               "application/json": {
                 "schema": {
