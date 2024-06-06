@@ -305,6 +305,20 @@
         "tags": [
           "Khách hàng"
         ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Lấy thông tin về Khách hàng thành công",
@@ -395,6 +409,106 @@
                       "description": "Không được xác thực.",
                       "example": "Unauthenticated.",
                       "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/email/verification-notification": {
+      "post": {
+        "description": "Gửi thông báo xác minh email mới",
+        "tags": [
+          "Khách hàng"
+        ],
+        "parameters": [
+          {
+            "name": "X-Requested-With",
+            "in": "header",
+            "example": "XMLHttpRequest",
+            "required": true
+          },
+          {
+            "name": "X-CSRF-TOKEN",
+            "in": "header",
+            "description": "Token CORS",
+            "required": true
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Khách hàng đã xác minh địa chỉ email thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Dữ liệu trả về",
+                  "example": ""
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Khách hàng đã xác minh địa chỉ email trước đó",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Dữ liệu trả về",
+                  "example": ""
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Khách hàng chưa đăng nhập",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "description": "Không được xác thực.",
+                      "example": "Unauthenticated.",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "description": "Token CORS bị thiếu, không hợp lệ hoặc đã hết hạn",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Token CSRF không khớp.",
+                      "example": "CSRF token mismatch."
                     }
                   },
                   "type": "object"
