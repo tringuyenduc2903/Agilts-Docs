@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Tài liệu API",
-    "description": "Xem thêm:\n * [Giới thiệu dự án](https://agilts.atlassian.net/wiki)\n * [Kanban board](https://agilts.atlassian.net/jira)",
+    "description": "__Lưu ý khi gọi API__:\n* Đối với máy chủ **Máy chủ địa phương**: Sử dụng tên miền [*http://localhost:3000*](http://localhost:3000)\n* Đối với máy chủ **Dành cho lập trình viên**: Sử dụng tên miền [*https://next.agilts.com*](https://next.agilts.com)\n\n__Xem thêm:__\n * [Giới thiệu dự án](https://agilts.atlassian.net/wiki)\n * [Kanban board](https://agilts.atlassian.net/jira)",
     "version": "1.0.0"
   },
   "servers": [
