@@ -83,7 +83,7 @@
       "get": {
         "description": "Thiết lập Cookie CSRF",
         "tags": [
-          "Xác thực"
+          "Xác thực tài khoản"
         ],
         "responses": {
           "204": {
@@ -96,7 +96,7 @@
       "post": {
         "description": "Đăng ký tài khoản",
         "tags": [
-          "Xác thực"
+          "Xác thực tài khoản"
         ],
         "parameters": [
           {
@@ -216,7 +216,7 @@
       "post": {
         "description": "Đăng nhập tài khoản",
         "tags": [
-          "Xác thực"
+          "Xác thực tài khoản"
         ],
         "parameters": [
           {
@@ -321,7 +321,7 @@
       "post": {
         "description": "Đăng xuất tài khoản",
         "tags": [
-          "Xác thực"
+          "Xác thực tài khoản"
         ],
         "parameters": [
           {
@@ -459,7 +459,7 @@
       "post": {
         "description": "Gửi email xác minh địa chỉ email",
         "tags": [
-          "Khách hàng"
+          "Xác thực Email"
         ],
         "parameters": [
           {
@@ -507,7 +507,7 @@
       "get": {
         "description": "Xác minh email khách hàng",
         "tags": [
-          "Khách hàng"
+          "Xác thực Email"
         ],
         "parameters": [
           {
@@ -550,7 +550,7 @@
       "post": {
         "description": "Gửi email lấy lại mật khẩu đã quên",
         "tags": [
-          "Khách hàng"
+          "Quên mật khẩu"
         ],
         "parameters": [
           {
@@ -635,7 +635,7 @@
       "post": {
         "description": "Đặt lại mật khẩu đã quên",
         "tags": [
-          "Khách hàng"
+          "Quên mật khẩu"
         ],
         "parameters": [
           {
@@ -750,7 +750,7 @@
       "post": {
         "description": "Xác nhận mật khẩu hiện tại",
         "tags": [
-          "Khách hàng"
+          "Xác nhận mật khẩu"
         ],
         "parameters": [
           {
@@ -833,16 +833,65 @@
           }
         }
       }
+    },
+    "/user/confirmed-password-status": {
+      "get": {
+        "description": "Trạng thái xác nhận mật khẩu",
+        "tags": [
+          "Xác nhận mật khẩu"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/X-CSRF-TOKEN"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lấy trạng thái xác nhận mật khẩu thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "confirmed": {
+                      "title": "Xác nhận mật khẩu",
+                      "description": "Trạng thái xác nhận mật khẩu",
+                      "type": "boolean",
+                      "example": true
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "419": {
+            "$ref": "#/components/responses/419"
+          }
+        }
+      }
     }
   },
   "tags": [
     {
-      "name": "Xác thực",
-      "description": "Chỉ định cách xác thực Khách hàng truy cập hệ thống"
+      "name": "Xác thực tài khoản"
     },
     {
-      "name": "Khách hàng",
-      "description": "Thông tin về Khách hàng, lịch sử hoạt động"
+      "name": "Xác thực Email"
+    },
+    {
+      "name": "Quên mật khẩu"
+    },
+    {
+      "name": "Xác nhận mật khẩu"
+    },
+    {
+      "name": "Khách hàng"
     }
   ]
 }
