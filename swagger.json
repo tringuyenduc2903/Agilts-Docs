@@ -40,6 +40,9 @@
       }
     },
     "responses": {
+      "302": {
+        "description": "Khách hàng đã đăng nhập"
+      },
       "401": {
         "description": "Khách hàng chưa đăng nhập",
         "content": {
@@ -164,6 +167,9 @@
               }
             }
           },
+          "302": {
+            "$ref": "#/components/responses/302"
+          },
           "419": {
             "$ref": "#/components/responses/419"
           },
@@ -275,6 +281,9 @@
                 }
               }
             }
+          },
+          "302": {
+            "$ref": "#/components/responses/302"
           },
           "419": {
             "$ref": "#/components/responses/419"
@@ -597,6 +606,9 @@
               }
             }
           },
+          "302": {
+            "$ref": "#/components/responses/302"
+          },
           "419": {
             "$ref": "#/components/responses/419"
           },
@@ -651,7 +663,7 @@
               "schema": {
                 "properties": {
                   "token": {
-                    "title": "Mã",
+                    "title": "Token",
                     "type": "string",
                     "example": "c5a52bf5d25a3f3e8866b18ae7097140c38d0e5f656e06571a771af508c4c022"
                   },
@@ -705,6 +717,9 @@
               }
             }
           },
+          "302": {
+            "$ref": "#/components/responses/302"
+          },
           "419": {
             "$ref": "#/components/responses/419"
           },
@@ -717,10 +732,17 @@
                     "message": {
                       "title": "Thông báo ngắn",
                       "type": "string",
-                      "example": "Trường email là bắt buộc. (và 1 lỗi)"
+                      "example": "Trường token là bắt buộc. (và 2 lỗi khác)"
                     },
                     "errors": {
                       "properties": {
+                        "token": {
+                          "title": "Token",
+                          "example": [
+                            "Trường token là bắt buộc."
+                          ],
+                          "type": "array"
+                        },
                         "email": {
                           "title": "Email khách hàng",
                           "example": [
