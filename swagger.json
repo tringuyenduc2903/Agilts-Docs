@@ -24,6 +24,13 @@
     }
   ],
   "components": {
+    "schemas": {
+      "Dữ liệu rỗng": {
+        "description": "Dữ liệu trả về",
+        "example": "",
+        "type": "string"
+      }
+    },
     "parameters": {
       "X-Requested-With": {
         "name": "X-Requested-With",
@@ -178,9 +185,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Dữ liệu trả về",
-                  "example": "",
-                  "type": "string"
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
                 }
               }
             }
@@ -364,9 +369,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Dữ liệu trả về",
-                  "example": "",
-                  "type": "string"
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
                 }
               }
             }
@@ -502,9 +505,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Dữ liệu trả về",
-                  "example": "",
-                  "type": "string"
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
                 }
               }
             }
@@ -514,9 +515,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Dữ liệu trả về",
-                  "example": "",
-                  "type": "string"
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
                 }
               }
             }
@@ -973,9 +972,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Dữ liệu trả về",
-                  "example": "",
-                  "type": "string"
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
                 }
               }
             }
@@ -1088,9 +1085,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Dữ liệu trả về",
-                  "example": "",
-                  "type": "string"
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
                 }
               }
             }
@@ -1141,7 +1136,7 @@
     },
     "/user/two-factor-qr-code": {
       "get": {
-        "description": "Lấy QR Xác thực hai bước",
+        "description": "Lấy QR xác thực hai bước",
         "tags": [
           "Xác thực hai bước"
         ],
@@ -1183,6 +1178,90 @@
           },
           "419": {
             "$ref": "#/components/responses/419"
+          },
+          "423": {
+            "$ref": "#/components/responses/423"
+          }
+        }
+      }
+    },
+    "/user/confirmed-two-factor-authentication": {
+      "post": {
+        "description": "Xác nhận mã xác thực hai bước",
+        "tags": [
+          "Xác thực hai bước"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/X-CSRF-TOKEN"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "code": {
+                    "title": "Mã",
+                    "type": "number",
+                    "example": "931953"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "code"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Xác nhận mã xác thực hai bước thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "419": {
+            "$ref": "#/components/responses/419"
+          },
+          "422": {
+            "description": "Dữ liệu khách hàng đã nhập không được chấp nhận",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "example": "Mã xác thực hai yếu tố được cung cấp không hợp lệ."
+                    },
+                    "errors": {
+                      "properties": {
+                        "code": {
+                          "title": "Mã",
+                          "example": [
+                            "Mã xác thực hai yếu tố được cung cấp không hợp lệ."
+                          ],
+                          "type": "array"
+                        }
+                      }
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
           },
           "423": {
             "$ref": "#/components/responses/423"
