@@ -1134,6 +1134,60 @@
         }
       }
     },
+    "/user/two-factor-authentication": {
+      "post": {
+        "description": "Bật tính năng xác thực hai bước",
+        "tags": [
+          "Xác thực hai bước"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/X-CSRF-TOKEN"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "force": {
+                    "title": "Hiệu lực",
+                    "type": "boolean",
+                    "example": true,
+                    "default": true
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Bật tính năng xác thực hai bước thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "419": {
+            "$ref": "#/components/responses/419"
+          },
+          "423": {
+            "$ref": "#/components/responses/423"
+          }
+        }
+      }
+    },
     "/user/two-factor-qr-code": {
       "get": {
         "description": "Lấy QR xác thực hai bước",
