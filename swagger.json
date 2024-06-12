@@ -349,6 +349,97 @@
         }
       }
     },
+    "/two-factor-challenge": {
+      "post": {
+        "description": "Xác nhận mã xác thực hai bước",
+        "tags": [
+          "Xác thực tài khoản",
+          "Xác thực hai bước"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/X-CSRF-TOKEN"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "code": {
+                    "title": "Mã",
+                    "type": "number",
+                    "example": "931953"
+                  },
+                  "recovery_code": {
+                    "title": "Mã dự phòng",
+                    "type": "string",
+                    "example": "lnfv0FSGRz-aafVt8Y4PN"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Xác nhận mã xác thực hai bước thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dữ liệu rỗng"
+                }
+              }
+            }
+          },
+          "302": {
+            "$ref": "#/components/responses/302"
+          },
+          "419": {
+            "$ref": "#/components/responses/419"
+          },
+          "422": {
+            "description": "Dữ liệu khách hàng đã nhập không được chấp nhận",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "example": "Mã xác thực hai yếu tố được cung cấp không hợp lệ."
+                    },
+                    "errors": {
+                      "properties": {
+                        "code": {
+                          "title": "Mã",
+                          "type": "array",
+                          "example": [
+                            "Mã xác thực hai yếu tố được cung cấp không hợp lệ."
+                          ]
+                        },
+                        "recovery_code": {
+                          "title": "Mã dự phòng",
+                          "type": "array",
+                          "example": [
+                            "Mã dự phòng xác thực hai yếu tố được cung cấp không hợp lệ."
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/logout": {
       "post": {
         "description": "Đăng xuất tài khoản",
