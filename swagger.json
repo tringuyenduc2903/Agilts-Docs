@@ -541,6 +541,60 @@
                       "example": "03-06-2024 13:53:15",
                       "type": "string"
                     },
+                    "socials": {
+                      "title": "Danh sách mạng xã hội đã liên kết với tài khoản",
+                      "properties": {
+                        "id": {
+                          "title": "Id liên kết",
+                          "example": 1,
+                          "type": "number"
+                        },
+                        "provider_id": {
+                          "title": "Id mạng xã hội",
+                          "example": "113394258790169712732",
+                          "type": "string"
+                        },
+                        "provider_name": {
+                          "title": "Tên mạng xã hội",
+                          "example": "google",
+                          "type": "string"
+                        },
+                        "customer_id": {
+                          "title": "Id khách hàng",
+                          "example": 1,
+                          "type": "number"
+                        },
+                        "created_at": {
+                          "title": "Thời gian liên kết tài khoản",
+                          "example": "13-06-2024 04:44:56",
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "title": "Thời gian cập nhật thông tin liên kết",
+                          "example": "13-06-2024 04:44:56",
+                          "type": "string"
+                        }
+                      },
+                      "example": [
+                        {
+                          "id": 1,
+                          "provider_id": "113394258790169712732",
+                          "provider_name": "google",
+                          "customer_id": 1,
+                          "created_at": "13-06-2024 04:44:56",
+                          "updated_at": "13-06-2024 04:44:56"
+                        },
+                        {
+                          "id": 2,
+                          "provider_id": "3734093343538907",
+                          "provider_name": "facebook",
+                          "customer_id": 1,
+                          "created_at": "13-06-2024 16:17:36",
+                          "updated_at": "13-06-2024 16:17:36"
+                        }
+                      ],
+                      "type": "array"
+                    },
                     "two_factor_confirmed_at": {
                       "title": "Thời gian bật xác thực 2 bước",
                       "example": "03-06-2024 13:53:15",
@@ -1574,6 +1628,28 @@
           }
         }
       }
+    },
+    "/auth/redirect/{driver_name}": {
+      "get": {
+        "description": "Thực hiện xác thực OAuth",
+        "tags": [
+          "Xác thực OAuth"
+        ],
+        "parameters": [
+          {
+            "name": "driver_name",
+            "in": "query",
+            "description": "Tên Driver",
+            "example": "google",
+            "required": true
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Thực hiện xác thực thông qua OAuth thành công"
+          }
+        }
+      }
     }
   },
   "tags": [
@@ -1582,6 +1658,9 @@
     },
     {
       "name": "Xác thực hai bước"
+    },
+    {
+      "name": "Xác thực OAuth"
     },
     {
       "name": "Xác thực Email"
