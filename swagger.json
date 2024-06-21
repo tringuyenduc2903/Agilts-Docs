@@ -595,6 +595,11 @@
                       ],
                       "type": "array"
                     },
+                    "timezone": {
+                      "title": "Múi giờ",
+                      "example": "Asia/Ho_Chi_Minh",
+                      "type": "string"
+                    },
                     "two_factor_confirmed_at": {
                       "title": "Thời gian bật xác thực 2 bước",
                       "example": "11:53:58 21/06/2024",
@@ -1213,12 +1218,19 @@
                     "title": "Giới tính khách hàng",
                     "type": "number",
                     "example": 0
+                  },
+                  "timezone": {
+                    "title": "Múi giờ khách hàng",
+                    "type": "string",
+                    "maxLength": 30,
+                    "example": "Asia/Ho_Chi_Minh"
                   }
                 },
                 "type": "object",
                 "required": [
                   "name",
-                  "email"
+                  "email",
+                  "timezone"
                 ]
               }
             }
