@@ -528,7 +528,7 @@
                     },
                     "email_verified_at": {
                       "title": "Thời gian xác thực email",
-                      "example": "03-06-2024 13:53:15",
+                      "example": "11:53:58 21/06/2024",
                       "type": "string"
                     },
                     "phone_number": {
@@ -538,7 +538,7 @@
                     },
                     "phone_number_verified_at": {
                       "title": "Thời gian xác thực số điện thoại",
-                      "example": "03-06-2024 13:53:15",
+                      "example": "11:53:58 21/06/2024",
                       "type": "string"
                     },
                     "socials": {
@@ -597,22 +597,22 @@
                     },
                     "two_factor_confirmed_at": {
                       "title": "Thời gian bật xác thực 2 bước",
-                      "example": "03-06-2024 13:53:15",
+                      "example": "11:53:58 21/06/2024",
                       "type": "string"
                     },
                     "deleted_at": {
                       "title": "Thời gian xoá tài khoản",
-                      "example": "03-06-2024 13:53:15",
+                      "example": "11:53:58 21/06/2024",
                       "type": "string"
                     },
                     "created_at": {
                       "title": "Thời gian tạo tài khoản",
-                      "example": "03-06-2024 13:53:15",
+                      "example": "11:53:58 21/06/2024",
                       "type": "string"
                     },
                     "updated_at": {
                       "title": "Thời gian cập nhật thông tin tài khoản",
-                      "example": "03-06-2024 13:53:15",
+                      "example": "11:53:58 21/06/2024",
                       "type": "string"
                     }
                   },
