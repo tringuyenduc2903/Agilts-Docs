@@ -566,12 +566,12 @@
                         },
                         "created_at": {
                           "title": "Thời gian liên kết tài khoản",
-                          "example": "13-06-2024 04:44:56",
+                          "example": "11:53:58 21/06/2024",
                           "type": "string"
                         },
                         "updated_at": {
                           "title": "Thời gian cập nhật thông tin liên kết",
-                          "example": "13-06-2024 04:44:56",
+                          "example": "11:53:58 21/06/2024",
                           "type": "string"
                         }
                       },
@@ -581,16 +581,16 @@
                           "provider_id": "113394258790169712732",
                           "provider_name": "google",
                           "customer_id": 1,
-                          "created_at": "13-06-2024 04:44:56",
-                          "updated_at": "13-06-2024 04:44:56"
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
                         },
                         {
                           "id": 2,
                           "provider_id": "3734093343538907",
                           "provider_name": "facebook",
                           "customer_id": 1,
-                          "created_at": "13-06-2024 16:17:36",
-                          "updated_at": "13-06-2024 16:17:36"
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
                         }
                       ],
                       "type": "array"
