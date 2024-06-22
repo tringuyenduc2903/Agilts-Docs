@@ -44,6 +44,11 @@
         "description": "Token CSRF",
         "example": "eyJpdiI6IkVkZ2dLVUhSdXRXYU8zMW1zclI0Rmc9PSIsInZhbHVlIjoiaklOOTlINHFHaDRyeXJWRmJZcDlWTzRqWC9iUWNCdWRXTTIrN2N5TmtoT3VESFBDR0VCcnFoV2UrSlFQYmFQZmYydkhYMUp3R2ZxVHhOWmhYekduWTFicEpsSlovTXA4V2taZUhOSi9vN0ZzcnRaeCtSZCs0UkNsSkRaU2NxdkYiLCJtYWMiOiJhY2EyZTUzOTZkOTc4ZGQ1MWQ1ODIwMzM2OTdiM2U5NDhiM2E4OTQ5OGUzMDJhOWVhMjU0NmE0Y2ViNjg3ODA4IiwidGFnIjoiIn0=",
         "required": true
+      },
+      "page": {
+        "name": "page",
+        "in": "query",
+        "example": "6"
       }
     },
     "responses": {
@@ -543,38 +548,6 @@
                     },
                     "socials": {
                       "title": "Danh sách mạng xã hội đã liên kết với tài khoản",
-                      "properties": {
-                        "id": {
-                          "title": "Id liên kết",
-                          "example": 1,
-                          "type": "number"
-                        },
-                        "provider_id": {
-                          "title": "Id mạng xã hội",
-                          "example": "113394258790169712732",
-                          "type": "string"
-                        },
-                        "provider_name": {
-                          "title": "Tên mạng xã hội",
-                          "example": "google",
-                          "type": "string"
-                        },
-                        "customer_id": {
-                          "title": "Id khách hàng",
-                          "example": 1,
-                          "type": "number"
-                        },
-                        "created_at": {
-                          "title": "Thời gian liên kết tài khoản",
-                          "example": "11:53:58 21/06/2024",
-                          "type": "string"
-                        },
-                        "updated_at": {
-                          "title": "Thời gian cập nhật thông tin liên kết",
-                          "example": "11:53:58 21/06/2024",
-                          "type": "string"
-                        }
-                      },
                       "example": [
                         {
                           "id": 1,
@@ -1662,6 +1635,319 @@
           }
         }
       }
+    },
+    "/api/branch": {
+      "get": {
+        "description": "Lấy danh sách chi nhánh",
+        "tags": [
+          "Chi nhánh"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/X-CSRF-TOKEN"
+          },
+          {
+            "$ref": "#/components/parameters/page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lấy danh sách chi nhánh thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {
+                      "title": "Dữ liệu",
+                      "example": [
+                        {
+                          "id": 76,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 77,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 78,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 79,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 80,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 81,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 82,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 83,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 84,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 85,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 86,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 87,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 88,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 89,
+                          "name": "Agilts P. Huế",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 90,
+                          "name": "Agilts Trần Khánh Dư",
+                          "province": "Hà Nội",
+                          "district": "Hoàn Kiếm",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "deleted_at": "11:53:58 21/06/2024",
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        }
+                      ],
+                      "type": "array"
+                    },
+                    "links": {
+                      "title": "Danh sách phân trang",
+                      "example": [
+                        {
+                          "url": "http://localhost:8000/api/branch?page=5",
+                          "label": "&laquo; Trước",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=1",
+                          "label": "1",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=2",
+                          "label": "2",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=3",
+                          "label": "3",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=4",
+                          "label": "4",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=5",
+                          "label": "5",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=6",
+                          "label": "6",
+                          "active": true
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=7",
+                          "label": "7",
+                          "active": false
+                        },
+                        {
+                          "url": "http://localhost:8000/api/branch?page=7",
+                          "label": "Tiếp &raquo;",
+                          "active": false
+                        }
+                      ],
+                      "type": "array"
+                    },
+                    "path": {
+                      "title": "Đường dẫn",
+                      "example": "http://localhost:8000/api/branch",
+                      "type": "string"
+                    },
+                    "last_page_url": {
+                      "title": "Liên kết trang đã truy cập trước đó",
+                      "example": "http://localhost:8000/api/branch?page=4",
+                      "type": "string"
+                    },
+                    "first_page_url": {
+                      "title": "Liên kết trang đầu tiên",
+                      "example": "http://localhost:8000/api/branch?page=1",
+                      "type": "string"
+                    },
+                    "prev_page_url": {
+                      "title": "Liên kết trang trước",
+                      "example": "http://localhost:8000/api/branch?page=5",
+                      "type": "string"
+                    },
+                    "next_page_url": {
+                      "title": "Liên kết trang sau",
+                      "example": "http://localhost:8000/api/branch?page=7",
+                      "type": "string"
+                    },
+                    "last_page": {
+                      "title": "Vị trí trang đã truy cập trước đó",
+                      "example": 4,
+                      "type": "number"
+                    },
+                    "current_page": {
+                      "title": "Vị trí trang hiện tại",
+                      "example": 6,
+                      "type": "number"
+                    },
+                    "from": {
+                      "title": "Vị trí dữ liệu đầu tiên của trang",
+                      "example": 76,
+                      "type": "number"
+                    },
+                    "to": {
+                      "title": "Vị trí dữ liệu cuối cùng của trang",
+                      "example": 90,
+                      "type": "number"
+                    },
+                    "per_page": {
+                      "title": "Tổng dữ liệu mỗi trang",
+                      "example": 15,
+                      "type": "number"
+                    },
+                    "total": {
+                      "title": "Tổng dữ liệu tất cả các trang",
+                      "example": 100,
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "$ref": "#/components/responses/419"
+          }
+        }
+      }
     }
   },
   "tags": [
@@ -1685,6 +1971,9 @@
     },
     {
       "name": "Khách hàng"
+    },
+    {
+      "name": "Chi nhánh"
     }
   ]
 }
