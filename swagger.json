@@ -1948,6 +1948,108 @@
           }
         }
       }
+    },
+    "/api/branch/{branch_id}": {
+      "get": {
+        "description": "Lấy thông tin chi nhánh",
+        "tags": [
+          "Chi nhánh"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/X-CSRF-TOKEN"
+          },
+          {
+            "name": "branch_id",
+            "in": "path",
+            "description": "Id chi nhánh",
+            "example": 76,
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lấy thông tin chi nhánh thành công",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "title": "Id chi nhánh",
+                      "example": 76,
+                      "type": "number"
+                    },
+                    "name": {
+                      "title": "Tên chi nhánh",
+                      "example": "Agilts Trần Khánh Dư",
+                      "type": "string"
+                    },
+                    "province": {
+                      "title": "Tỉnh/thành phố chi nhánh",
+                      "example": "Hà Nội",
+                      "type": "string"
+                    },
+                    "district": {
+                      "title": "Quận/huyện/thị xã chi nhánh",
+                      "example": "Hoàn Kiếm",
+                      "type": "string"
+                    },
+                    "ward": {
+                      "title": "Xã/phường/thị trấn chi nhánh",
+                      "example": "Phan Chu Trinh",
+                      "type": "string"
+                    },
+                    "address_detail": {
+                      "title": "Địa chỉ chi tiết chi nhánh",
+                      "example": "25 Trần Khánh Dư",
+                      "type": "string"
+                    },
+                    "deleted_at": {
+                      "title": "Thời gian xoá chi nhánh",
+                      "example": "11:53:58 21/06/2024",
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "title": "Thời gian tạo chi nhánh",
+                      "example": "11:53:58 21/06/2024",
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "title": "Thời gian cập nhật thông tin chi nhánh",
+                      "example": "11:53:58 21/06/2024",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Id không trùng khớp với chi nhánh nào",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "title": "Thông báo ngắn",
+                      "type": "string",
+                      "description": "Không có kết quả truy vấn nào cho mô hình [App\\Models\\Branch] 101",
+                      "example": "No query results for model [App\\Models\\Branch] 101"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "419": {
+            "$ref": "#/components/responses/419"
+          }
+        }
+      }
     }
   },
   "tags": [
