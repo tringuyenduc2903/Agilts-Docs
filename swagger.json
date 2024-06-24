@@ -1638,7 +1638,7 @@
     },
     "/api/branch": {
       "get": {
-        "description": "Lấy danh sách chi nhánh",
+        "description": "Lấy danh sách chi nhánh (Chỉ hiện thị chi nhánh có 1 trong các địa chỉ được Đặt làm mặc định và Kiểu Cửa hàng)",
         "tags": [
           "Chi nhánh"
         ],
@@ -1651,6 +1651,26 @@
           },
           {
             "$ref": "#/components/parameters/page"
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "example": "Việt Nam"
+          },
+          {
+            "name": "province",
+            "in": "query",
+            "example": "Hà Nội"
+          },
+          {
+            "name": "district",
+            "in": "query",
+            "example": "Hai Bà Trưng"
+          },
+          {
+            "name": "ward",
+            "in": "query",
+            "example": "Phan Chu Trinh"
           }
         ],
         "responses": {
