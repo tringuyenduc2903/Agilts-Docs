@@ -1665,165 +1665,37 @@
                       "example": [
                         {
                           "id": 76,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 77,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 78,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 79,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 80,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 81,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 82,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 83,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 84,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 85,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 86,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 87,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 88,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 89,
-                          "name": "Agilts P. Huế",
-                          "province": "Hà Nội",
-                          "district": "Hai Bà Trưng",
-                          "ward": "Bùi Thị Xuân",
-                          "address_detail": "252 P. Huế",
-                          "deleted_at": "11:53:58 21/06/2024",
-                          "created_at": "11:53:58 21/06/2024",
-                          "updated_at": "11:53:58 21/06/2024"
-                        },
-                        {
-                          "id": 90,
-                          "name": "Agilts Trần Khánh Dư",
-                          "province": "Hà Nội",
-                          "district": "Hoàn Kiếm",
-                          "ward": "Phan Chu Trinh",
-                          "address_detail": "25 Trần Khánh Dư",
+                          "name": "Agilts Hai Bà Trưng",
+                          "addresses": [
+                            {
+                              "id": 1,
+                              "country": "Việt Nam",
+                              "province": "Hà Nội",
+                              "district": "Hai Bà Trưng",
+                              "ward": "Phan Chu Trinh",
+                              "address_detail": "25 Trần Khánh Dư",
+                              "address_preview": "25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội",
+                              "type": 0,
+                              "type_preview": "Cửa hàng",
+                              "default": true,
+                              "created_at": "11:53:58 21/06/2024",
+                              "updated_at": "11:53:58 21/06/2024"
+                            },
+                            {
+                              "id": 2,
+                              "country": "Việt Nam",
+                              "province": "Hà Nội",
+                              "district": "Hai Bà Trưng",
+                              "ward": "Bùi Thị Xuân",
+                              "address_detail": "252 P. Huế",
+                              "address_preview": "252 P. Huế, Bùi Thị Xuân, Hai Bà Trưng, Hà Nội",
+                              "type": 1,
+                              "type_preview": "Kho",
+                              "default": true,
+                              "created_at": "11:53:58 21/06/2024",
+                              "updated_at": "11:53:58 21/06/2024"
+                            }
+                          ],
                           "deleted_at": "11:53:58 21/06/2024",
                           "created_at": "11:53:58 21/06/2024",
                           "updated_at": "11:53:58 21/06/2024"
@@ -1984,28 +1856,42 @@
                     },
                     "name": {
                       "title": "Tên chi nhánh",
-                      "example": "Agilts Trần Khánh Dư",
+                      "example": "Agilts Hai Bà Trưng",
                       "type": "string"
                     },
-                    "province": {
-                      "title": "Tỉnh/thành phố chi nhánh",
-                      "example": "Hà Nội",
-                      "type": "string"
-                    },
-                    "district": {
-                      "title": "Quận/huyện/thị xã chi nhánh",
-                      "example": "Hoàn Kiếm",
-                      "type": "string"
-                    },
-                    "ward": {
-                      "title": "Xã/phường/thị trấn chi nhánh",
-                      "example": "Phan Chu Trinh",
-                      "type": "string"
-                    },
-                    "address_detail": {
-                      "title": "Địa chỉ chi tiết chi nhánh",
-                      "example": "25 Trần Khánh Dư",
-                      "type": "string"
+                    "addresses": {
+                      "title": "Các địa chỉ chi nhánh",
+                      "example": [
+                        {
+                          "id": 1,
+                          "country": "Việt Nam",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Phan Chu Trinh",
+                          "address_detail": "25 Trần Khánh Dư",
+                          "address_preview": "25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội",
+                          "type": 0,
+                          "type_preview": "Cửa hàng",
+                          "default": true,
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        },
+                        {
+                          "id": 2,
+                          "country": "Việt Nam",
+                          "province": "Hà Nội",
+                          "district": "Hai Bà Trưng",
+                          "ward": "Bùi Thị Xuân",
+                          "address_detail": "252 P. Huế",
+                          "address_preview": "252 P. Huế, Bùi Thị Xuân, Hai Bà Trưng, Hà Nội",
+                          "type": 1,
+                          "type_preview": "Kho",
+                          "default": true,
+                          "created_at": "11:53:58 21/06/2024",
+                          "updated_at": "11:53:58 21/06/2024"
+                        }
+                      ],
+                      "type": "array"
                     },
                     "deleted_at": {
                       "title": "Thời gian xoá chi nhánh",
