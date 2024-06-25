@@ -1,0 +1,69 @@
+post:
+  description: Đăng nhập tài khoản
+  tags:
+    - Xác thực tài khoản
+  parameters:
+    - $ref: "../components/parameters/X-Requested-With.yaml"
+    - $ref: "../components/parameters/X-CSRF-TOKEN.yaml"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          properties:
+            email:
+              title: Email khách hàng
+              type: string
+              example: nguyenvanhai@agilts.com
+            password:
+              title: Mật khẩu khách hàng
+              type: string
+              example: NguyenVanHai825!
+            remember:
+              title: Ghi nhớ tôi
+              description: Tài khoản không bị đăng xuất sau khoảng thời gian nhất định
+              type: boolean
+              example: false
+          type: object
+          required:
+            - email
+            - password
+  responses:
+    200:
+      description: Đăng nhập tài khoản thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              two_factor:
+                title: Xác thực 2 bước
+                description: Trạng thái xác thực 2 bước
+                example: false
+                type: boolean
+            type: object
+    302:
+      $ref: "../components/responses/302.yaml"
+    419:
+      $ref: "../components/responses/419.yaml"
+    422:
+      description: Dữ liệu khách hàng đã nhập không được chấp nhận
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                example: Trường email là bắt buộc. (và 1 lỗi)
+              errors:
+                properties:
+                  email:
+                    title: Email khách hàng
+                    example:
+                      - Trường email là bắt buộc.
+                    type: array
+                  password:
+                    title: Mật khẩu khách hàng
+                    example:
+                      - Trường mật khẩu là bắt buộc.
+                    type: array
+            type: object

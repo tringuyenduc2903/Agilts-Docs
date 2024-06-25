@@ -1,0 +1,13 @@
+get:
+  description: Thực hiện xác thực OAuth
+  tags:
+    - Xác thực OAuth
+  parameters:
+    - name: driver_name
+      in: query
+      description: Tên Driver
+      example: google
+      required: true
+  responses:
+    302:
+      description: Thực hiện xác thực thông qua OAuth thành công

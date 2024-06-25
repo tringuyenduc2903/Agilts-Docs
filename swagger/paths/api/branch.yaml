@@ -1,0 +1,375 @@
+get:
+  description: Lấy danh sách chi nhánh (Chỉ hiện thị chi nhánh có 1 trong các địa chỉ được Đặt làm mặc định và Kiểu Cửa hàng)
+  tags:
+    - Chi nhánh
+  parameters:
+    - $ref: "../../components/parameters/page.yaml"
+    - name: country
+      in: query
+      example: Việt Nam
+    - name: province
+      in: query
+      example: Hà Nội
+    - name: district
+      in: query
+      example: Hai Bà Trưng
+    - name: ward
+      in: query
+      example: Phan Chu Trinh
+  responses:
+    200:
+      description: Lấy danh sách chi nhánh thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - id: 76
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 76
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 77
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 77
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 78
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 78
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 79
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 79
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 80
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 80
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 81
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 81
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 82
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 82
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 83
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 83
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 84
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 84
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 85
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 85
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 86
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 86
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 87
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 87
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 88
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 88
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 89
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 89
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 90
+                    name: Agilts Hai Bà Trưng
+                    addresses:
+                      - id: 90
+                        country: Việt Nam
+                        province: Hà Nội
+                        district: Hai Bà Trưng
+                        ward: Phan Chu Trinh
+                        address_detail: 25 Trần Khánh Dư
+                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                        type: 0
+                        type_preview: Cửa hàng
+                        default: true
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                type: array
+              links:
+                title: Danh sách phân trang
+                example:
+                  - url: http://localhost:8000/api/branch?page=5
+                    label: "&laquo; Trước"
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=1
+                    label: 1
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=2
+                    label: 2
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=3
+                    label: 3
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=4
+                    label: 4
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=5
+                    label: 5
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=6
+                    label: 6
+                    active: true
+                  - url: http://localhost:8000/api/branch?page=7
+                    label: 7
+                    active: false
+                  - url: http://localhost:8000/api/branch?page=7
+                    label: "Tiếp &raquo;"
+                    active: false
+                type: array
+              path:
+                title: Đường dẫn
+                example: http://localhost:8000/api/branch
+                type: string
+              last_page_url:
+                title: Liên kết trang đã truy cập trước đó
+                example: http://localhost:8000/api/branch?page=4
+                type: string
+              first_page_url:
+                title: Liên kết trang đầu tiên
+                example: http://localhost:8000/api/branch?page=1
+                type: string
+              prev_page_url:
+                title: Liên kết trang trước
+                example: http://localhost:8000/api/branch?page=5
+                type: string
+              next_page_url:
+                title: Liên kết trang sau
+                example: http://localhost:8000/api/branch?page=7
+                type: string
+              last_page:
+                title: Vị trí trang đã truy cập trước đó
+                example: 4
+                type: number
+              current_page:
+                title: Vị trí trang hiện tại
+                example: 6
+                type: number
+              from:
+                title: Vị trí dữ liệu đầu tiên của trang
+                example: 76
+                type: number
+              to:
+                title: Vị trí dữ liệu cuối cùng của trang
+                example: 90
+                type: number
+              per_page:
+                title: Tổng dữ liệu mỗi trang
+                example: 15
+                type: number
+              total:
+                title: Tổng dữ liệu tất cả các trang
+                example: 100
+                type: number
+            type: object

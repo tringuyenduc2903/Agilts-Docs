@@ -1,0 +1,65 @@
+get:
+  description: Lấy thông tin chi nhánh
+  tags:
+    - Chi nhánh
+  parameters:
+    - name: branch_id
+      in: path
+      description: Id chi nhánh
+      example: 76
+      required: true
+  responses:
+    200:
+      description: Lấy thông tin chi nhánh thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                title: Id chi nhánh
+                example: 76
+                type: number
+              name:
+                title: Tên chi nhánh
+                example: Agilts Hai Bà Trưng
+                type: string
+              addresses:
+                title: Các địa chỉ chi nhánh
+                example:
+                  - id: 76
+                    country: Việt Nam
+                    province: Hà Nội
+                    district: Hai Bà Trưng
+                    ward: Phan Chu Trinh
+                    address_detail: 25 Trần Khánh Dư
+                    address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                    type: 0
+                    type_preview: Cửa hàng
+                    default: true
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                type: array
+              deleted_at:
+                title: Thời gian xoá chi nhánh
+                example: 11:53:58 21/06/2024
+                type: string
+              created_at:
+                title: Thời gian tạo chi nhánh
+                example: 11:53:58 21/06/2024
+                type: string
+              updated_at:
+                title: Thời gian cập nhật thông tin chi nhánh
+                example: 11:53:58 21/06/2024
+                type: string
+    404:
+      description: Id không trùng khớp với chi nhánh nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\\Models\\Branch] 101
+                example: No query results for model [App\\Models\\Branch] 101
+            type: object

@@ -1,0 +1,80 @@
+put:
+  description: Đổi thông tin tài khoản
+  tags:
+    - Thông tin tài khoản
+  parameters:
+    - $ref: "../../components/parameters/X-Requested-With.yaml"
+    - $ref: "../../components/parameters/X-CSRF-TOKEN.yaml"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          properties:
+            name:
+              title: Tên khách hàng
+              type: string
+              maxLength: 50
+              example: Nguyễn Văn Hải
+            email:
+              title: Email khách hàng
+              type: string
+              maxLength: 100
+              example: nguyenvanhai@agilts.com
+            phone_number:
+              title: Số điện thoại khách hàng
+              type: string
+              minLength: 12
+              maxLength: 12
+              example: +84982213854
+            birthday:
+              title: Ngày sinh khách hàng
+              type: string
+              example: 29/03/2003
+            gender:
+              title: Giới tính khách hàng
+              type: number
+              example: 0
+            timezone:
+              title: Múi giờ khách hàng
+              type: string
+              maxLength: 30
+              example: Asia/Ho_Chi_Minh
+          type: object
+          required:
+            - name
+            - email
+            - timezone
+  responses:
+    200:
+      description: Đổi thông tin tài khoản thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../components/responses/401.yaml"
+    419:
+      $ref: "../../components/responses/419.yaml"
+    422:
+      description: Dữ liệu khách hàng đã nhập không được chấp nhận
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                example: Trường tên là bắt buộc. (và 1 lỗi khác)
+              errors:
+                properties:
+                  name:
+                    title: Tên khách hàng
+                    example:
+                      - Trường tên là bắt buộc.
+                    type: array
+                  email:
+                    title: Email khách hàng
+                    example:
+                      - Trường email là bắt buộc.
+                    type: array
+            type: object

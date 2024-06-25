@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  title: Tài liệu API
+  description: "[Giới thiệu dự án](https://agilts.atlassian.net/wiki)"
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Máy chủ địa phương
+  - url: https://{sub-domain}.agilts.com
+    description: Máy chủ công khai
+    variables:
+      sub-domain:
+        default: api
+        enum:
+          - api-dev
+          - api-staging
+          - api
+paths:
+  /sanctum/csrf-cookie:
+    $ref: "./paths/sanctum/csrf-cookie.yaml"
+  /register:
+    $ref: "./paths/register.yaml"
+  /login:
+    $ref: "./paths/login.yaml"
+  /logout:
+    $ref: "./paths/logout.yaml"
+  /two-factor-challenge:
+    $ref: "./paths/two-factor-challenge.yaml"
+  /auth/redirect/{driver_name}:
+    $ref: "./paths/auth/redirect/{driver_name}.yaml"
+  /email/verification-notification:
+    $ref: "./paths/email/verification-notification.yaml"
+  /forgot-password:
+    $ref: "./paths/forgot-password.yaml"
+  /reset-password:
+    $ref: "./paths/reset-password.yaml"
+  /user/profile-information:
+    $ref: "./paths/user/profile-information.yaml"
+  /user/password:
+    $ref: "./paths/user/password.yaml"
+  /user/confirm-password:
+    $ref: "./paths/user/confirm-password.yaml"
+  /user/confirmed-password-status:
+    $ref: "./paths/user/confirmed-password-status.yaml"
+  /user/two-factor-authentication:
+    $ref: "./paths/user/two-factor-authentication.yaml"
+  /user/two-factor-qr-code:
+    $ref: "./paths/user/two-factor-qr-code.yaml"
+  /user/confirmed-two-factor-authentication:
+    $ref: "./paths/user/confirmed-two-factor-authentication.yaml"
+  /user/two-factor-recovery-codes:
+    $ref: "./paths/user/two-factor-recovery-codes.yaml"
+  /user/two-factor-secret-key:
+    $ref: "./paths/user/two-factor-secret-key.yaml"
+  /api/user:
+    $ref: "./paths/api/user.yaml"
+  /api/branch:
+    $ref: "./paths/api/branch.yaml"
+  /api/branch/{branch_id}:
+    $ref: "./paths/api/branch/{branch_id}.yaml"
