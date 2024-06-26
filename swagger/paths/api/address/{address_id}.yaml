@@ -119,3 +119,34 @@ put:
                       - Trường địa chỉ chi tiết là bắt buộc.
                     type: array
             type: object
+delete:
+  description: Xoá địa chỉ cũ
+  tags:
+    - Địa chỉ
+  parameters:
+    - name: address_id
+      in: path
+      description: Id địa chỉ
+      example: 1
+      required: true
+  responses:
+    200:
+      description: Xoá địa chỉ cũ thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      description: Id không trùng khớp với địa chỉ nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\\Models\\Address] 1
+                example: No query results for model [App\\Models\\Address] 1
+            type: object
