@@ -1,46 +1,13 @@
-get:
-  description: Lấy danh sách địa chỉ
+put:
+  description: Đổi thông tin địa chỉ
   tags:
     - Địa chỉ
-  responses:
-    200:
-      description: Lấy danh sách địa chỉ thành công
-      content:
-        application/json:
-          schema:
-            description: Dữ liệu trả về
-            example:
-              - id: 105
-                country: Việt Nam
-                province: Hà Nội
-                district: Hai Bà Trưng
-                ward: Phan Chu Trinh
-                address_detail: 25 Trần Khánh Dư
-                address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
-                type: 0
-                type_preview: Nhà riêng
-                default: true
-                created_at: 11:53:58 21/06/2024
-                updated_at: 11:53:58 21/06/2024
-              - id: 106
-                country: Việt Nam
-                province: Hà Nội
-                district: Hai Bà Trưng
-                ward: Phan Chu Trinh
-                address_detail: 25 Trần Khánh Dư
-                address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
-                type: 1
-                type_preview: Công ty
-                default: true
-                created_at: 11:53:58 21/06/2024
-                updated_at: 11:53:58 21/06/2024
-            type: array
-    401:
-      $ref: "../../components/responses/401.yaml"
-post:
-  description: Tạo địa chỉ mới
-  tags:
-    - Địa chỉ
+  parameters:
+    - name: address_id
+      in: path
+      description: Id địa chỉ
+      example: 1
+      required: true
   requestBody:
     content:
       application/json:
@@ -84,14 +51,26 @@ post:
             - ward
             - address_detail
   responses:
-    201:
-      description: Tạo địa chỉ mới thành công
+    200:
+      description: Đổi thông tin địa chỉ thành công
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/Dữ liệu rỗng.yaml"
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
     401:
-      $ref: "../../components/responses/401.yaml"
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      description: Id không trùng khớp với địa chỉ nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\\Models\\Address] 1
+                example: No query results for model [App\\Models\\Address] 1
+            type: object
     422:
       description: Dữ liệu khách hàng đã nhập không được chấp nhận
       content:
