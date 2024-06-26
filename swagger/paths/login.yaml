@@ -12,17 +12,17 @@ post:
           properties:
             email:
               title: Email khách hàng
-              type: string
               example: nguyenvanhai@agilts.com
+              type: string
             password:
               title: Mật khẩu khách hàng
-              type: string
               example: NguyenVanHai825!
+              type: string
             remember:
               title: Ghi nhớ tôi
               description: Tài khoản không bị đăng xuất sau khoảng thời gian nhất định
-              type: boolean
               example: false
+              type: boolean
           type: object
           required:
             - email
@@ -52,8 +52,8 @@ post:
             properties:
               message:
                 title: Thông báo ngắn
-                type: string
                 example: Trường email là bắt buộc. (và 1 lỗi)
+                type: string
               errors:
                 properties:
                   email:

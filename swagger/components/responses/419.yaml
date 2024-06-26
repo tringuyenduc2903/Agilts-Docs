@@ -5,7 +5,7 @@ content:
       properties:
         message:
           title: Thông báo ngắn
-          type: string
           description: Token CSRF không khớp.
           example: CSRF token mismatch.
+          type: string
       type: object

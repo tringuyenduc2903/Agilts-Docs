@@ -21,7 +21,7 @@ get:
                 type: number
               name:
                 title: Tên chi nhánh
-                example: Agilts Hai Bà Trưng
+                example: Agilts Hoàn Kiếm
                 type: string
               addresses:
                 title: Các địa chỉ chi nhánh
@@ -29,12 +29,24 @@ get:
                   - id: 76
                     country: Việt Nam
                     province: Hà Nội
-                    district: Hai Bà Trưng
+                    district: Hoàn Kiếm
                     ward: Phan Chu Trinh
                     address_detail: 25 Trần Khánh Dư
-                    address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hai Bà Trưng, Hà Nội
+                    address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
                     type: 0
                     type_preview: Cửa hàng
+                    default: true
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                  - id: 91
+                    country: Việt Nam
+                    province: Hà Nội
+                    district: Hoàn Kiếm
+                    ward: Hàng Trống
+                    address_detail: 93 P. Phủ Doãn
+                    address_preview: 93 P. Phủ Doãn, Hàng Trống, Hoàn Kiếm, Hà Nội
+                    type: 1
+                    type_preview: Kho
                     default: true
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024

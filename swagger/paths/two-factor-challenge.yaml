@@ -12,12 +12,12 @@ post:
           properties:
             code:
               title: Mã
-              type: number
               example: 931953
+              type: number
             recovery_code:
               title: Mã dự phòng
-              type: string
               example: lnfv0FSGRz-aafVt8Y4PN
+              type: string
           type: object
   responses:
     200:
@@ -38,8 +38,8 @@ post:
             properties:
               message:
                 title: Thông báo ngắn
-                type: string
                 example: Mã xác thực hai yếu tố được cung cấp không hợp lệ.
+                type: string
               errors:
                 properties:
                   code:

@@ -12,8 +12,8 @@ post:
           properties:
             force:
               title: Hiệu lực
-              type: boolean
               example: true
+              type: boolean
               default: true
           type: object
   responses:
