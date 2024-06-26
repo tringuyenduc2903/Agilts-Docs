@@ -80,7 +80,7 @@ put:
               message:
                 title: Thông báo ngắn
                 type: string
-                example: Trường đặt làm mặc định là bắt buộc. (và 6 lỗi khác)
+                example: Trường đặt làm mặc định là bắt buộc. (và 5 lỗi khác)
               errors:
                 properties:
                   default:
@@ -107,11 +107,6 @@ put:
                     title: Quận/huyện/thị xã
                     example:
                       - Trường quận/huyện/thị xã là bắt buộc.
-                    type: array
-                  ward:
-                    title: Xã/phường/thị trấn
-                    example:
-                      - Trường xã/phường/thị trấn là bắt buộc.
                     type: array
                   address_detail:
                     title: Địa chỉ chi tiết

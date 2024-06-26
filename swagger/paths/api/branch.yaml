@@ -28,6 +28,7 @@ get:
                 example:
                   - id: 76
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 76
                         country: Việt Nam
@@ -58,6 +59,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 77
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 77
                         country: Việt Nam
@@ -76,6 +78,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 78
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 78
                         country: Việt Nam
@@ -94,6 +97,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 79
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 79
                         country: Việt Nam
@@ -112,6 +116,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 80
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 80
                         country: Việt Nam
@@ -130,6 +135,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 81
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 81
                         country: Việt Nam
@@ -148,6 +154,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 82
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 82
                         country: Việt Nam
@@ -166,6 +173,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 83
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 83
                         country: Việt Nam
@@ -184,6 +192,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 84
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 84
                         country: Việt Nam
@@ -202,6 +211,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 85
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 85
                         country: Việt Nam
@@ -220,6 +230,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 86
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 86
                         country: Việt Nam
@@ -238,6 +249,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 87
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 87
                         country: Việt Nam
@@ -256,6 +268,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 88
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 88
                         country: Việt Nam
@@ -274,6 +287,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 89
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 89
                         country: Việt Nam
@@ -292,6 +306,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                   - id: 90
                     name: Agilts Hoàn Kiếm
+                    phone_number: 02462958427
                     addresses:
                       - id: 90
                         country: Việt Nam

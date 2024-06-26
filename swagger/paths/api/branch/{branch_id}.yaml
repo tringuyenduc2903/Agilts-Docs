@@ -23,6 +23,10 @@ get:
                 title: Tên chi nhánh
                 example: Agilts Hoàn Kiếm
                 type: string
+              phone_number:
+                title: Số điện thoại chi nhánh
+                example: 02462958427
+                type: string
               addresses:
                 title: Các địa chỉ chi nhánh
                 example:
