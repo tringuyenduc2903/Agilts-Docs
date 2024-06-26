@@ -54,6 +54,8 @@ paths:
     $ref: "./paths/user/two-factor-secret-key.yaml"
   /api/user:
     $ref: "./paths/api/user.yaml"
+  /api/address:
+    $ref: "./paths/api/address.yaml"
   /api/branch:
     $ref: "./paths/api/branch.yaml"
   /api/branch/{branch_id}:
