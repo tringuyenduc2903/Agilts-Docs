@@ -60,6 +60,8 @@ paths:
     $ref: "./paths/api/address/{address_id}.yaml"
   /api/identification:
     $ref: "./paths/api/identification.yaml"
+  /api/identification/{identification_id}:
+    $ref: "./paths/api/identification/{identification_id}.yaml"
   /api/branch:
     $ref: "./paths/api/branch.yaml"
   /api/branch/{branch_id}:
