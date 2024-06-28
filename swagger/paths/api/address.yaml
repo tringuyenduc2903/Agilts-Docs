@@ -42,46 +42,7 @@ post:
   tags:
     - Địa chỉ
   requestBody:
-    content:
-      application/json:
-        schema:
-          properties:
-            default:
-              title: Đặt làm mặc định
-              example: true
-              type: bool
-            type:
-              title: Kiểu
-              example: 0
-              type: number
-            country:
-              title: Quốc gia
-              example: Việt Nam
-              type: string
-            province:
-              title: Tỉnh/thành phố
-              example: Hà Nội
-              type: string
-            district:
-              title: Quận/huyện/thị xã
-              example: Hai Bà Trưng
-              type: string
-            ward:
-              title: Xã/phường/thị trấn
-              example: Phan Chu Trinh
-              type: string
-            address_detail:
-              title: Địa chỉ chi tiết
-              example: 25 Trần Khánh Dư
-              type: string
-          type: object
-          required:
-            - default
-            - type
-            - country
-            - province
-            - district
-            - address_detail
+    $ref: "../../components/requestBodies/address.yaml"
   responses:
     201:
       description: Tạo địa chỉ mới thành công
@@ -92,45 +53,4 @@ post:
     401:
       $ref: "../../components/responses/401.yaml"
     422:
-      description: Dữ liệu khách hàng đã nhập không được chấp nhận
-      content:
-        application/json:
-          schema:
-            properties:
-              message:
-                title: Thông báo ngắn
-                type: string
-                example: Trường đặt làm mặc định là bắt buộc. (và 5 lỗi khác)
-              errors:
-                properties:
-                  default:
-                    title: Đặt làm mặc định
-                    example:
-                      - Trường đặt làm mặc định là bắt buộc.
-                    type: array
-                  type:
-                    title: Kiểu
-                    example:
-                      - Trường kiểu là bắt buộc.
-                    type: array
-                  country:
-                    title: Quốc gia
-                    example:
-                      - Trường quốc gia là bắt buộc.
-                    type: array
-                  province:
-                    title: Tỉnh/thành phố
-                    example:
-                      - Trường tỉnh/thành phố là bắt buộc.
-                    type: array
-                  district:
-                    title: Quận/huyện/thị xã
-                    example:
-                      - Trường quận/huyện/thị xã là bắt buộc.
-                    type: array
-                  address_detail:
-                    title: Địa chỉ chi tiết
-                    example:
-                      - Trường địa chỉ chi tiết là bắt buộc.
-                    type: array
-            type: object
+      $ref: "../../components/responses/422/address.yaml"

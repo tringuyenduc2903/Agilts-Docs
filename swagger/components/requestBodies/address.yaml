@@ -1,0 +1,40 @@
+content:
+  application/json:
+    schema:
+      properties:
+        default:
+          title: Đặt làm mặc định
+          example: true
+          type: bool
+        type:
+          title: Kiểu
+          example: 0
+          type: number
+        country:
+          title: Quốc gia
+          example: Việt Nam
+          type: string
+        province:
+          title: Tỉnh/thành phố
+          example: Hà Nội
+          type: string
+        district:
+          title: Quận/huyện/thị xã
+          example: Hai Bà Trưng
+          type: string
+        ward:
+          title: Xã/phường/thị trấn
+          example: Phan Chu Trinh
+          type: string
+        address_detail:
+          title: Địa chỉ chi tiết
+          example: 25 Trần Khánh Dư
+          type: string
+      type: object
+      required:
+        - default
+        - type
+        - country
+        - province
+        - district
+        - address_detail

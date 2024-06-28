@@ -1,0 +1,36 @@
+content:
+  application/json:
+    schema:
+      properties:
+        default:
+          title: Đặt làm mặc định
+          example: true
+          type: bool
+        type:
+          title: Kiểu
+          example: 1
+          type: number
+        number:
+          title: Số
+          example: 012345678901
+          type: string
+        issued_name:
+          title: Nơi cấp
+          example: Cục Cảnh sát đăng ký quản lý cư trú và dữ liệu Quốc gia về dân cư
+          type: string
+        issuance_date:
+          title: Ngày cấp
+          example: 21/06/2024
+          type: string
+        expiry_date:
+          title: Ngày hết hạn
+          example: 21/06/2024
+          type: string
+      type: object
+      required:
+        - default
+        - type
+        - number
+        - issued_name
+        - issuance_date
+        - expiry_date
