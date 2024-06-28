@@ -1,0 +1,48 @@
+get:
+  description: Lấy danh sách hồ sơ
+  tags:
+    - Hồ sơ
+  responses:
+    200:
+      description: Lấy danh sách hồ sơ thành công
+      content:
+        application/json:
+          schema:
+            description: Dữ liệu trả về
+            example:
+              - id: 1
+                type: 0
+                type_preview: Chứng minh nhân dân
+                number: 012345678
+                issued_name: CA TP. Hà Nội
+                issuance_date: 21/06/2024
+                expiry_date: 21/06/2024
+                default: false
+                customer_id: 1
+                created_at: 11:53:58 21/06/2024
+                updated_at: 11:53:58 21/06/2024
+              - id: 2
+                type: 1
+                type_preview: Căn cước công dân
+                number: 012345678901
+                issued_name: Cục Cảnh sát đăng ký quản lý cư trú và dữ liệu Quốc gia về dân cư
+                issuance_date: 21/06/2024
+                expiry_date: 21/06/2024
+                default: true
+                customer_id: 1
+                created_at: 11:53:58 21/06/2024
+                updated_at: 11:53:58 21/06/2024
+              - id: 3
+                type: 2
+                type_preview: Hộ chiếu
+                number: 012345678901
+                issued_name: Lãnh sự quán
+                issuance_date: 21/06/2024
+                expiry_date: 21/06/2024
+                default: false
+                customer_id: 1
+                created_at: 11:53:58 21/06/2024
+                updated_at: 11:53:58 21/06/2024
+            type: array
+    401:
+      $ref: "../../components/responses/401.yaml"
