@@ -48,7 +48,6 @@ put:
             - country
             - province
             - district
-            - ward
             - address_detail
   responses:
     200:

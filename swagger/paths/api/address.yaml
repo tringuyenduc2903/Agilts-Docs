@@ -81,7 +81,6 @@ post:
             - country
             - province
             - district
-            - ward
             - address_detail
   responses:
     201:
@@ -101,7 +100,7 @@ post:
               message:
                 title: Thông báo ngắn
                 type: string
-                example: Trường đặt làm mặc định là bắt buộc. (và 6 lỗi khác)
+                example: Trường đặt làm mặc định là bắt buộc. (và 5 lỗi khác)
               errors:
                 properties:
                   default:
