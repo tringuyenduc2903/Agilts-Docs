@@ -113,3 +113,34 @@ put:
                       - Trường ngày hết hạn là bắt buộc.
                     type: array
             type: object
+delete:
+  description: Xoá hồ sơ cũ
+  tags:
+    - Hồ sơ
+  parameters:
+    - name: identification_id
+      in: path
+      description: Id hồ sơ
+      example: 1
+      required: true
+  responses:
+    200:
+      description: Xoá hồ sơ cũ thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      description: Id không trùng khớp với hồ sơ nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\\Models\\Identification] 1
+                example: No query results for model [App\\Models\\Identification] 1
+            type: object
