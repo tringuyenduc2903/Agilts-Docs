@@ -1,5 +1,5 @@
 get:
-  description: Lấy danh sách chi nhánh (Chỉ hiện thị chi nhánh có 1 trong các địa chỉ được Đặt làm mặc định và Kiểu Cửa hàng)
+  description: Lấy danh sách chi nhánh
   tags:
     - Chi nhánh
   parameters:
@@ -30,30 +30,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 76
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
-                      - id: 91
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Hàng Trống
-                        address_detail: 93 P. Phủ Doãn
-                        address_preview: 93 P. Phủ Doãn, Hàng Trống, Hoàn Kiếm, Hà Nội
-                        type: 1
-                        type_preview: Kho
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 76
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -61,18 +46,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 77
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 77
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -80,18 +62,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 78
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 78
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -99,18 +78,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 79
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 79
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -118,18 +94,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 80
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 80
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -137,18 +110,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 81
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 81
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -156,18 +126,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 82
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 82
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -175,18 +142,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 83
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 83
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -194,18 +158,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 84
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 84
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -213,18 +174,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 85
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 85
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -232,18 +190,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 86
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 86
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -251,18 +206,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 87
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 87
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -270,18 +222,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 88
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 88
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -289,18 +238,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 89
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 89
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
@@ -308,18 +254,15 @@ get:
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
                     addresses:
-                      - id: 90
-                        country: Việt Nam
-                        province: Hà Nội
-                        district: Hoàn Kiếm
-                        ward: Phan Chu Trinh
-                        address_detail: 25 Trần Khánh Dư
-                        address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
-                        type: 0
-                        type_preview: Cửa hàng
-                        default: true
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
+                      id: 90
+                      country: Việt Nam
+                      province: Hà Nội
+                      district: Hoàn Kiếm
+                      ward: Phan Chu Trinh
+                      address_detail: 25 Trần Khánh Dư
+                      address_preview: 25 Trần Khánh Dư, Phan Chu Trinh, Hoàn Kiếm, Hà Nội
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
