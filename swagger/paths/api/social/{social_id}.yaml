@@ -26,6 +26,6 @@ delete:
               message:
                 title: Thông báo ngắn
                 type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\\Models\\Social] 1
-                example: No query results for model [App\\Models\\Social] 1
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Social] 1
+                example: No query results for model [App\Models\Social] 1
             type: object
