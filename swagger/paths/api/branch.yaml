@@ -4,6 +4,7 @@ get:
     - Chi nhánh
   parameters:
     - $ref: "../../components/parameters/page.yaml"
+    - $ref: "../../components/parameters/perPage.yaml"
     - name: country
       in: query
       example: Việt Nam
@@ -267,64 +268,9 @@ get:
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
                 type: array
-              links:
-                title: Danh sách phân trang
-                example:
-                  - url: http://localhost:8000/api/branch?page=5
-                    label: "&laquo; Trước"
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=1
-                    label: 1
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=2
-                    label: 2
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=3
-                    label: 3
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=4
-                    label: 4
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=5
-                    label: 5
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=6
-                    label: 6
-                    active: true
-                  - url: http://localhost:8000/api/branch?page=7
-                    label: 7
-                    active: false
-                  - url: http://localhost:8000/api/branch?page=7
-                    label: "Tiếp &raquo;"
-                    active: false
-                type: array
-              path:
-                title: Đường dẫn
-                example: http://localhost:8000/api/branch
-                type: string
-              last_page_url:
-                title: Liên kết trang đã truy cập trước đó
-                example: http://localhost:8000/api/branch?page=4
-                type: string
-              first_page_url:
-                title: Liên kết trang đầu tiên
-                example: http://localhost:8000/api/branch?page=1
-                type: string
-              prev_page_url:
-                title: Liên kết trang trước
-                example: http://localhost:8000/api/branch?page=5
-                type: string
-              next_page_url:
-                title: Liên kết trang sau
-                example: http://localhost:8000/api/branch?page=7
-                type: string
-              last_page:
-                title: Vị trí trang đã truy cập trước đó
-                example: 4
-                type: number
-              current_page:
-                title: Vị trí trang hiện tại
-                example: 6
+              total_pages:
+                title: Tổng trang
+                example: 7
                 type: number
               from:
                 title: Vị trí dữ liệu đầu tiên của trang
@@ -338,8 +284,12 @@ get:
                 title: Tổng dữ liệu mỗi trang
                 example: 15
                 type: number
+              current_page:
+                title: Vị trí trang hiện tại
+                example: 6
+                type: number
               total:
-                title: Tổng dữ liệu tất cả các trang
+                title: Tổng dữ liệu
                 example: 100
                 type: number
             type: object
