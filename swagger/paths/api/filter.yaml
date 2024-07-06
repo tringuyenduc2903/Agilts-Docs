@@ -1,0 +1,73 @@
+get:
+  description: Lấy danh sách bộ lọc sản phẩm
+  tags:
+    - Sản phẩm
+  responses:
+    200:
+      description: Lấy danh sách bộ lọc sản phẩm thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - name: type
+                    label: Loại
+                    data:
+                      0: Sản phẩm mới
+                      1: Sản phẩm cũ
+                      2: Sản phẩm tân trang
+                  - name: minPrice
+                    label: Giá thấp nhất
+                    data: 13443931.27
+                  - name: maxPrice
+                    label: Giá cao nhất
+                    data: 996162156.37
+                  - name: color
+                    label: Màu sắc
+                    data:
+                      Mận: Mận
+                      Tía: Tía
+                      Hồng y: Hồng y
+                      Cẩm quỳ: Cẩm quỳ
+                      Hồng đất: Hồng đất
+                  - name: model_name
+                    label: Tên mẫu
+                    data:
+                      1970: 1970
+                      1971: 1971
+                      1972: 1972
+                      1973: 1973
+                      1974: 1974
+                      1975: 1975
+                      1976: 1976
+                      1977: 1977
+                      1978: 1978
+                      1979: 1979
+                      1980: 1980
+                      1981: 1981
+                      1982: 1982
+                      1983: 1983
+                      1984: 1984
+                  - name: category
+                    label: Thể loại
+                    data:
+                      1: Eum nulla adipisci
+                      2: Est accusamus
+                      3: Dicta ut aut iure
+                      4: Repudiandae alias
+                      5: Aperiam nisi hic in
+                      6: Architecto dolore
+                      7: Ad perspiciatis
+                      8: Consequuntur non
+                      9: Quia est laudantium
+                      10: Quo enim dolores
+                      11: Non beatae aliquam
+                      12: Consequatur eos
+                      13: Ad sunt sit dolores
+                      14: Voluptatem illo ut
+                      15: Commodi sit fugiat
+
+                type: array
+            type: object
