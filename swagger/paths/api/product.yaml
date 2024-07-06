@@ -1,0 +1,69 @@
+get:
+  description: "Lấy danh sách sản phẩm (Chỉ hiển thị sản phẩm enabled: true, visibility: Catalog/ Catalog và Tìm kiếm, status: Còn hàng)"
+  tags:
+    - Sản phẩm
+  responses:
+    200:
+      description: Lấy danh sách sản phẩm thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - id: 76
+                    name: Sh mode
+                    description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
+                    min_price:
+                      raw: 161105278.00
+                      preview: 161.105.278,00 VND
+                    max_price:
+                      raw: 968519527.76
+                      preview: 968.519.527,76 VND
+                    images:
+                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                        alt: Et temporibus provident qui qui.
+                    videos:
+                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                        title: Aut beatae quas eum id minima.
+                        description: Sed dolorem ut saepe enim. Pariatur et amet provident laboriosam. Dignissimos veritatis dolorem soluta commodi. Soluta excepturi quod veritatis. Accusantium repellendus cupiditate neque eligendi et ut iste. Recusandae non possimus aut reiciendis.
+                        video:
+                          provider: youtube
+                          id: e1811b11-43d6-3c9c-906f-b16ce611bd87
+                          url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
+                    enabled: true
+                    visibility: Catalog
+                    type: Sản phẩm tân trang
+                    specifications:
+                      - key: Khối lượng bản thân
+                        value: 116kg
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                type: array
+              total_pages:
+                title: Tổng trang
+                example: 7
+                type: number
+              from:
+                title: Vị trí dữ liệu đầu tiên của trang
+                example: 76
+                type: number
+              to:
+                title: Vị trí dữ liệu cuối cùng của trang
+                example: 90
+                type: number
+              per_page:
+                title: Tổng dữ liệu mỗi trang
+                example: 15
+                type: number
+              current_page:
+                title: Vị trí trang hiện tại
+                example: 6
+                type: number
+              total:
+                title: Tổng dữ liệu
+                example: 100
+                type: number
+            type: object
