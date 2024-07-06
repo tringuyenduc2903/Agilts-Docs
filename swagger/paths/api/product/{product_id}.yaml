@@ -1,0 +1,87 @@
+get:
+  description: Lấy sản phẩm
+  tags:
+    - Sản phẩm
+  parameters:
+    - name: product_id
+      in: path
+      description: Id sản phẩm
+      example: 76
+      required: true
+  responses:
+    200:
+      description: Lấy danh sách sản phẩm thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - id: 76
+                    name: Sh mode 125 2024
+                    description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
+                    min_price:
+                      raw: 161105278.00
+                      preview: 161.105.278,00 VND
+                    max_price:
+                      raw: 968519527.76
+                      preview: 968.519.527,76 VND
+                    images:
+                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                        alt: Et temporibus provident qui qui.
+                    videos:
+                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                        title: Aut beatae quas eum id minima.
+                        description: Sed dolorem ut saepe enim. Pariatur et amet provident laboriosam. Dignissimos veritatis dolorem soluta commodi. Soluta excepturi quod veritatis. Accusantium repellendus cupiditate neque eligendi et ut iste. Recusandae non possimus aut reiciendis.
+                        video:
+                          provider: youtube
+                          id: e1811b11-43d6-3c9c-906f-b16ce611bd87
+                          url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
+                    enabled: true
+                    visibility: Catalog
+                    type: Sản phẩm tân trang
+                    specifications:
+                      - key: Khối lượng bản thân
+                        value: 116kg
+                    options:
+                      - id: 1
+                        sku: DK5UDS2WUT_RED_STANDARD
+                        price: 161105278.00
+                        price_preview: 161.105.278,00 VND
+                        images:
+                          - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                            alt: Et temporibus provident qui qui.
+                        color: Đỏ
+                        model_name: Tiêu chuẩn
+                        specifications:
+                          - key: Pariatur nam deleniti sit molestiae fugiat.
+                            value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                        product_id: 3
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    categories:
+                      - id: 1
+                        name: Commodi sit fugiat.
+                        pivot:
+                          product_id: 76
+                          category_id: 1
+                        deleted_at: 11:53:58 21/06/2024
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                type: array
+    404:
+      description: Id không trùng khớp với sản phẩm nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product] 76
+                example: No query results for model [App\Models\Product] 76
+            type: object
