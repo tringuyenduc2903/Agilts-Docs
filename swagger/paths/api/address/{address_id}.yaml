@@ -52,6 +52,17 @@ delete:
             $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
     401:
       $ref: "../../../components/responses/401.yaml"
+    403:
+      description: Không thể xóa địa chỉ mặc định
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                example: Không thể xóa địa chỉ mặc định.
+            type: object
     404:
       description: Id không trùng khớp với địa chỉ nào
       content:
