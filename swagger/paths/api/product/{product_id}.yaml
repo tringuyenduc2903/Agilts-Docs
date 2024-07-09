@@ -53,7 +53,7 @@ get:
                           - image: d100d8f7ac62cc4743d57b6900bb895a.png
                             alt: Et temporibus provident qui qui.
                         color: Đỏ
-                        model_name: Tiêu chuẩn
+                        version: Tiêu chuẩn
                         specifications:
                           - key: Pariatur nam deleniti sit molestiae fugiat.
                             value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
@@ -62,7 +62,7 @@ get:
                         updated_at: 11:53:58 21/06/2024
                     categories:
                       - id: 1
-                        name: Commodi sit fugiat.
+                        name: Xe tay ga
                         pivot:
                           product_id: 76
                           category_id: 1

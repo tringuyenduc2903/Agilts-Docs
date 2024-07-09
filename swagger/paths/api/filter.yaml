@@ -27,46 +27,19 @@ get:
                   - name: color
                     label: Màu sắc
                     data:
-                      Mận: Mận
-                      Tía: Tía
-                      Hồng y: Hồng y
-                      Cẩm quỳ: Cẩm quỳ
-                      Hồng đất: Hồng đất
-                  - name: model_name
+                      Đỏ: Đỏ
+                      Đen: Đen
+                      Trắng: Trắng
+                  - name: version
                     label: Tên mẫu
                     data:
-                      1970: 1970
-                      1971: 1971
-                      1972: 1972
-                      1973: 1973
-                      1974: 1974
-                      1975: 1975
-                      1976: 1976
-                      1977: 1977
-                      1978: 1978
-                      1979: 1979
-                      1980: 1980
-                      1981: 1981
-                      1982: 1982
-                      1983: 1983
-                      1984: 1984
+                      Tiêu chuẩn: Tiêu chuẩn
+                      Thể Thao: Thể Thao
+                      Cao cấp: Cao cấp
                   - name: category
-                    label: Thể loại
+                    label: Danh mục
                     data:
-                      1: Eum nulla adipisci
-                      2: Est accusamus
-                      3: Dicta ut aut iure
-                      4: Repudiandae alias
-                      5: Aperiam nisi hic in
-                      6: Architecto dolore
-                      7: Ad perspiciatis
-                      8: Consequuntur non
-                      9: Quia est laudantium
-                      10: Quo enim dolores
-                      11: Non beatae aliquam
-                      12: Consequatur eos
-                      13: Ad sunt sit dolores
-                      14: Voluptatem illo ut
-                      15: Commodi sit fugiat
+                      1: Xe tay ga
+                      2: Xe số
                 type: array
             type: object
