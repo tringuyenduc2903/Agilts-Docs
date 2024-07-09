@@ -22,7 +22,7 @@ get:
                       raw: 968519527.76
                       preview: 968.519.527,76 VND
                     images:
-                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                      - image: https://localhost:8000/storage//product/d100d8f7ac62cc4743d57b6900bb895a.png
                         alt: Et temporibus provident qui qui.
                     videos:
                       - image: d100d8f7ac62cc4743d57b6900bb895a.png

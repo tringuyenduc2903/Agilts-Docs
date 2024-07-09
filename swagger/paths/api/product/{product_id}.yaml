@@ -28,7 +28,7 @@ get:
                       raw: 968519527.76
                       preview: 968.519.527,76 VND
                     images:
-                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                      - image: https://localhost:8000/storage//product/d100d8f7ac62cc4743d57b6900bb895a.png
                         alt: Et temporibus provident qui qui.
                     videos:
                       - image: d100d8f7ac62cc4743d57b6900bb895a.png
@@ -42,15 +42,15 @@ get:
                     visibility: Catalog
                     type: Sản phẩm tân trang
                     specifications:
-                      - key: Khối lượng bản thân
-                        value: 116kg
+                      - key: Pariatur nam deleniti sit molestiae fugiat.
+                        value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
                     options:
                       - id: 1
                         sku: DK5UDS2WUT_RED_STANDARD
                         price: 161105278.00
                         price_preview: 161.105.278,00 VND
                         images:
-                          - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                          - image: https://localhost:8000/storage//product/d100d8f7ac62cc4743d57b6900bb895a.png
                             alt: Et temporibus provident qui qui.
                         color: Đỏ
                         version: Tiêu chuẩn
