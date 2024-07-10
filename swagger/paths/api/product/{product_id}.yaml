@@ -21,12 +21,6 @@ get:
                   - id: 76
                     name: Sh mode 125 2024
                     description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
-                    min_price:
-                      raw: 161105278.00
-                      preview: 161.105.278,00 VND
-                    max_price:
-                      raw: 968519527.76
-                      preview: 968.519.527,76 VND
                     images:
                       - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
                         alt: Et temporibus provident qui qui.
@@ -40,7 +34,6 @@ get:
                           url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
                     enabled: true
                     visibility: Catalog
-                    type: Sản phẩm tân trang
                     specifications:
                       - key: Pariatur nam deleniti sit molestiae fugiat.
                         value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
@@ -54,6 +47,10 @@ get:
                             alt: Et temporibus provident qui qui.
                         color: Đỏ
                         version: Tiêu chuẩn
+                        status: Còn hàng
+                        type: Sản phẩm tân trang
+                        quantity: 12939
+                        weight: 139
                         specifications:
                           - key: Pariatur nam deleniti sit molestiae fugiat.
                             value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
