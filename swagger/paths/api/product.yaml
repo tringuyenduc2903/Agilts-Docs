@@ -2,6 +2,11 @@ get:
   description: "Lấy danh sách sản phẩm (Chỉ hiển thị sản phẩm enabled: 'true', visibility: 'Catalog/ Catalog và Tìm kiếm' và tối thiểu 1 sản phẩm option có status: 'Còn hàng')"
   tags:
     - Sản phẩm
+  parameters:
+    - name: search
+      in: path
+      description: Từ khoá tìm kiếm sản phẩm
+      example: Sh mode
   responses:
     200:
       description: Lấy danh sách sản phẩm thành công
@@ -37,6 +42,36 @@ get:
                     specifications:
                       - key: Pariatur nam deleniti sit molestiae fugiat.
                         value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                    options:
+                      - id: 1
+                        sku: DK5UDS2WUT_RED_STANDARD
+                        price: 161105278.00
+                        price_preview: 161.105.278,00 VND
+                        images:
+                          - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
+                            alt: Et temporibus provident qui qui.
+                        color: Đỏ
+                        version: Tiêu chuẩn
+                        status: Còn hàng
+                        type: Sản phẩm tân trang
+                        quantity: 12939
+                        weight: 139
+                        specifications:
+                          - key: Pariatur nam deleniti sit molestiae fugiat.
+                            value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                        product_id: 3
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    categories:
+                      - id: 1
+                        name: Xe tay ga
+                        pivot:
+                          product_id: 76
+                          category_id: 1
+                        deleted_at: 11:53:58 21/06/2024
+                        created_at: 11:53:58 21/06/2024
+                        updated_at:
+                          11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
