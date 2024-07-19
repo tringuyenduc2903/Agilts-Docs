@@ -21,7 +21,7 @@ get:
                 type: number
               name:
                 title: Tên sản phẩm
-                example: Sh mode 125 2024
+                example: SH 350i
                 type: string
               description:
                 title: Mô tả sản phẩm
@@ -66,13 +66,13 @@ get:
                 title: Danh sách sản phẩm tuỳ chọn
                 example:
                   - id: 1
-                    sku: DK5UDS2WUT_RED_STANDARD
+                    sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
                     price: 161105278.00
                     price_preview: 161.105.278,00 VND
                     images:
                       - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
                         alt: Et temporibus provident qui qui.
-                    color: Đỏ
+                    color: Trắng Đen
                     version: Tiêu chuẩn
                     status: Còn hàng
                     type: Sản phẩm tân trang

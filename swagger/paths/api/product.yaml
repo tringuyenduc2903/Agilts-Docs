@@ -16,7 +16,7 @@ get:
     - name: search
       in: path
       description: Từ khoá tìm kiếm sản phẩm
-      example: Sh mode
+      example: SH
   responses:
     200:
       description: Lấy danh sách sản phẩm thành công
@@ -28,7 +28,7 @@ get:
                 title: Dữ liệu
                 example:
                   - id: 76
-                    name: Sh mode
+                    name: SH 350i
                     description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
                     reviews_avg_rate: 3.0400
                     options_min_price:
@@ -55,13 +55,13 @@ get:
                         value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
                     options:
                       - id: 1
-                        sku: DK5UDS2WUT_RED_STANDARD
+                        sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
                         price: 161105278.00
                         price_preview: 161.105.278,00 VND
                         images:
                           - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
                             alt: Et temporibus provident qui qui.
-                        color: Đỏ
+                        color: Trắng Đen
                         version: Tiêu chuẩn
                         status: Còn hàng
                         type: Sản phẩm tân trang

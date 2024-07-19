@@ -1,0 +1,85 @@
+get:
+  description: "Lấy danh sách đánh giá của sản phẩm: Sắp xếp theo Đánh giá mới nhất. Lấy thêm các trường bộ lọc tại [API Filter](/#/Đánh%20giá/get_api_filter_review__product_id_)"
+  tags:
+    - Đánh giá
+  parameters:
+    - name: product_id
+      in: path
+      description: Id sản phẩm
+      example: 76
+      required: true
+    - $ref: "../../../components/parameters/page.yaml"
+    - $ref: "../../../components/parameters/perPage.yaml"
+  responses:
+    200:
+      description: Lấy danh sách đánh giá của sản phẩm thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - id: 1
+                    content: Mollitia eum quo porro labore. Vitae nihil odit ut aut et earum. Voluptatum molestiae officia et eveniet quia sit natus. Incidunt minima fugiat sed nulla. Adipisci qui aperiam minima asperiores aliquid pariatur.
+                    rate: 2
+                    images:
+                      - http://localhost:8000/storage/review/4aGDXHdy5E8wKcEQif0X.png
+                      - http://localhost:8000/storage/review/xVWcnTXB3PlylzRmZuSB.png
+                    parent_preview:
+                      name: SH 350i
+                      sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
+                      color: Trắng Đen
+                    reviewable_preview:
+                      name: Nguyễn Văn Hải
+                    laravel_through_key: 1
+                    response:
+                      id: 421
+                      content: Dolores omnis tenetur eos minus vel. Consequuntur dolorum ut et ullam natus vel molestiae eos. Ipsum ut fugit maxime suscipit. Perferendis quo voluptatem adipisci id.
+                      images:
+                        - http://localhost:8000/storage/review/4aGDXHdy5E8wKcEQif0X.png
+                        - http://localhost:8000/storage/review/xVWcnTXB3PlylzRmZuSB.png
+                      reviewable_preview:
+                        name: Admin
+                      created_at: 21:49:56 18/07/2024
+                      updated_at: 21:49:56 18/07/2024
+                    created_at: 21:49:55 18/07/2024
+                    updated_at: 21:49:55 18/07/2024
+                type: array
+              total_pages:
+                title: Tổng trang
+                example: 7
+                type: number
+              from:
+                title: Vị trí dữ liệu đầu tiên của trang
+                example: 76
+                type: number
+              to:
+                title: Vị trí dữ liệu cuối cùng của trang
+                example: 90
+                type: number
+              per_page:
+                title: Tổng dữ liệu mỗi trang
+                example: 15
+                type: number
+              current_page:
+                title: Vị trí trang hiện tại
+                example: 6
+                type: number
+              total:
+                title: Tổng dữ liệu
+                example: 100
+                type: number
+            type: object
+    404:
+      description: Id không trùng khớp với sản phẩm nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product] 76
+                example: No query results for model [App\Models\Product] 76
+            type: object
