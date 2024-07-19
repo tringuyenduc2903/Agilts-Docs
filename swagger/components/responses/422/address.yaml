@@ -10,7 +10,7 @@ content:
         errors:
           properties:
             default:
-              title: Đặt làm mặc định
+              title: Mặc định
               example:
                 - Trường đặt làm mặc định là bắt buộc.
               type: array

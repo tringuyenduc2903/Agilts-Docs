@@ -3,7 +3,7 @@ content:
     schema:
       properties:
         default:
-          title: Đặt làm mặc định
+          title: Mặc định
           example: true
           type: bool
         type:
@@ -13,22 +13,27 @@ content:
         country:
           title: Quốc gia
           example: Việt Nam
+          maxLength: 100
           type: string
         province:
           title: Tỉnh/thành phố
           example: Hà Nội
+          maxLength: 100
           type: string
         district:
           title: Quận/huyện/thị xã
           example: Hai Bà Trưng
+          maxLength: 100
           type: string
         ward:
           title: Xã/phường/thị trấn
           example: Phan Chu Trinh
+          maxLength: 100
           type: string
         address_detail:
           title: Địa chỉ chi tiết
           example: 25 Trần Khánh Dư
+          maxLength: 255
           type: string
       type: object
       required:

@@ -11,11 +11,11 @@ post:
         schema:
           properties:
             email:
-              title: Email khách hàng
+              title: Email
               example: nguyenvanhai@agilts.com
               type: string
             password:
-              title: Mật khẩu khách hàng
+              title: Mật khẩu
               example: NguyenVanHai825!
               type: string
             remember:
@@ -57,12 +57,12 @@ post:
               errors:
                 properties:
                   email:
-                    title: Email khách hàng
+                    title: Email
                     example:
                       - Trường email là bắt buộc.
                     type: array
                   password:
-                    title: Mật khẩu khách hàng
+                    title: Mật khẩu
                     example:
                       - Trường mật khẩu là bắt buộc.
                     type: array

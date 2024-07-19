@@ -1,0 +1,30 @@
+content:
+  application/json:
+    schema:
+      properties:
+        content:
+          title: Nội dung
+          example: Mollitia eum quo porro labore. Vitae nihil odit ut aut et earum. Voluptatum molestiae officia et eveniet quia sit natus. Incidunt minima fugiat sed nulla. Adipisci qui aperiam minima asperiores aliquid pariatur.
+          type: string
+        rate:
+          title: Đánh giá
+          example: 2
+          maximum: 5
+          minimum: 1
+          type: number
+        version:
+          title: Phiên bản (product option id)
+          example: 25
+          type: number
+        images:
+          title: Danh sách ảnh
+          example:
+            - 4aGDXHdy5E8wKcEQif0X.png
+            - xVWcnTXB3PlylzRmZuSB.png
+          maximum: 5
+          type: array
+      type: object
+      required:
+        - content
+        - rate
+        - version

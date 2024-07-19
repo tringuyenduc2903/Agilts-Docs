@@ -11,17 +11,17 @@ post:
         schema:
           properties:
             name:
-              title: Tên khách hàng
+              title: Tên
               maxLength: 50
               example: Nguyễn Văn Hải
               type: string
             email:
-              title: Email khách hàng
+              title: Email
               maxLength: 100
               example: nguyenvanhai@agilts.com
               type: string
             password:
-              title: Mật khẩu khách hàng
+              title: Mật khẩu
               description: Mật khẩu phải chứa chữ thường, chữ in hoa, ký tự đặc biệt và số. Ngoài ra, mật khẩu chưa bị rò rỉ trong các cuộc tấn công đã được công khai
               maxLength: 20
               minLength: 8
@@ -64,17 +64,17 @@ post:
               errors:
                 properties:
                   name:
-                    title: Tên khách hàng
+                    title: Tên
                     example:
                       - Trường tên là bắt buộc.
                     type: array
                   email:
-                    title: Email khách hàng
+                    title: Email
                     example:
                       - Trường email là bắt buộc.
                     type: array
                   password:
-                    title: Mật khẩu khách hàng
+                    title: Mật khẩu
                     example:
                       - Trường mật khẩu là bắt buộc.
                     type: array

@@ -3,7 +3,7 @@ content:
     schema:
       properties:
         default:
-          title: Đặt làm mặc định
+          title: Mặc định
           example: true
           type: bool
         type:
@@ -13,10 +13,12 @@ content:
         number:
           title: Số
           example: 012345678901
+          maxLength: 255
           type: string
         issued_name:
           title: Nơi cấp
           example: Cục Cảnh sát đăng ký quản lý cư trú và dữ liệu Quốc gia về dân cư
+          maxLength: 255
           type: string
         issuance_date:
           title: Ngày cấp
