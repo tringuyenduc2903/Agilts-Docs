@@ -10,7 +10,7 @@ get:
       required: true
   responses:
     200:
-      description: Lấy danh sách sản phẩm thành công
+      description: Lấy sản phẩm thành công
       content:
         application/json:
           schema:
@@ -18,59 +18,59 @@ get:
               data:
                 title: Dữ liệu
                 example:
-                  - id: 76
-                    name: Sh mode 125 2024
-                    description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
-                    reviews_avg_rate: 3.0400
-                    images:
-                      - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
-                        alt: Et temporibus provident qui qui.
-                    videos:
-                      - image: d100d8f7ac62cc4743d57b6900bb895a.png
-                        title: Aut beatae quas eum id minima.
-                        description: Sed dolorem ut saepe enim. Pariatur et amet provident laboriosam. Dignissimos veritatis dolorem soluta commodi. Soluta excepturi quod veritatis. Accusantium repellendus cupiditate neque eligendi et ut iste. Recusandae non possimus aut reiciendis.
-                        video:
-                          provider: youtube
-                          id: e1811b11-43d6-3c9c-906f-b16ce611bd87
-                          url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
-                    enabled: true
-                    visibility: Catalog
-                    specifications:
-                      - key: Pariatur nam deleniti sit molestiae fugiat.
-                        value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
-                    options:
-                      - id: 1
-                        sku: DK5UDS2WUT_RED_STANDARD
-                        price: 161105278.00
-                        price_preview: 161.105.278,00 VND
-                        images:
-                          - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
-                            alt: Et temporibus provident qui qui.
-                        color: Đỏ
-                        version: Tiêu chuẩn
-                        status: Còn hàng
-                        type: Sản phẩm tân trang
-                        quantity: 12939
-                        weight: 139
-                        specifications:
-                          - key: Pariatur nam deleniti sit molestiae fugiat.
-                            value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
-                        product_id: 3
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
-                    categories:
-                      - id: 1
-                        name: Xe tay ga
-                        pivot:
-                          product_id: 76
-                          category_id: 1
-                        deleted_at: 11:53:58 21/06/2024
-                        created_at: 11:53:58 21/06/2024
-                        updated_at: 11:53:58 21/06/2024
-                    deleted_at: 11:53:58 21/06/2024
-                    created_at: 11:53:58 21/06/2024
-                    updated_at: 11:53:58 21/06/2024
-                type: array
+                  id: 76
+                  name: Sh mode 125 2024
+                  description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
+                  reviews_avg_rate: 3.0400
+                  images:
+                    - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
+                      alt: Et temporibus provident qui qui.
+                  videos:
+                    - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                      title: Aut beatae quas eum id minima.
+                      description: Sed dolorem ut saepe enim. Pariatur et amet provident laboriosam. Dignissimos veritatis dolorem soluta commodi. Soluta excepturi quod veritatis. Accusantium repellendus cupiditate neque eligendi et ut iste. Recusandae non possimus aut reiciendis.
+                      video:
+                        provider: youtube
+                        id: e1811b11-43d6-3c9c-906f-b16ce611bd87
+                        url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
+                  enabled: true
+                  visibility: Catalog
+                  specifications:
+                    - key: Pariatur nam deleniti sit molestiae fugiat.
+                      value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                  options:
+                    - id: 1
+                      sku: DK5UDS2WUT_RED_STANDARD
+                      price: 161105278.00
+                      price_preview: 161.105.278,00 VND
+                      images:
+                        - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
+                          alt: Et temporibus provident qui qui.
+                      color: Đỏ
+                      version: Tiêu chuẩn
+                      status: Còn hàng
+                      type: Sản phẩm tân trang
+                      quantity: 12939
+                      weight: 139
+                      specifications:
+                        - key: Pariatur nam deleniti sit molestiae fugiat.
+                          value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                      product_id: 3
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
+                  categories:
+                    - id: 1
+                      name: Xe tay ga
+                      pivot:
+                        product_id: 76
+                        category_id: 1
+                      deleted_at: 11:53:58 21/06/2024
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
+                  deleted_at: 11:53:58 21/06/2024
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
+                type: object
     404:
       description: Id không trùng khớp với sản phẩm nào
       content:
