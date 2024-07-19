@@ -1,0 +1,56 @@
+get:
+  description: "Lấy danh sách đánh giá của khách hàng: Sắp xếp theo Đánh giá mới nhất"
+  tags:
+    - Đánh giá
+  parameters:
+    - $ref: "../../components/parameters/page.yaml"
+    - $ref: "../../components/parameters/perPage.yaml"
+  responses:
+    200:
+      description: Lấy danh sách đánh giá của khách hàng thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - id: 261
+                    content: Mollitia eum quo porro labore. Vitae nihil odit ut aut et earum. Voluptatum molestiae officia et eveniet quia sit natus. Incidunt minima fugiat sed nulla. Adipisci qui aperiam minima asperiores aliquid pariatur.
+                    rate: 2
+                    reviewable_preview:
+                      name: Nguyễn Văn Hải
+                    parent_preview:
+                      name: SH 350i
+                      sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
+                      color: Trắng Đen
+                    created_at: 11:49:56 18/07/2024
+                    updated_at: 11:49:56 18/07/2024
+                type: array
+              total_pages:
+                title: Tổng trang
+                example: 7
+                type: number
+              from:
+                title: Vị trí dữ liệu đầu tiên của trang
+                example: 76
+                type: number
+              to:
+                title: Vị trí dữ liệu cuối cùng của trang
+                example: 90
+                type: number
+              per_page:
+                title: Tổng dữ liệu mỗi trang
+                example: 15
+                type: number
+              current_page:
+                title: Vị trí trang hiện tại
+                example: 6
+                type: number
+              total:
+                title: Tổng dữ liệu
+                example: 100
+                type: number
+            type: object
+    401:
+      $ref: "../../components/responses/401.yaml"

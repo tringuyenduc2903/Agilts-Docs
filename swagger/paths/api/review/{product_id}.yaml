@@ -20,7 +20,7 @@ get:
               data:
                 title: Dữ liệu
                 example:
-                  - id: 1
+                  - id: 261
                     content: Mollitia eum quo porro labore. Vitae nihil odit ut aut et earum. Voluptatum molestiae officia et eveniet quia sit natus. Incidunt minima fugiat sed nulla. Adipisci qui aperiam minima asperiores aliquid pariatur.
                     rate: 2
                     images:
@@ -32,7 +32,7 @@ get:
                       color: Trắng Đen
                     reviewable_preview:
                       name: Nguyễn Văn Hải
-                    laravel_through_key: 1
+                    laravel_through_key: 76
                     response:
                       id: 421
                       content: Dolores omnis tenetur eos minus vel. Consequuntur dolorum ut et ullam natus vel molestiae eos. Ipsum ut fugit maxime suscipit. Perferendis quo voluptatem adipisci id.
