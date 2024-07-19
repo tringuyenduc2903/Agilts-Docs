@@ -1,0 +1,35 @@
+put:
+  description: Đổi thông tin đánh giá
+  tags:
+    - Đánh giá
+  parameters:
+    - name: review_id
+      in: path
+      description: Id đánh giá
+      example: 1
+      required: true
+  requestBody:
+    $ref: '../../../components/requestBodies/review.yaml'
+  responses:
+    200:
+      description: Đổi thông tin đánh giá thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      description: Id không trùng khớp với đánh giá nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\ProductReview] 1
+                example: No query results for model [App\Models\ProductReview] 1
+            type: object
+    422:
+      $ref: "../../../components/responses/422/review.yaml"
