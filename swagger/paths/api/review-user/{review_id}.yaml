@@ -33,3 +33,34 @@ put:
             type: object
     422:
       $ref: "../../../components/responses/422/review.yaml"
+delete:
+  description: Xoá đánh giá cũ
+  tags:
+    - Đánh giá
+  parameters:
+    - name: address_id
+      in: path
+      description: Id đánh giá
+      example: 1
+      required: true
+  responses:
+    200:
+      description: Xoá đánh giá cũ thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      description: Id không trùng khớp với đánh giá nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\ProductReview] 1
+                example: No query results for model [App\Models\ProductReview] 1
+            type: object
