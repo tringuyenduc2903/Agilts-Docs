@@ -21,6 +21,7 @@ get:
                   - id: 76
                     name: Sh mode 125 2024
                     description: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
+                    reviews_avg_rate: 3.0400
                     images:
                       - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
                         alt: Et temporibus provident qui qui.

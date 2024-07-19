@@ -1,0 +1,33 @@
+get:
+  description: "Lấy danh sách bộ lọc đánh giá của sản phẩm (Tiêu cực: Từ 1 -> 3 sao, Tích cực: Từ 4 -> 5 sao)"
+  tags:
+    - Đánh giá
+  parameters:
+    - name: product_id
+      in: path
+      description: Id sản phẩm
+      example: 76
+      required: true
+  responses:
+    200:
+      description: Lấy danh sách bộ lọc đánh giá của sản phẩm thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - name: rate
+                    label: Đánh giá
+                    data:
+                      1: 1 Sao (4)
+                      2: 2 Sao (6)
+                      3: 3 Sao (5)
+                      4: 4 Sao (5)
+                      5: 5 Sao (5)
+                      negative: Tiêu cực (15)
+                      positive: Tích cực (10)
+                      with_image: Có hình ảnh (25)
+                type: array
+            type: object
