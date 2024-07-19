@@ -1,5 +1,5 @@
 get:
-  description: "Lấy danh sách sản phẩm: Chỉ hiển thị sản phẩm enabled: 'true', visibility: 'Catalog/ Catalog và Tìm kiếm' khi không có param search và visibility: 'Tìm kiếm/ Catalog và Tìm kiếm' khi có param search và tối thiểu 1 sản phẩm option có status: 'Còn hàng'). Lấy thêm các trường bộ lọc tại [API Filter](/#/Sản%20phẩm/get_api_filter_product)"
+  description: "Lấy danh sách sản phẩm: Chỉ hiển thị sản phẩm enabled: 'true', visibility: 'Catalog/ Catalog và Tìm kiếm' khi không có param search và visibility: 'Tìm kiếm/ Catalog và Tìm kiếm' khi có param search và tối thiểu 1 sản phẩm option có status: 'Còn hàng'. Lấy thêm các trường bộ lọc tại [API Filter](/#/Sản%20phẩm/get_api_filter_product)"
   tags:
     - Sản phẩm
   parameters:
