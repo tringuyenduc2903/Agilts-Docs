@@ -76,6 +76,8 @@ paths:
     $ref: "./paths/api/filter-review/{product_id}.yaml"
   /api/review/{product_id}:
     $ref: "./paths/api/review/{product_id}.yaml"
+  /api/review-image:
+    $ref: "./paths/api/review-image.yaml"
   /api/review-user:
     $ref: "./paths/api/review-user.yaml"
   /api/review-user/{review_id}:

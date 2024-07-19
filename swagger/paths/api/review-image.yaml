@@ -1,0 +1,48 @@
+post:
+  description: Tải lên ảnh đánh giá mới
+  tags:
+    - Đánh giá
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          properties:
+            image:
+              title: Hình ảnh
+              type: string
+              format: binary
+              maxLength: 2048
+          type: object
+          required:
+            - image
+  responses:
+    201:
+      description: Tải lên ảnh đánh giá mới thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              file_name:
+                description: Tên tệp
+                example: "1_2024_07_19_13_08_26_1wdlyyjnhiflpb0.png"
+                type: string
+    401:
+      $ref: "../../components/responses/401.yaml"
+    422:
+      description: Dữ liệu khách hàng đã nhập không được chấp nhận
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                example: Trường ảnh là bắt buộc.
+              errors:
+                properties:
+                  image:
+                    title: Hình ảnh
+                    example:
+                      - Trường ảnh là bắt buộc.
+                    type: array
+            type: object
