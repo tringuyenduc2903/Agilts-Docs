@@ -20,17 +20,7 @@ put:
     401:
       $ref: "../../../components/responses/401.yaml"
     404:
-      description: Id không trùng khớp với hồ sơ nào
-      content:
-        application/json:
-          schema:
-            properties:
-              message:
-                title: Thông báo ngắn
-                type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Identification] 1
-                example: No query results for model [App\Models\Identification] 1
-            type: object
+      $ref: "../../../components/responses/404/identification.yaml"
     422:
       $ref: "../../../components/responses/422/identification.yaml"
 delete:
@@ -64,14 +54,4 @@ delete:
                 example: Không thể xóa hồ sơ mặc định.
             type: object
     404:
-      description: Id không trùng khớp với hồ sơ nào
-      content:
-        application/json:
-          schema:
-            properties:
-              message:
-                title: Thông báo ngắn
-                type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Identification] 1
-                example: No query results for model [App\Models\Identification] 1
-            type: object
+      $ref: "../../../components/responses/404/identification.yaml"

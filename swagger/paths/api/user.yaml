@@ -10,28 +10,28 @@ get:
           schema:
             properties:
               id:
-                title: Id khách hàng
+                title: Id
                 example: 1
                 type: number
               name:
-                title: Tên khách hàng
+                title: Tên
                 example: Nguyễn Văn Hải
                 type: string
               birthday:
-                title: Ngày sinh khách hàng
+                title: Ngày sinh
                 example: 29/03/2003
                 type: string
               gender:
-                title: Giới tính khách hàng
+                title: Giới tính
                 example: 0
                 type: number
               gender_preview:
-                title: Giới tính khách hàng
+                title: Giới tính
                 description: Hiển thị dưới dạng văn bản
                 example: Nam
                 type: string
               email:
-                title: Email khách hàng
+                title: Email
                 example: nguyenvanhai@agilts.com
                 type: string
               email_verified_at:
@@ -39,7 +39,7 @@ get:
                 example: 11:53:58 21/06/2024
                 type: string
               phone_number:
-                title: Số điện thoại khách hàng
+                title: Số điện thoại
                 example: +84982213854
                 type: string
               phone_number_verified_at:

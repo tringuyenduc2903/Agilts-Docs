@@ -20,17 +20,7 @@ put:
     401:
       $ref: "../../../components/responses/401.yaml"
     404:
-      description: Id không trùng khớp với đánh giá nào
-      content:
-        application/json:
-          schema:
-            properties:
-              message:
-                title: Thông báo ngắn
-                type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\Models\ProductReview] 1
-                example: No query results for model [App\Models\ProductReview] 1
-            type: object
+      $ref: "../../../components/responses/404/review.yaml"
     422:
       $ref: "../../../components/responses/422/review.yaml"
 delete:
@@ -53,14 +43,4 @@ delete:
     401:
       $ref: "../../../components/responses/401.yaml"
     404:
-      description: Id không trùng khớp với đánh giá nào
-      content:
-        application/json:
-          schema:
-            properties:
-              message:
-                title: Thông báo ngắn
-                type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\Models\ProductReview] 1
-                example: No query results for model [App\Models\ProductReview] 1
-            type: object
+      $ref: "../../../components/responses/404/review.yaml"
