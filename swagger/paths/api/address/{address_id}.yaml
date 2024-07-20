@@ -3,11 +3,7 @@ put:
   tags:
     - Địa chỉ
   parameters:
-    - name: address_id
-      in: path
-      description: Id địa chỉ
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/address.yaml"
   requestBody:
     $ref: '../../../components/requestBodies/address.yaml'
   responses:
@@ -28,11 +24,7 @@ delete:
   tags:
     - Địa chỉ
   parameters:
-    - name: address_id
-      in: path
-      description: Id địa chỉ
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/address.yaml"
   responses:
     200:
       description: Xoá địa chỉ cũ thành công

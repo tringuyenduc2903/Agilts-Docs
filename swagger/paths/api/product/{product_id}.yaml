@@ -3,11 +3,7 @@ get:
   tags:
     - Sản phẩm
   parameters:
-    - name: product_id
-      in: path
-      description: Id sản phẩm
-      example: 76
-      required: true
+    - $ref: "../../../components/parameters/product.yaml"
   responses:
     200:
       description: Lấy sản phẩm thành công
@@ -16,29 +12,29 @@ get:
           schema:
             properties:
               id:
-                title: Id sản phẩm
+                title: Id
                 example: 76
                 type: number
               name:
-                title: Tên sản phẩm
+                title: Tên
                 example: SH 350i
                 type: string
               description:
-                title: Mô tả sản phẩm
+                title: Mô tả
                 example: Thuộc phân khúc xe ga cao cấp và thừa hưởng thiết kế sang trọng nổi tiếng của dòng xe SH, Sh mode luôn được đánh giá cao nhờ kiểu dáng sang trọng, tinh tế tới từng đường nét, động cơ tiên tiến và các tiện nghi cao cấp xứng tầm phong cách sống thời thượng, đẳng cấp.
                 type: string
               reviews_avg_rate:
-                title: Đánh giá trung bình sản phẩm
+                title: Đánh giá trung bình
                 example: 3.0400
                 type: number
               images:
-                title: Danh sách ảnh sản phẩm
+                title: Danh sách ảnh
                 example:
                   - image: https://localhost:8000/storage/product/d100d8f7ac62cc4743d57b6900bb895a.png
                     alt: Et temporibus provident qui qui.
                 type: array
               videos:
-                title: Danh sách video sản phẩm
+                title: Danh sách video
                 example:
                   - image: d100d8f7ac62cc4743d57b6900bb895a.png
                     title: Aut beatae quas eum id minima.
@@ -49,21 +45,21 @@ get:
                       url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
                 type: array
               enabled:
-                title: Trạng thái bật/tắt sản phẩm
+                title: Trạng thái bật/tắt
                 example: true
                 type: boolean
               visibility:
-                title: Vị trí hiển thị sản phẩm
+                title: Vị trí hiển thị
                 example: Catalog
                 type: string
               specifications:
-                title: Thông số kỹ thuật sản phẩm
+                title: Thông số kỹ thuật
                 example:
                   - key: Pariatur nam deleniti sit molestiae fugiat.
                     value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
                 type: array
               options:
-                title: Danh sách sản phẩm tuỳ chọn
+                title: Danh sách tuỳ chọn
                 example:
                   - id: 1
                     sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
@@ -86,7 +82,7 @@ get:
                     updated_at: 11:53:58 21/06/2024
                 type: array
               categories:
-                title: Danh sách danh mục sản phẩm
+                title: Danh sách danh mục
                 example:
                   - id: 1
                     name: Xe tay ga
@@ -98,15 +94,15 @@ get:
                     updated_at: 11:53:58 21/06/2024
                 type: array
               deleted_at:
-                title: Thời gian xoá sản phẩm
+                title: Thời gian xoá
                 example: 11:53:58 21/06/2024
                 type: string
               created_at:
-                title: Thời gian tạo sản phẩm
+                title: Thời gian tạo
                 example: 11:53:58 21/06/2024
                 type: string
               updated_at:
-                title: Thời gian cập nhật thông tin sản phẩm
+                title: Thời gian cập nhật thông tin
                 example: 11:53:58 21/06/2024
                 type: string
     404:

@@ -55,15 +55,15 @@ get:
                 example: 11:53:58 21/06/2024
                 type: string
               deleted_at:
-                title: Thời gian xoá tài khoản
+                title: Thời gian xoá
                 example: 11:53:58 21/06/2024
                 type: string
               created_at:
-                title: Thời gian tạo tài khoản
+                title: Thời gian tạo
                 example: 11:53:58 21/06/2024
                 type: string
               updated_at:
-                title: Thời gian cập nhật thông tin tài khoản
+                title: Thời gian cập nhật thông tin
                 example: 11:53:58 21/06/2024
                 type: string
             type: object

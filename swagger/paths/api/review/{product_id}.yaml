@@ -3,13 +3,7 @@ get:
   tags:
     - Đánh giá
   parameters:
-    - name: product_id
-      in: path
-      description: Id sản phẩm
-      example: 76
-      required: true
-    - $ref: "../../../components/parameters/page.yaml"
-    - $ref: "../../../components/parameters/perPage.yaml"
+    - $ref: "../../../components/parameters/product.yaml"
   responses:
     200:
       description: Lấy danh sách đánh giá của sản phẩm thành công
@@ -36,15 +30,15 @@ get:
                     response:
                       id: 421
                       content: Dolores omnis tenetur eos minus vel. Consequuntur dolorum ut et ullam natus vel molestiae eos. Ipsum ut fugit maxime suscipit. Perferendis quo voluptatem adipisci id.
+                      rate:
                       images:
-                        - http://localhost:8000/storage/review/4aGDXHdy5E8wKcEQif0X.png
-                        - http://localhost:8000/storage/review/xVWcnTXB3PlylzRmZuSB.png
+                        -
                       reviewable_preview:
                         name: Admin
-                      created_at: 21:49:56 18/07/2024
-                      updated_at: 21:49:56 18/07/2024
-                    created_at: 21:49:55 18/07/2024
-                    updated_at: 21:49:55 18/07/2024
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
                 type: array
               total_pages:
                 title: Tổng trang

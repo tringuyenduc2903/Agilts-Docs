@@ -3,11 +3,7 @@ put:
   tags:
     - Hồ sơ
   parameters:
-    - name: identification_id
-      in: path
-      description: Id hồ sơ
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/identification.yaml"
   requestBody:
     $ref: "../../../components/requestBodies/identification.yaml"
   responses:
@@ -28,11 +24,7 @@ delete:
   tags:
     - Hồ sơ
   parameters:
-    - name: identification_id
-      in: path
-      description: Id hồ sơ
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/identification.yaml"
   responses:
     200:
       description: Xoá hồ sơ cũ thành công

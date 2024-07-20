@@ -1,13 +1,74 @@
+get:
+  description: Lấy đánh giá
+  tags:
+    - Đánh giá
+  parameters:
+    - $ref: "../../../components/parameters/review.yaml"
+  responses:
+    200:
+      description: Lấy đánh giá thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                title: Id
+                example: 25
+                type: number
+              content:
+                title: Nội dung
+                example: Expedita voluptatem quod impedit omnis officia. Sequi et omnis iure cum. Modi et unde et voluptatem odio sint nisi. Iste quo et saepe autem fugiat. Ab deserunt et ipsa assumenda.
+                type: string
+              rate:
+                title: Đánh giá
+                example: 5
+                type: number
+              images:
+                title: Danh sách ảnh
+                example:
+                  -
+                type: array
+              reviewable_preview:
+                title: Người tạo
+                example:
+                  name: Đào Thị Linh
+                type: object
+              parent_preview:
+                title: Sản phẩm
+                example:
+                  name: SH 350i
+                  sku: SH_350I_XÁM_ĐEN_THỂ_THAO_1OEGIOTSYTX0DCEE8GITRF
+                  color: Xám Đen
+                type: object
+              response:
+                title: Phản hồi từ nhà bán hàng
+                example:
+                  id: 865
+                  content: Occaecati recusandae tempore minus facilis. Qui nobis commodi et aut eum quos. Quidem quia sunt quis nobis. Quisquam sunt non consequatur nisi repellendus nam.
+                  rate: null
+                  images:
+                    -
+                  reviewable_preview:
+                    name: Admin
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
+                type: object
+              created_at:
+                title: Thời gian tạo
+                example: 11:53:58 21/06/2024
+                type: string
+              updated_at:
+                title: Thời gian cập nhật thông tin
+                example: 11:53:58 21/06/2024
+                type: string
+    404:
+      $ref: "../../../components/responses/404/product.yaml"
 put:
   description: Đổi thông tin đánh giá
   tags:
     - Đánh giá
   parameters:
-    - name: review_id
-      in: path
-      description: Id đánh giá
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/review.yaml"
   requestBody:
     $ref: '../../../components/requestBodies/review.yaml'
   responses:
@@ -28,11 +89,7 @@ delete:
   tags:
     - Đánh giá
   parameters:
-    - name: address_id
-      in: path
-      description: Id đánh giá
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/review.yaml"
   responses:
     200:
       description: Xoá đánh giá cũ thành công
