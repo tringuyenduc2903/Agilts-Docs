@@ -21,7 +21,9 @@ get:
                     reviewable_preview:
                       name: Nguyễn Văn Hải
                     parent_preview:
+                      id: 2
                       name: SH 350i
+                      option_id: 11
                       sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
                       color: Trắng Đen
                     created_at: 11:49:56 18/07/2024

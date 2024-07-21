@@ -14,7 +14,7 @@ content:
           type: number
         version:
           title: Phiên bản (product option id)
-          example: 25
+          example: 11
           type: number
         images:
           title: Danh sách ảnh

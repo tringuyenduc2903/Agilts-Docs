@@ -69,3 +69,46 @@ get:
             type: array
     401:
       $ref: "../../components/responses/401.yaml"
+post:
+  description: Thêm sản phẩm mới vào giỏ hàng
+  tags:
+    - Giỏ hàng
+  requestBody:
+    content:
+      application/json:
+        schema:
+          properties:
+            version:
+              title: Phiên bản(product option id)
+              example: 11
+              type: number
+          type: object
+          required:
+            - version
+  responses:
+    201:
+      description: Thêm sản phẩm mới vào giỏ hàng thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../components/responses/401.yaml"
+    422:
+      description: Dữ liệu khách hàng đã nhập không được chấp nhận
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                example: Trường phiên bản là bắt buộc.
+              errors:
+                properties:
+                  version:
+                    title: Phiên bản
+                    example:
+                      - Trường phiên bản là bắt buộc.
+                    type: array
+            type: object

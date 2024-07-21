@@ -13,20 +13,20 @@ get:
             properties:
               id:
                 title: Id
-                example: 25
+                example: 261
                 type: number
               content:
                 title: Nội dung
-                example: Expedita voluptatem quod impedit omnis officia. Sequi et omnis iure cum. Modi et unde et voluptatem odio sint nisi. Iste quo et saepe autem fugiat. Ab deserunt et ipsa assumenda.
+                example: Mollitia eum quo porro labore. Vitae nihil odit ut aut et earum. Voluptatum molestiae officia et eveniet quia sit natus. Incidunt minima fugiat sed nulla. Adipisci qui aperiam minima asperiores aliquid pariatur.
                 type: string
               rate:
                 title: Đánh giá
-                example: 5
+                example: 2
                 type: number
               images:
                 title: Danh sách ảnh
                 example:
-                  -
+                  - http://localhost:8000/storage/review/4aGDXHdy5E8wKcEQif0X.png
                 type: array
               reviewable_preview:
                 title: Người tạo
@@ -36,9 +36,11 @@ get:
               parent_preview:
                 title: Sản phẩm
                 example:
-                  name: SH 350i
-                  sku: SH_350I_XÁM_ĐEN_THỂ_THAO_1OEGIOTSYTX0DCEE8GITRF
-                  color: Xám Đen
+                  id: 2
+                  name: SH 160i/125i
+                  option_id: 11
+                  sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
+                  color: Đỏ Đen
                 type: object
               response:
                 title: Phản hồi từ nhà bán hàng

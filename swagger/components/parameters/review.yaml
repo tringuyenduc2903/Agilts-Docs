@@ -1,5 +1,5 @@
 name: review_id
 in: path
 description: Id đánh giá
-example: 1
+example: 261
 required: true
