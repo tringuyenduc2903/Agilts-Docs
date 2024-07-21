@@ -1,5 +1,5 @@
 name: product_id
 in: path
 description: Id sản phẩm
-example: 76
+example: 2
 required: true

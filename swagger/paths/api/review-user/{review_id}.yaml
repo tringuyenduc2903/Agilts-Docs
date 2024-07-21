@@ -61,6 +61,8 @@ get:
                 title: Thời gian cập nhật thông tin
                 example: 11:53:58 21/06/2024
                 type: string
+    401:
+      $ref: "../../../components/responses/401.yaml"
     404:
       $ref: "../../../components/responses/404/product.yaml"
 put:
