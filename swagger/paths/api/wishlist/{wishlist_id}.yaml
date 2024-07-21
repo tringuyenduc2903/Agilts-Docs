@@ -1,0 +1,31 @@
+delete:
+  description: Xoá sản phẩm cũ khỏi danh sách yêu thích
+  tags:
+    - Danh sách yêu thích
+  parameters:
+    - name: cart_id
+      in: path
+      description: Id danh sách yêu thích
+      example: 1
+      required: true
+  responses:
+    200:
+      description: Xoá sản phẩm cũ khỏi danh sách yêu thích thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      description: Id không trùng khớp với danh sách yêu thích nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\ProductList] 1
+                example: No query results for model [App\Models\ProductList] 1
+            type: object

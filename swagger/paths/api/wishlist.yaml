@@ -1,10 +1,10 @@
 get:
-  description: Lấy danh sách sản phẩm trong giỏ hàng
+  description: Lấy danh sách sản phẩm trong danh sách yêu thích
   tags:
-    - Giỏ hàng
+    - Danh sách yêu thích
   responses:
     200:
-      description: Lấy danh sách sản phẩm trong giỏ hàng thành công
+      description: Lấy danh sách sản phẩm trong danh sách yêu thích thành công
       content:
         application/json:
           schema:
@@ -26,9 +26,9 @@ get:
     401:
       $ref: "../../components/responses/401.yaml"
 post:
-  description: Thêm sản phẩm mới vào giỏ hàng
+  description: Thêm sản phẩm mới vào danh sách yêu thích
   tags:
-    - Giỏ hàng
+    - Danh sách yêu thích
   requestBody:
     content:
       application/json:
@@ -43,7 +43,7 @@ post:
             - version
   responses:
     201:
-      description: Thêm sản phẩm mới vào giỏ hàng thành công
+      description: Thêm sản phẩm mới vào danh sách yêu thích thành công
       content:
         application/json:
           schema:
