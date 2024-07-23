@@ -56,6 +56,14 @@ get:
                 title: Vị trí hiển thị
                 example: Catalog
                 type: string
+              max_amount:
+                title: Số lượng tối đa
+                example: 1
+                type: number
+              must_direct_purchase:
+                title: Chỉ mua trực tiếp
+                example: true
+                type: number
               specifications:
                 title: Thông số kỹ thuật
                 example:

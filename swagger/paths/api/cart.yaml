@@ -47,6 +47,8 @@ get:
                           url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
                     enabled: true
                     visibility: Catalog và Tìm kiếm
+                    max_amount: 1
+                    must_direct_purchase: true
                     specifications:
                       - key: Khối lượng bản thân
                         value:
