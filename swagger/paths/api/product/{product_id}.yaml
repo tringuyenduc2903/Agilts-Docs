@@ -88,7 +88,8 @@ get:
                     price: 73921091.00
                     price_preview: 73.921.091,00 VND
                     images:
-                      - http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
+                      - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
+                        alt: SH125i Tiêu Chuẩn
                     color: Đỏ Đen
                     version: SH125i Tiêu Chuẩn
                     type: Sản phẩm mới
