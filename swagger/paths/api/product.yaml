@@ -53,6 +53,8 @@ get:
                     visibility: Catalog và Tìm kiếm
                     max_amount: 1
                     must_direct_purchase: true
+                    transportable: true
+                    assistance: true
                     specifications:
                       - key: Khối lượng bản thân
                         value:
