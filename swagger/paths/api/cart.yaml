@@ -28,6 +28,7 @@ get:
                     - key: Pariatur nam deleniti sit molestiae fugiat.
                       value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
                   product_id: 2
+                  deleted_at: 11:53:58 21/06/2024
                   created_at: 11:53:58 21/06/2024
                   updated_at: 11:53:58 21/06/2024
                   product:
@@ -74,6 +75,7 @@ get:
                           - key: Pariatur nam deleniti sit molestiae fugiat.
                             value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
                         product_id: 2
+                        deleted_at: 11:53:58 21/06/2024
                         created_at: 11:53:58 21/06/2024
                         updated_at: 11:53:58 21/06/2024
                     categories:
@@ -82,10 +84,10 @@ get:
                         pivot:
                           product_id: 2
                           category_id: 1
-                        deleted_at: null
+                        deleted_at: 11:53:58 21/06/2024
                         created_at: 11:53:58 21/06/2024
                         updated_at: 11:53:58 21/06/2024
-                    deleted_at: null
+                    deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
                 created_at: 11:53:58 21/06/2024

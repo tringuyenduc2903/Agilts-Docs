@@ -20,6 +20,7 @@ get:
                 type: 0
                 type_preview: Nhà riêng
                 default: true
+                deleted_at: 11:53:58 21/06/2024
                 created_at: 11:53:58 21/06/2024
                 updated_at: 11:53:58 21/06/2024
               - id: 106
@@ -32,6 +33,7 @@ get:
                 type: 1
                 type_preview: Công ty
                 default: true
+                deleted_at: 11:53:58 21/06/2024
                 created_at: 11:53:58 21/06/2024
                 updated_at: 11:53:58 21/06/2024
             type: array
