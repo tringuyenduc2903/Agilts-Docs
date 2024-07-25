@@ -1,10 +1,10 @@
 get:
-  description: Lấy danh sách sản phẩm trong danh sách yêu thích
+  description: Lấy danh sách sản phẩm trong danh sách mong muốn
   tags:
-    - Danh sách yêu thích
+    - Danh sách mong muốn
   responses:
     200:
-      description: Lấy danh sách sản phẩm trong danh sách yêu thích thành công
+      description: Lấy danh sách sản phẩm trong danh sách mong muốn thành công
       content:
         application/json:
           schema:
@@ -20,15 +20,18 @@ get:
                   categories:
                     - Xe tay ga
                     - Honda
+                  images:
+                    - image: http://localhost:8001/storage/product/motorbikes/August2023/ysNjFYeAUAMLeWs4mu6L.png
+                      alt: SH 160i/125i
                 created_at: 11:53:58 21/06/2024
                 updated_at: 11:53:58 21/06/2024
             type: array
     401:
       $ref: "../../components/responses/401.yaml"
 post:
-  description: Thêm sản phẩm mới vào danh sách yêu thích
+  description: Thêm sản phẩm mới vào danh sách mong muốn
   tags:
-    - Danh sách yêu thích
+    - Danh sách mong muốn
   requestBody:
     content:
       application/json:
@@ -43,7 +46,7 @@ post:
             - version
   responses:
     201:
-      description: Thêm sản phẩm mới vào danh sách yêu thích thành công
+      description: Thêm sản phẩm mới vào danh sách mong muốn thành công
       content:
         application/json:
           schema:

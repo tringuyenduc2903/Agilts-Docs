@@ -1,16 +1,16 @@
 delete:
-  description: Xoá sản phẩm cũ khỏi danh sách yêu thích
+  description: Xoá sản phẩm cũ khỏi danh sách mong muốn
   tags:
-    - Danh sách yêu thích
+    - Danh sách mong muốn
   parameters:
     - name: cart_id
       in: path
-      description: Id danh sách yêu thích
+      description: Id danh sách mong muốn
       example: 1
       required: true
   responses:
     200:
-      description: Xoá sản phẩm cũ khỏi danh sách yêu thích thành công
+      description: Xoá sản phẩm cũ khỏi danh sách mong muốn thành công
       content:
         application/json:
           schema:
@@ -18,7 +18,7 @@ delete:
     401:
       $ref: "../../../components/responses/401.yaml"
     404:
-      description: Id không trùng khớp với danh sách yêu thích nào
+      description: Id không trùng khớp với danh sách mong muốn nào
       content:
         application/json:
           schema:
