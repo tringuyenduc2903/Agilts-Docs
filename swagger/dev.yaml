@@ -82,6 +82,8 @@ paths:
     $ref: "./paths/api/wishlist/{wishlist_id}.yaml"
   /api/order:
     $ref: "./paths/api/order.yaml"
+  /api/order/{order_id}:
+    $ref: "./paths/api/order/{order_id}.yaml"
   /api/filter-review/{product_id}:
     $ref: "./paths/api/filter-review/{product_id}.yaml"
   /api/review/{product_id}:

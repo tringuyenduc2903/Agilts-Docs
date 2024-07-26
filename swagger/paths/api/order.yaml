@@ -1,11 +1,12 @@
 get:
-  description: "Lấy danh sách đặt hàng (Trạng thái: 0: Chờ thanh toá, 1: Chờ vận chuyển, 2: Chờ nhận hàng, 3: Hoàn thành, 4: Đã huỷ, 5: Trả hàng/Hoàn tiền)"
+  description: "Lấy danh sách đặt hàng: Sắp xếp theo Đặt hàng mới nhất"
   tags:
     - Đặt hàng
   parameters:
     - $ref: "../../components/parameters/page.yaml"
     - $ref: "../../components/parameters/perPage.yaml"
     - name: status
+      description: "0: Chờ thanh toán, 1: Chờ vận chuyển, 2: Chờ nhận hàng, 3: Hoàn thành, 4: Đã huỷ, 5: Trả hàng/Hoàn tiền)"
       in: query
       example: 0
   responses:

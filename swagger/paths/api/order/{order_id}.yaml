@@ -1,0 +1,33 @@
+get:
+  description: Lấy sản phẩm
+  tags:
+    - Sản phẩm
+  parameters:
+    - name: order_id
+      in: path
+      description: Id sản phẩm
+      example: 2
+      required: true
+  responses:
+    200:
+      description: Lấy sản phẩm thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                title: Id
+                example: 2
+                type: number
+    404:
+      description: Id không trùng khớp với sản phẩm nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product] 76
+                example: No query results for model [App\Models\Product] 76
+            type: object
