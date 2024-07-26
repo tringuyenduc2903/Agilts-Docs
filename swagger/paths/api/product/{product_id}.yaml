@@ -56,20 +56,8 @@ get:
                 title: Vị trí hiển thị
                 example: Catalog
                 type: string
-              max_amount:
-                title: Số lượng tối đa
-                example: 1
-                type: number
               must_direct_purchase:
                 title: Chỉ mua trực tiếp
-                example: true
-                type: number
-              transportable:
-                title: Có thể vận chuyển
-                example: true
-                type: number
-              assistance:
-                title: Có thể hỗ trợ
                 example: true
                 type: number
               specifications:
