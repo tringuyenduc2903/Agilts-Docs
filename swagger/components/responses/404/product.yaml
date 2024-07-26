@@ -6,6 +6,6 @@ content:
         message:
           title: Thông báo ngắn
           type: string
-          description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product] 76
-          example: No query results for model [App\Models\Product] 76
+          description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product] 2
+          example: No query results for model [App\Models\Product] 2
       type: object

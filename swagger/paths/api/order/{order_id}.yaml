@@ -1,26 +1,176 @@
 get:
-  description: Lấy sản phẩm
+  description: Lấy thông tin đặt hàng
   tags:
-    - Sản phẩm
+    - Đặt hàng
   parameters:
     - name: order_id
       in: path
-      description: Id sản phẩm
-      example: 2
+      description: Id đặt hàng
+      example: 1
       required: true
   responses:
     200:
-      description: Lấy sản phẩm thành công
+      description: Lấy thông tin đặt hàng thành công
       content:
         application/json:
           schema:
             properties:
               id:
                 title: Id
-                example: 2
+                example: 1
                 type: number
+              tax:
+                title: Thuế
+                example: 6720099.18
+                type: number
+              tax_preview:
+                title: Xem trước thuế
+                example: 6.720.099,18 VND
+                type: string
+              shipping_fee:
+                title: Phí giao hàng
+                example: 0.00
+                type: number
+              shipping_fee_preview:
+                title: Xem trước phí giao hàng
+                example: 0,00 VND
+                type: string
+              vehicle_registration_support_fee:
+                title: Phí hỗ trợ đăng ký
+                example: 400000.00
+                type: number
+              vehicle_registration_support_fee_preview:
+                title: Xem trước phí hỗ trợ đăng ký
+                example: 400.000,00 VND
+                type: string
+              registration_fee:
+                title: Lệ phí trước bạ
+                example: 3696054.55
+                type: number
+              registration_fee_preview:
+                title: Xem trước lệ phí trước bạ
+                example: 3.696.054,55 VND
+                type: string
+              license_plate_registration_fee:
+                title: Lệ phí đăng ký biển số
+                example: 4000000.00
+                type: number
+              license_plate_registration_fee_preview:
+                title: Xem trước lệ phí đăng ký biển số
+                example: 4.000.000,00 VND
+                type: string
+              total:
+                title: Tổng tiền
+                example: 82017145.55
+                type: number
+              total_preview:
+                title: Xem trước tổng tiền
+                example: 82.017.145,55 VND
+                type: string
+              status:
+                title: Trạng thái
+                example: Chờ thanh toán
+                type: string
+              note:
+                title: Ghi chú
+                example: Người thân nhận hộ hàng (Không cần gọi điện trước)
+                type: string
+              other_fields:
+                title: Các trường khác
+                example:
+                  - vehicle_registration_support_option: true
+                    registration_option: false
+                    license_plate_registration_option: false
+              address_id:
+                title: Id địa chỉ
+                example: 61
+                type: number
+              address:
+                title: Địa chỉ
+                example:
+                  id: 61
+                  default: false
+                  type: 1
+                  country: Việt Nam
+                  province: Tỉnh Kon Tum
+                  district: Huyện Đắk Tô
+                  ward: Xã Văn Lem
+                  address_detail: 857 Phố Thuần
+                  address_preview: 857 Phố Thuần, Xã Văn Lem, Huyện Đắk Tô, Tỉnh Kon Tum
+                  deleted_at: 11:53:58 21/06/2024
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
+                type: object
+              identification_id:
+                title: Id hồ sơ
+                example: 11
+                type: number
+              identification:
+                title: Hồ sơ
+                example:
+                  id: 11
+                  default: false
+                  type: 2
+                  type_preview: Hộ chiếu
+                  number: TYE0NCCFQJ6VQEO
+                  issued_name: Lãnh sự quán Việt Nam
+                  issuance_date: 19/07/2018
+                  expiry_date: 25/07/2032
+                  customer_id: 3
+                  deleted_at: 11:53:58 21/06/2024
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
+                type: object
+              customer_id:
+                title: Id khách hàng
+                example: 3
+                type: number
+              invoice_products:
+                title: Các sản phẩm đặt hàng
+                example:
+                  id: 13
+                  price: 73921091.00
+                  price_preview: 73.921.091,00 VND
+                  value_added_tax: 6720099.18
+                  value_added_tax_preview: 6.720.099,18 VND
+                  amount: 1
+                  invoice_id: 14
+                  option_id: 11
+                  vehicle_id: 11:53:58 21/06/2024
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
+                  option:
+                    id: 11
+                    sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
+                    price: 73921091.00
+                    price_preview: 73.921.091,00 VND
+                    value_added_tax: 10
+                    images:
+                      - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
+                        alt: SH125i Tiêu Chuẩn
+                    color: Đỏ Đen
+                    version: SH125i Tiêu Chuẩn
+                    type: Sản phẩm mới
+                    status: Còn hàng
+                    quantity: 4
+                    weight: null
+                    specifications:
+                      - key: Pariatur nam deleniti sit molestiae fugiat.
+                        value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                    product_id: 2
+                    deleted_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+              created_at:
+                title: Thời gian tạo
+                example: 11:53:58 21/06/2024
+                type: string
+              updated_at:
+                title: Thời gian cập nhật thông tin
+                example: 11:53:58 21/06/2024
+                type: string
     404:
-      description: Id không trùng khớp với sản phẩm nào
+      description: Id không trùng khớp với đặt hàng nào
       content:
         application/json:
           schema:
@@ -28,6 +178,6 @@ get:
               message:
                 title: Thông báo ngắn
                 type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product] 76
-                example: No query results for model [App\Models\Product] 76
+                description: Không có kết quả truy vấn nào cho mô hình [ App\Models\Invoice ] 1
+                example: No query results for model [ App\Models\Invoice ] 1
             type: object
