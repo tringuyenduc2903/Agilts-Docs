@@ -1,0 +1,74 @@
+get:
+  description: "Lấy danh sách đặt hàng (Trạng thái: 0: Chờ thanh toá, 1: Chờ vận chuyển, 2: Chờ nhận hàng, 3: Hoàn thành, 4: Đã huỷ, 5: Trả hàng/Hoàn tiền)"
+  tags:
+    - Đặt hàng
+  parameters:
+    - $ref: "../../components/parameters/page.yaml"
+    - $ref: "../../components/parameters/perPage.yaml"
+    - name: status
+      in: query
+      example: 0
+  responses:
+    200:
+      description: Lấy danh sách đặt hàng thành công
+      content:
+        application/json:
+          schema:
+            properties:
+              data:
+                title: Dữ liệu
+                example:
+                  - id: 1
+                    total: 82017145.55
+                    total_preview: 82.017.145,55 VND
+                    status: Chờ thanh toán
+                    note: Người thân nhận hộ hàng (Không cần gọi điện trước)
+                    other_fields:
+                      - vehicle_registration_support_option: true
+                        registration_option: false
+                        license_plate_registration_option: false
+                    address_id: 1
+                    identification_id: 1
+                    customer_id: 1
+                    invoice_products:
+                      - id: 13
+                        price: 73921091.00
+                        price_preview: 73.921.091,00 VND
+                        value_added_tax: 6720099.18
+                        value_added_tax_preview: 6.720.099,18 VND
+                        amount: 1
+                        invoice_id: 1
+                        option_id: 11
+                        vehicle_id: null
+                        created_at: 11:53:58 21/06/2024
+                        updated_at: 11:53:58 21/06/2024
+                    created_at: 11:53:58 21/06/2024
+                    updated_at: 11:53:58 21/06/2024
+                type: array
+              total_pages:
+                title: Tổng trang
+                example: 7
+                type: number
+              from:
+                title: Vị trí dữ liệu đầu tiên của trang
+                example: 76
+                type: number
+              to:
+                title: Vị trí dữ liệu cuối cùng của trang
+                example: 90
+                type: number
+              per_page:
+                title: Tổng dữ liệu mỗi trang
+                example: 15
+                type: number
+              current_page:
+                title: Vị trí trang hiện tại
+                example: 6
+                type: number
+              total:
+                title: Tổng dữ liệu
+                example: 100
+                type: number
+            type: object
+    401:
+      $ref: "../../components/responses/401.yaml"
