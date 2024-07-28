@@ -16,42 +16,42 @@ servers:
           - api-staging
           - api
 paths:
-  /sanctum/csrf-cookie:
-    $ref: "./paths/sanctum/csrf-cookie.yaml"
-  /register:
-    $ref: "./paths/register.yaml"
-  /login:
-    $ref: "./paths/login.yaml"
-  /logout:
-    $ref: "./paths/logout.yaml"
-  /two-factor-challenge:
-    $ref: "./paths/two-factor-challenge.yaml"
   /auth/redirect/{driver_name}:
     $ref: "./paths/auth/redirect/{driver_name}.yaml"
-  /email/verification-notification:
-    $ref: "./paths/email/verification-notification.yaml"
-  /forgot-password:
-    $ref: "./paths/forgot-password.yaml"
-  /reset-password:
-    $ref: "./paths/reset-password.yaml"
-  /user/profile-information:
-    $ref: "./paths/user/profile-information.yaml"
-  /user/password:
-    $ref: "./paths/user/password.yaml"
-  /user/confirm-password:
-    $ref: "./paths/user/confirm-password.yaml"
-  /user/confirmed-password-status:
-    $ref: "./paths/user/confirmed-password-status.yaml"
-  /user/two-factor-authentication:
-    $ref: "./paths/user/two-factor-authentication.yaml"
-  /user/two-factor-qr-code:
-    $ref: "./paths/user/two-factor-qr-code.yaml"
-  /user/confirmed-two-factor-authentication:
-    $ref: "./paths/user/confirmed-two-factor-authentication.yaml"
-  /user/two-factor-recovery-codes:
-    $ref: "./paths/user/two-factor-recovery-codes.yaml"
-  /user/two-factor-secret-key:
-    $ref: "./paths/user/two-factor-secret-key.yaml"
+  /sanctum/csrf-cookie:
+    $ref: "./paths/sanctum/csrf-cookie.yaml"
+  /api/register:
+    $ref: "./paths/api/register.yaml"
+  /api/login:
+    $ref: "./paths/api/login.yaml"
+  /api/logout:
+    $ref: "./paths/api/logout.yaml"
+  /api/two-factor-challenge:
+    $ref: "./paths/api/two-factor-challenge.yaml"
+  /api/email/verification-notification:
+    $ref: "./paths/api/email/verification-notification.yaml"
+  /api/forgot-password:
+    $ref: "./paths/api/forgot-password.yaml"
+  /api/reset-password:
+    $ref: "./paths/api/reset-password.yaml"
+  /api/user/profile-information:
+    $ref: "./paths/api/user/profile-information.yaml"
+  /api/user/password:
+    $ref: "./paths/api/user/password.yaml"
+  /api/user/confirm-password:
+    $ref: "./paths/api/user/confirm-password.yaml"
+  /api/user/confirmed-password-status:
+    $ref: "./paths/api/user/confirmed-password-status.yaml"
+  /api/user/two-factor-authentication:
+    $ref: "./paths/api/user/two-factor-authentication.yaml"
+  /api/user/two-factor-qr-code:
+    $ref: "./paths/api/user/two-factor-qr-code.yaml"
+  /api/user/confirmed-two-factor-authentication:
+    $ref: "./paths/api/user/confirmed-two-factor-authentication.yaml"
+  /api/user/two-factor-recovery-codes:
+    $ref: "./paths/api/user/two-factor-recovery-codes.yaml"
+  /api/user/two-factor-secret-key:
+    $ref: "./paths/api/user/two-factor-secret-key.yaml"
   /api/user:
     $ref: "./paths/api/user.yaml"
   /api/address:

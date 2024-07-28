@@ -1,19 +1,13 @@
 post:
-  description: Gửi email xác minh địa chỉ email
+  description: Đăng xuất tài khoản
   tags:
-    - Xác thực Email
+    - Xác thực tài khoản
   parameters:
     - $ref: "../../components/parameters/X-Requested-With.yaml"
     - $ref: "../../components/parameters/X-CSRF-TOKEN.yaml"
   responses:
-    202:
-      description: Đã gửi email thành công
-      content:
-        application/json:
-          schema:
-            $ref: "../../components/schemas/Dữ liệu rỗng.yaml"
     204:
-      description: Khách hàng đã xác minh địa chỉ email trước đó
+      description: Đăng xuất tài khoản thành công
       content:
         application/json:
           schema:
