@@ -39,6 +39,10 @@ post:
                 description: Trạng thái xác thực 2 bước
                 example: false
                 type: boolean
+              token:
+                title: Mã đăng nhập dành cho Ứng dụng
+                example: 1|tRmiiQiSJdy7IO9bhD1fDeLY5FFf8Y5OiKYhxZVscc8b762f
+                type: string
             type: object
     302:
       $ref: "../../components/responses/302.yaml"

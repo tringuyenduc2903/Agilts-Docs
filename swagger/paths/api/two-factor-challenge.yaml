@@ -25,7 +25,12 @@ post:
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/Dữ liệu rỗng.yaml"
+            properties:
+              token:
+                title: Mã đăng nhập dành cho Ứng dụng
+                example: 1|tRmiiQiSJdy7IO9bhD1fDeLY5FFf8Y5OiKYhxZVscc8b762f
+                type: string
+            type: object
     302:
       $ref: "../../components/responses/302.yaml"
     419:
