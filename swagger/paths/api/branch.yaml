@@ -30,6 +30,7 @@ get:
                   - id: 76
                     name: Agilts Hoàn Kiếm
                     phone_number: 02462958427
+                    image: http://localhost:8001/storage/branch/wUVVTwH7X3nWHwsrseUMAE1vFG3J7nTuCCL1at55.png
                     address:
                       id: 76
                       country: Việt Nam
