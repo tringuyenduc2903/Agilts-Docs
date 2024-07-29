@@ -21,52 +21,41 @@ get:
                 type: number
               tax:
                 title: Thuế
-                example: 6720099.18
-                type: number
-              tax_preview:
-                title: Xem trước thuế
-                example: 6.720.099,18 VND
-                type: string
+                example:
+                  raw: 6720099.18
+                  preview: 6.720.099,18 VND
+                type: object
               shipping_fee:
                 title: Phí giao hàng
-                example: 0.00
-                type: number
-              shipping_fee_preview:
-                title: Xem trước phí giao hàng
-                example: 0,00 VND
-                type: string
-              vehicle_registration_support_fee:
-                title: Phí hỗ trợ đăng ký
-                example: 400000.00
-                type: number
-              vehicle_registration_support_fee_preview:
-                title: Xem trước phí hỗ trợ đăng ký
-                example: 400.000,00 VND
-                type: string
-              registration_fee:
-                title: Lệ phí trước bạ
-                example: 3696054.55
-                type: number
-              registration_fee_preview:
-                title: Xem trước lệ phí trước bạ
-                example: 3.696.054,55 VND
-                type: string
-              license_plate_registration_fee:
-                title: Lệ phí đăng ký biển số
-                example: 4000000.00
-                type: number
-              license_plate_registration_fee_preview:
-                title: Xem trước lệ phí đăng ký biển số
-                example: 4.000.000,00 VND
-                type: string
+                example:
+                  raw: 0.00
+                  preview: 0,00 VND
+                type: object
+              handling_fee:
+                title: Phí xử lý
+                example:
+                  raw: 8096854.55
+                  preview: 8.096.854,55 VND
+                type: object
+              other_fees:
+                title: Các phí khác
+                example:
+                  vehicle_registration_support_fee:
+                    raw: 400000.00
+                    preview: 400.000,00 VND
+                  registration_fee:
+                    raw: 3696054.55
+                    preview: 3.696.054,55 VND
+                  license_plate_registration_fee:
+                    raw: 4000000.00
+                    preview: 4.000.000,00 VND
+                type: object
               total:
                 title: Tổng tiền
-                example: 82017145.55
-                type: number
-              total_preview:
-                title: Xem trước tổng tiền
-                example: 82.017.145,55 VND
-                type: string
+                example:
+                  raw: 82017145.55
+                  preview: 82.017.145,55 VND
+                type: object
               status:
                 title: Trạng thái
                 example: Chờ thanh toán
@@ -75,12 +64,20 @@ get:
                 title: Ghi chú
                 example: Người thân nhận hộ hàng (Không cần gọi điện trước)
                 type: string
+              shipping_type:
+                title: Loại vận chuyển
+                example: Nhận hàng tại Cửa hàng
+                type: string
+              transaction_type:
+                title: Loại giao dịch
+                example: Thanh toán khi giao hàng
+                type: string
               other_fields:
                 title: Các trường khác
                 example:
-                  - vehicle_registration_support_option: true
-                    registration_option: false
-                    license_plate_registration_option: false
+                  vehicle_registration_support_option: true
+                  registration_option: Lần đầu (5%)
+                  license_plate_registration_option: Khu vực I (Thành phố Hà Nội, Thành phố Hồ Chí Minh bao gồm tất cả các quận, huyện trực thuộc thành phố không phân biệt nội thành hay ngoại thành)
               address_id:
                 title: Id địa chỉ
                 example: 61
@@ -129,10 +126,12 @@ get:
                 title: Các sản phẩm đặt hàng
                 example:
                   id: 13
-                  price: 73921091.00
-                  price_preview: 73.921.091,00 VND
-                  value_added_tax: 6720099.18
-                  value_added_tax_preview: 6.720.099,18 VND
+                  price:
+                    raw: 73921091.00
+                    preview: 73.921.091,00 VND
+                  value_added_tax:
+                    raw: 6720099.18
+                    preview: 6.720.099,18 VND
                   amount: 1
                   invoice_id: 14
                   option_id: 11
@@ -142,8 +141,9 @@ get:
                   option:
                     id: 11
                     sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
-                    price: 73921091.00
-                    price_preview: 73.921.091,00 VND
+                    price:
+                      raw: 73921091.00
+                      preview: 73.921.091,00 VND
                     value_added_tax: 10
                     images:
                       - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png

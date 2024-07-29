@@ -20,23 +20,47 @@ get:
                 title: Dữ liệu
                 example:
                   - id: 1
-                    total: 82017145.55
-                    total_preview: 82.017.145,55 VND
+                    tax:
+                      raw: 6720099.18
+                      preview: 6.720.099,18 VND
+                    shipping_fee:
+                      raw: 0.00
+                      preview: 0,00 VND
+                    handling_fee:
+                      raw: 8096854.55
+                      preview: 8.096.854,55 VND
+                    other_fees:
+                      vehicle_registration_support_fee:
+                        raw: 400000.00
+                        preview: 400.000,00 VND
+                      registration_fee:
+                        raw: 3696054.55
+                        preview: 3.696.054,55 VND
+                      license_plate_registration_fee:
+                        raw: 4000000.00
+                        preview: 4.000.000,00 VND
+                    total:
+                      raw: 82017145.55
+                      preview: 82.017.145,55 VND
                     status: Chờ thanh toán
                     note: Người thân nhận hộ hàng (Không cần gọi điện trước)
+                    shipping_type: Nhận hàng tại Cửa hàng
+                    transaction_type: Thanh toán khi giao hàng
                     other_fields:
-                      - vehicle_registration_support_option: true
-                        registration_option: false
-                        license_plate_registration_option: false
-                    address_id: 1
-                    identification_id: 1
-                    customer_id: 1
+                      vehicle_registration_support_option: true
+                      registration_option: Lần đầu (5%)
+                      license_plate_registration_option: Khu vực I (Thành phố Hà Nội, Thành phố Hồ Chí Minh bao gồm tất cả các quận, huyện trực thuộc thành phố không phân biệt nội thành hay ngoại thành)
+                    address_id: 61
+                    identification_id: 11
+                    customer_id: 3
                     invoice_products:
                       - id: 13
-                        price: 73921091.00
-                        price_preview: 73.921.091,00 VND
-                        value_added_tax: 6720099.18
-                        value_added_tax_preview: 6.720.099,18 VND
+                        price:
+                          raw: 73921091.00
+                          preview: 73.921.091,00 VND
+                        value_added_tax:
+                          raw: 6720099.18
+                          preview: 6.720.099,18 VND
                         amount: 1
                         invoice_id: 1
                         option_id: 11
@@ -110,6 +134,16 @@ post:
               description: "0: Khu vực I (Thành phố Hà Nội, Thành phố Hồ Chí Minh bao gồm tất cả các quận, huyện trực thuộc thành phố không phân biệt nội thành hay ngoại thành), 1: Khu vực II (Thành phố trực thuộc Trung ương (trừ Thành phố Hà Nội, Thành phố Hồ Chí Minh) bao gồm tất cả các quận, huyện trực thuộc thành phố không phân biệt nội thành hay ngoại thành; thành phố trực thuộc tỉnh, thị xã bao gồm tất cả các phường, xã thuộc thành phố, thị xã không phân biệt phường nội thành, nội thị hay xã ngoại thành, ngoại thị), 2: Khu vực III (Các khu vực khác ngoài khu vực I và khu vực II)"
               example: 0
               type: number
+            shipping_type:
+              title: Loại vận chuyển
+              description: "0: Nhận hàng tại Cửa hàng"
+              example: 0
+              type: number
+            transaction_type:
+              title: Loại giao dịch
+              description: "0: Thanh toán khi giao hàng"
+              example: 0
+              type: number
             note:
               title: Ghi chú
               example: 1
@@ -120,6 +154,8 @@ post:
             - address
             - invoice_products
             - vehicle_registration_support
+            - shipping_type
+            - transaction_type
   responses:
     201:
       description: Tạo đặt hàng mới thành công
@@ -138,7 +174,7 @@ post:
               message:
                 title: Thông báo ngắn
                 type: string
-                example: Trường địa chỉ là bắt buộc. (và 2 lỗi khác)
+                example: Trường địa chỉ là bắt buộc. (và 4 lỗi khác)
               errors:
                 properties:
                   address:
@@ -155,5 +191,15 @@ post:
                     title: Hỗ trợ đăng ký xe
                     example:
                       - Trường hỗ trợ đăng ký xe là bắt buộc.
+                    type: array
+                  shipping_type:
+                    title: Loại vận chuyển
+                    example:
+                      - Trường loại vận chuyển là bắt buộc.
+                    type: array
+                  transaction_type:
+                    title: Loại giao dịch
+                    example:
+                      - Trường loại giao dịch là bắt buộc.
                     type: array
             type: object
