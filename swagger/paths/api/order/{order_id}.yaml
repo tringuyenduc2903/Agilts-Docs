@@ -129,9 +129,7 @@ get:
                   price:
                     raw: 73921091.00
                     preview: 73.921.091,00 VND
-                  value_added_tax:
-                    raw: 6720099.18
-                    preview: 6.720.099,18 VND
+                  value_added_tax: 10
                   amount: 1
                   invoice_id: 14
                   option_id: 11
