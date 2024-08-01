@@ -70,7 +70,7 @@ get:
                 type: string
               transaction_type:
                 title: Loại giao dịch
-                example: Thanh toán khi giao hàng
+                example: Thanh toán khi nhận hàng
                 type: string
               other_fields:
                 title: Các trường khác

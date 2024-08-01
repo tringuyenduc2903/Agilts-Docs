@@ -45,7 +45,7 @@ get:
                     status: Chờ thanh toán
                     note: Người thân nhận hộ hàng (Không cần gọi điện trước)
                     shipping_type: Nhận hàng tại Cửa hàng
-                    transaction_type: Thanh toán khi giao hàng
+                    transaction_type: Thanh toán khi nhận hàng
                     other_fields:
                       vehicle_registration_support_option: true
                       registration_option: Lần đầu (5%)
@@ -139,7 +139,7 @@ post:
               type: number
             transaction_type:
               title: Loại giao dịch
-              description: "0: Thanh toán khi giao hàng"
+              description: "0: Thanh toán khi nhận hàng"
               example: 0
               type: number
             note:
