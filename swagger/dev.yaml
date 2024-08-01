@@ -54,6 +54,12 @@ paths:
     $ref: "./paths/api/user/two-factor-secret-key.yaml"
   /api/user:
     $ref: "./paths/api/user.yaml"
+  /api/address/province:
+    $ref: "./paths/api/address/province.yaml"
+  /api/address/district/{province_id}:
+    $ref: "./paths/api/address/district/{province_id}.yaml"
+  /api/address/ward/{district_id}:
+    $ref: "./paths/api/address/ward/{district_id}.yaml"
   /api/address:
     $ref: "./paths/api/address.yaml"
   /api/address/{address_id}:

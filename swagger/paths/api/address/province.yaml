@@ -1,0 +1,35 @@
+get:
+  description: Lấy danh sách tỉnh/thành phố
+  tags:
+    - Địa chỉ
+  responses:
+    200:
+      description: Lấy danh sách tỉnh/thành phố thành công
+      content:
+        application/json:
+          schema:
+            description: Dữ liệu trả về
+            example:
+              - ProvinceID: 269
+                ProvinceName: Lào Cai
+                CountryID: 1
+                Code: 20
+                NameExtension:
+                  - Lào Cai
+                  - Tỉnh Lào Cai
+                  - T.Lào Cai
+                  - lào cai
+                IsEnable: 1
+                RegionID: 4
+                RegionCPN: 5
+                UpdatedBy: 1718600
+                CreatedAt: 2019-12-05 15:41:26.891384 +0700 +07 m=+0.010448463
+                UpdatedAt: 2019-12-05 15:41:26.891384 +0700 +07 m=+0.010449016
+                AreaID: 3
+                CanUpdateCOD: true
+                Status: 1
+                UpdatedIP: 118.69.109.163
+                UpdatedEmployee: 1876695
+                UpdatedSource: internal
+                UpdatedDate: 2024-06-19T03:58:35.025Z
+            type: array

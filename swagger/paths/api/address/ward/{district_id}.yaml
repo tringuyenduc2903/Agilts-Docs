@@ -1,0 +1,53 @@
+get:
+  description: Lấy danh sách xã/phường/thị trấn
+  tags:
+    - Địa chỉ
+  parameters:
+    - name: district_id
+      in: path
+      description: DistrictID
+      example: 2264
+      required: true
+  responses:
+    200:
+      description: Lấy danh sách xã/phường/thị trấn thành công
+      content:
+        application/json:
+          schema:
+            description: Dữ liệu trả về
+            example:
+              - WardCode: 90816
+                DistrictID: 2264
+                WardName: Thị Trấn Si Ma Cai
+                NameExtension:
+                  - thị trấn si ma cai
+                  - thi tran si ma cai
+                  - Thi Tran Si Ma Cai
+                  - thị trấn xi ma cai
+                CanUpdateCOD: true
+                SupportType: 0
+                PickType: 3
+                DeliverType: 3
+                WhiteListClient:
+                  From:
+                    -
+                  To:
+                    -
+                  Return:
+                    -
+                WhiteListWard:
+                  From: null
+                  To: null
+                Status: 1
+                ReasonCode:
+                ReasonMessage:
+                OnDates: null
+                CreatedIP: 35.247.155.234
+                CreatedEmployee: 1705038
+                CreatedSource: internal
+                CreatedDate: 2021-11-12T10:20:59.132Z
+                UpdatedIP: 101.99.32.236
+                UpdatedEmployee: 1876695
+                UpdatedSource: internal
+                UpdatedDate: 2024-07-15T07:04:48.852Z
+            type: array

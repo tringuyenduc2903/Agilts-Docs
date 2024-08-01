@@ -1,0 +1,60 @@
+get:
+  description: Lấy danh sách quận/huyện/thị xã
+  tags:
+    - Địa chỉ
+  parameters:
+    - name: province_id
+      in: path
+      description: ProvinceID
+      example: 269
+      required: true
+  responses:
+    200:
+      description: Lấy danh sách quận/huyện/thị xã thành công
+      content:
+        application/json:
+          schema:
+            description: Dữ liệu trả về
+            example:
+              - DistrictID: 2264
+                ProvinceID: 269
+                DistrictName: Huyện Si Ma Cai
+                Code: 0802
+                Type: 3
+                SupportType: 0
+                NameExtension:
+                  - Huyện Xi Ma Cai
+                  - Huyện Si Ma Cai
+                  - H.Xi Ma Cai
+                  - H Xi Ma Cai
+                  - Xi Ma Cai
+                  - Huyen Xi Ma Cai
+                  - ximacai
+                  - Si Ma Cai
+                IsEnable: 1
+                UpdatedBy: 1718600
+                CreatedAt: 2019-12-05 15:53:32.432143 +0700 +07 m=+0.016088375
+                UpdatedAt: 2020-09-29 13:42:47.12692 +0700 +07 m=+19.629251853
+                CanUpdateCOD: false
+                Status: 1
+                PickType: 1
+                DeliverType: 1
+                WhiteListClient:
+                  From:
+                    -
+                  To:
+                    -
+                  Return:
+                    -
+                WhiteListDistrict:
+                  From: null
+                  To: null
+                ReasonCode:
+                ReasonMessage:
+                OnDates:
+                  - 2022-04-02T17:00:00Z
+                UpdatedIP: 101.99.32.236
+                UpdatedEmployee: 1876695
+                UpdatedSource: internal
+                UpdatedDate: 2024-07-29T06:44:04.2Z
+            type: array
