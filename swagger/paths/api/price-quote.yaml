@@ -32,6 +32,10 @@ post:
               description: "0: Nhận hàng tại Cửa hàng"
               example: 0
               type: number
+            preview:
+              title: Hiển thị giá dưới dạng xem trước
+              example: true
+              type: boolean
           type: object
           required:
             - invoice_products
@@ -43,9 +47,67 @@ post:
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/Dữ liệu rỗng.yaml"
-    401:
-      $ref: "../../components/responses/401.yaml"
+            properties:
+              invoice_products:
+                title: Các sản phẩm
+                example:
+                  - id: null
+                    option: 11
+                    price:
+                      raw: 92490000
+                      preview: 92.490.000,00 VND
+                    amount: 1
+                    value_added_tax: 10
+                type: array
+              price:
+                title: Thành tiền
+                example:
+                  raw: 92490000
+                  preview: 92.490.000,00 VND
+                type: object
+              tax:
+                title: Thuế
+                example:
+                  raw: 8408181.818181818
+                  preview: 8.408.181,82 VND
+                type: object
+              shipping_fee:
+                title: Phí giao hàng
+                example:
+                  raw: 0
+                  preview: 0,00 VND
+                type: object
+              vehicle_registration_support_fee:
+                title: Phí hỗ trợ đăng ký xe
+                example:
+                  raw: 400000
+                  preview: 400.000,00 VND
+                type: object
+              registration_fee:
+                title: Lệ phí trước bạ
+                example:
+                  raw: 4624500
+                  preview: 4.624.500,00 VND
+                type: object
+              license_plate_registration_fee:
+                title: Lệ phí đăng ký biển số
+                example:
+                  raw: 4000000
+                  preview: 4.000.000,00 VND
+                type: object
+              handling_fee:
+                title: Phí xử lý
+                example:
+                  raw: 9024500
+                  preview: 9.024.500,00 VND
+                type: object
+              total:
+                title: Tổng tiền
+                example:
+                  raw: 101514500
+                  preview: 101.514.500,00 VND
+                type: object
+            type: object
     422:
       description: Dữ liệu khách hàng đã nhập không được chấp nhận
       content:
