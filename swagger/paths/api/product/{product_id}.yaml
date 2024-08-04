@@ -3,7 +3,11 @@ get:
   tags:
     - Sản phẩm
   parameters:
-    - $ref: "../../../components/parameters/product.yaml"
+    - name: product_id
+      in: path
+      description: Id/URL tìm kiếm sản phẩm
+      example: 2
+      required: true
   responses:
     200:
       description: Lấy sản phẩm thành công
@@ -15,6 +19,10 @@ get:
                 title: Id
                 example: 2
                 type: number
+              search_url:
+                title: URL tìm kiếm
+                example: sh-350i
+                type: string
               name:
                 title: Tên
                 example: SH 350i
@@ -106,6 +114,24 @@ get:
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
                 type: array
+              seo:
+                title: Danh sách danh mục
+                example:
+                  id: 1
+                  title: SH 350i
+                  description: Tại Việt Nam, hình ảnh mẫu xe SH từ lâu đã trở thành biểu tượng cho tính đẳng cấp, sang trọng và sự hoàn hảo. Kế thừa những nét đặc trưng đó, mẫu xe SH350i ...
+                  image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
+                  author: null
+                  robots:
+                    - key: max-snippet
+                      value: -1
+                    - key: max-image-preview
+                      value: large
+                    - key: max-video-preview
+                      value: -1
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
+                type: object
               deleted_at:
                 title: Thời gian xoá
                 example: 11:53:58 21/06/2024
@@ -119,4 +145,14 @@ get:
                 example: 11:53:58 21/06/2024
                 type: string
     404:
-      $ref: "../../../components/responses/404/product.yaml"
+      description: Id/URL tìm kiếm không trùng khớp với sản phẩm nào
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                description: Không có kết quả truy vấn nào cho mô hình [App\Models\Product].
+                example: No query results for model [App\Models\Product].
+            type: object
