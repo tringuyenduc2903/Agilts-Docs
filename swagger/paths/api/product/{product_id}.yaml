@@ -64,10 +64,14 @@ get:
                 title: Vị trí hiển thị
                 example: Catalog
                 type: string
-              must_direct_purchase:
-                title: Chỉ mua trực tiếp
-                example: true
-                type: number
+              type:
+                title: Loại
+                example: Xe máy
+                type: string
+              manufacturer:
+                title: Công ty sản xuất
+                example: Honda
+                type: string
               specifications:
                 title: Thông số kỹ thuật
                 example:

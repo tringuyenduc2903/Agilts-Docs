@@ -10,22 +10,19 @@ get:
       content:
         application/json:
           schema:
-            properties:
-              data:
-                title: Dữ liệu
-                example:
-                  - name: rate
-                    label: Đánh giá
-                    data:
-                      1: 1 Sao (4)
-                      2: 2 Sao (6)
-                      3: 3 Sao (5)
-                      4: 4 Sao (5)
-                      5: 5 Sao (5)
-                      negative: Tiêu cực (15)
-                      positive: Tích cực (10)
-                      with_image: Có hình ảnh (25)
-                type: array
-            type: object
+            description: Dữ liệu trả về
+            example:
+              - name: rate
+                label: Đánh giá
+                data:
+                  1: 1 Sao (4)
+                  2: 2 Sao (6)
+                  3: 3 Sao (5)
+                  4: 4 Sao (5)
+                  5: 5 Sao (5)
+                  negative: Tiêu cực (15)
+                  positive: Tích cực (10)
+                  with_image: Có hình ảnh (25)
+            type: array
     404:
       $ref: "../../../components/responses/404/product.yaml"

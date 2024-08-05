@@ -8,38 +8,57 @@ get:
       content:
         application/json:
           schema:
-            properties:
-              data:
-                title: Dữ liệu
-                example:
-                  - name: type
-                    label: Loại
-                    data:
-                      0: Sản phẩm mới
-                      1: Sản phẩm cũ
-                      2: Sản phẩm tân trang
-                  - name: minPrice
-                    label: Giá thấp nhất
-                    data: 13443931.27
-                  - name: maxPrice
-                    label: Giá cao nhất
-                    data: 996162156.37
-                  - name: color
-                    label: Màu sắc
-                    data:
-                      Đỏ: Đỏ
-                      Đen: Đen
-                      Trắng: Trắng
-                  - name: version
-                    label: Tên mẫu
-                    data:
-                      Tiêu chuẩn: Tiêu chuẩn
-                      Thể Thao: Thể Thao
-                      Cao cấp: Cao cấp
-                  - name: category
-                    label: Danh mục
-                    data:
-                      1: Xe tay ga
-                      2: Xe số
-                type: array
-            type: object
+            description: Dữ liệu trả về
+            example:
+              - name: product_type
+                label: Loại
+                data:
+                  - Xe máy
+                    Phụ tùng
+                    Phụ kiện
+              - name: option_type
+                label: Loại
+                data:
+                  - Sản phẩm mới
+                    Sản phẩm cũ
+                    Sản phẩm tân trang
+              - name: manufacturer
+                label: Công ty sản xuất
+                data:
+                  Honda: Honda
+                  Yamaha: Yamaha
+              - name: minPrice
+                label: Giá thấp nhất
+                data:
+                  raw: 17859273
+                  preview: 17.859.273,00 VND
+              - name: maxPrice
+                label: Giá cao nhất
+                data:
+                  raw: 1231500000
+                  preview: 1.231.500.000,00 VND
+              - name: color
+                label: Màu sắc
+                data:
+                  Bạc: Bạc
+                  Đen: Đen
+                  Đỏ: Đỏ
+                  Trắng: Trắng
+                  Xanh: Xanh
+              - name: version
+                label: Phiên bản
+                data:
+                  Cao cấp: Cao cấp
+                  Cổ điển: Cổ điển
+                  Đặc biệt: Đặc biệt
+                  Giới hạn: Giới hạn
+                  Thể thao: Thể thao
+                  Tiêu chuẩn: Tiêu chuẩn
+              - name: category
+                label: Danh mục
+                data:
+                  1: Xe côn tay
+                  2: Xe phân khối lớn
+                  3: Xe số
+                  4: Xe tay ga
+            type: array
