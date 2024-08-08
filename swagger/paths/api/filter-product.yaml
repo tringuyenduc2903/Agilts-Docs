@@ -14,14 +14,14 @@ get:
                 label: Loại
                 data:
                   - Xe máy
-                    Phụ tùng
-                    Phụ kiện
+                  - Phụ tùng
+                  - Phụ kiện
               - name: option_type
                 label: Loại
                 data:
                   - Sản phẩm mới
-                    Sản phẩm cũ
-                    Sản phẩm tân trang
+                  - Sản phẩm cũ
+                  - Sản phẩm tân trang
               - name: manufacturer
                 label: Công ty sản xuất
                 data:
