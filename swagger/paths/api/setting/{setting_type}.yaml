@@ -1,0 +1,23 @@
+get:
+  description: Lấy danh sách cấu hình
+  tags:
+    - Cấu hình
+  parameters:
+    - name: setting_type
+      description: homepage, header, footer, auth
+      in: query
+      example: homepage
+  responses:
+    200:
+      description: Lấy danh sách cấu hình thành công
+      content:
+        application/json:
+          schema:
+            description: Dữ liệu trả về
+            example:
+              - id: 1
+                key: homepage_show_navigation_button
+                name: Hiển thị nút điều hướng
+                value: true
+                active: true
+            type: array

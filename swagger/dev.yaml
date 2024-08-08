@@ -104,3 +104,5 @@ paths:
     $ref: "./paths/api/review-user/{review_id}.yaml"
   /api/branch:
     $ref: "./paths/api/branch.yaml"
+  /api/setting/{setting_type}:
+    $ref: "./paths/api/setting/{setting_type}.yaml"
