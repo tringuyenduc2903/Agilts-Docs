@@ -3,8 +3,9 @@ get:
   tags:
     - Sản phẩm
   parameters:
-    - $ref: "../../components/parameters/page.yaml"
-    - $ref: "../../components/parameters/perPage.yaml"
+    - $ref: "../../../components/parameters/productType.yaml"
+    - $ref: "../../../components/parameters/page.yaml"
+    - $ref: "../../../components/parameters/perPage.yaml"
     - name: sortColumn
       in: path
       description: "Cột cần sắp xếp (giá trị: name, price, review, latest, oldest)"

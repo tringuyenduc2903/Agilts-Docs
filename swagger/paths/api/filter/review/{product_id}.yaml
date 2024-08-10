@@ -3,7 +3,7 @@ get:
   tags:
     - Đánh giá
   parameters:
-    - $ref: "../../../components/parameters/product.yaml"
+    - $ref: "../../../../components/parameters/product.yaml"
   responses:
     200:
       description: Lấy danh sách bộ lọc đánh giá của sản phẩm thành công
@@ -25,4 +25,4 @@ get:
                   with_image: Có hình ảnh (25)
             type: array
     404:
-      $ref: "../../../components/responses/404/product.yaml"
+      $ref: "../../../../components/responses/404/product.yaml"

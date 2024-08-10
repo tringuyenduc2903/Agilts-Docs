@@ -72,10 +72,10 @@ paths:
     $ref: "./paths/api/social.yaml"
   /api/social/{social_id}:
     $ref: "./paths/api/social/{social_id}.yaml"
-  /api/filter-product:
-    $ref: "./paths/api/filter-product.yaml"
-  /api/product:
-    $ref: "./paths/api/product.yaml"
+  /api/filter/product/{product_type}:
+    $ref: "./paths/api/filter/product/{product_type}.yaml"
+  /api/product/{product_type}:
+    $ref: "./paths/api/product/{product_type}.yaml"
   /api/product/{product_id}:
     $ref: "./paths/api/product/{product_id}.yaml"
   /api/cart:
@@ -92,8 +92,8 @@ paths:
     $ref: "./paths/api/order.yaml"
   /api/order/{order_id}:
     $ref: "./paths/api/order/{order_id}.yaml"
-  /api/filter-review/{product_id}:
-    $ref: "./paths/api/filter-review/{product_id}.yaml"
+  /api/filter/review/{product_id}:
+    $ref: "./paths/api/filter/review/{product_id}.yaml"
   /api/review/{product_id}:
     $ref: "./paths/api/review/{product_id}.yaml"
   /api/review-image:

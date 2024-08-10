@@ -2,6 +2,8 @@ get:
   description: Lấy danh sách bộ lọc sản phẩm
   tags:
     - Sản phẩm
+  parameters:
+    - $ref: "../../../../components/parameters/productType.yaml"
   responses:
     200:
       description: Lấy danh sách bộ lọc sản phẩm thành công
@@ -10,12 +12,6 @@ get:
           schema:
             description: Dữ liệu trả về
             example:
-              - name: product_type
-                label: Loại
-                data:
-                  - Xe máy
-                  - Phụ tùng
-                  - Phụ kiện
               - name: option_type
                 label: Loại
                 data:
