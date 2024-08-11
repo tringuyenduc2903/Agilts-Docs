@@ -133,9 +133,6 @@ get:
                   amount: 1
                   invoice_id: 14
                   option_id: 11
-                  vehicle_id: 11:53:58 21/06/2024
-                  created_at: 11:53:58 21/06/2024
-                  updated_at: 11:53:58 21/06/2024
                   option:
                     id: 11
                     sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
@@ -152,13 +149,90 @@ get:
                     status: Còn hàng
                     quantity: 414
                     weight: 139
+                    length: 40
+                    width: 40
+                    height: 40
                     specifications:
                       - key: Pariatur nam deleniti sit molestiae fugiat.
                         value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
                     product_id: 2
+                    product:
+                      id: 2
+                      search_url: sh-350i
+                      name: SH 160i/125i
+                      description: "<p>Kế thừa tinh hoa của dòng xe SH với những đường nét thanh lịch, sang trọng mang hơi thở Châu Âu cùng động cơ cải tiến đột phá và công nghệ tiên tiến, SH160i/125i mới sở hữu diện mạo đầy ấn tượng và nổi bật.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbikes/August2023/UDRtvNv71RxATkuwhW0V.jpg\" alt=\"Kế thừa tinh hoa của dòng xe SH với những đường n\" width=\"650\" height=\"490\"></p><h3>Thiết kế</h3><h4>Diện mạo mới sang trọng và thời thượng</h4><p>SH160i/125i tuyệt tác xe tay ga sang trọng đẳng cấp. Kiến tạo tinh tế với các đường nét thiết kế ấn tượng. Nổi bật khó cưỡng với phối màu mới cuốn hút trên tất cả các phiên bản. Tem xe trên phiên bản đặc biệt và thể thao được làm mới tạo điểm nhấn khi nhìn từ phía trước và hai bên.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/UT6CDKZPp1pnlSGUI0bI.jpg\" alt=\"Diện mạo mới sang trọng và thời thượng\" width=\"650\" height=\"490\"></p><h4>Cụm đèn trước và thiết kế đầu xe ấn tượng</h4><p>Cụm đèn trước được trang bị đồng bộ công nghệ LED hiện đại và cao cấp, kết hợp hài hoà cùng thiết kế phần đầu xe cân đối.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/AYOfBZridQFiGvFWtDJu.jpg\" alt=\"Cụm đèn trước và thiết kế đầu xe ấn tượng\" width=\"650\" height=\"490\"></p><h4>Cụm đèn hậu và thiết kế đuôi xe tinh tế</h4><p>Đuôi xe được thiết kế tinh xảo với hệ thống đèn LED nổi bật, tay nắm sau được vuốt thon gọn đầy phong cách, tôn lên vẻ sang trọng và lịch lãm.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/oFEA3iUEjCfwB8Z3h3bc.jpg\" alt=\"Cụm đèn hậu và thiết kế đuôi xe tinh tế\" width=\"650\" height=\"490\"></p><h4>Mặt đồng hồ thông minh</h4><p>\"Đồng hồ với phần đo vận tốc lớn được đặt ở giữa, có thiết kế đơn giản mà hiện đại giúp người lái dễ dàng quan sát các thông số tức thì.\nĐồng thời, đồng hồ tốc độ được thiết kế tách biệt với màn hình hiển thị thông số, mặt đồng hồ được trang trí mạ chrome đem đến nét sang trọng cho tổng thể cụm đồng hồ trung tâm.\"</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/t9rtWsMF91PnMqFdMxD7.jpg\" alt=\"Mặt đồng hồ thông minh\" width=\"650\" height=\"490\"></p><h3>Động cơ - Công nghệ</h3><p>Trái tim làm nên sức mạnh của SH160i/125i mới chính là động cơ thông minh thế hệ mới eSP+, giúp tạo nên uy lực để chinh phục mọi hành trình.</p><h4>Động cơ eSP+ 4 van thông minh thế hệ mới</h4><p>SH160i/125i sở hữu động cơ thế hệ mới eSP+ 4 van đánh dấu bước đột phá trong công nghệ động cơ của Honda, giúp tăng hiệu suất hoạt động, khả năng vận hành mạnh mẽ vượt trội, tiết kiệm nhiên liệu và thân thiện môi trường</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/December2022/Xtgx1FHZeXazVbJ5vzAG.jpg\" alt=\"Động cơ eSP+ 4 van thông minh thế hệ mới\" width=\"650\" height=\"490\"></p><h4>Hệ thống kiểm soát lực kéo (HSTC) (*)</h4><p>Hệ thống HSTC sử dụng cảm biến tốc độ quay ở bánh trước và bánh sau để tính toán độ trượt của bánh sau. Lượng mô-men xoắn của động cơ được kiểm soát sau khi đã được tính toán từ tỷ lệ trượt bánh, hỗ trợ chống trượt khi tăng ga, giúp khách hàng an tâm hơn khi vận hành xe.\n(*) Chức năng được trang bị trên phiên bản ABS.\n**Lưu ý: HSTC không phải hệ thống để loại bỏ hoàn toàn hiện tượng trượt bánh. Hệ thống chỉ có tính năng hỗ trợ chống trượt khi tăng ga.\nVì vậy, người lái vẫn phải bảo đảm an toàn khi lưu thông, tương tự như khi sử dụng các dòng xe không có hệ thống HSTC</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/oTvsEwp1fyKozP548CjQ.jpg\" alt=\"Hệ thống kiểm soát lực kéo (HSTC) (*)\" width=\"650\" height=\"490\"></p><h4>Kết nối điện thoại qua Bluetooth (*)</h4><p>Công nghệ bluetooth kết nối với điện thoại thông minh tiếp tục được trang bị trên SH160i. Bằng việc kết nối Bluetooth qua ứng dụng My Honda+, khách hàng có thể xem toàn bộ thông tin xe như tình trạng vận hành, lịch sử sửa chữa, bảo dưỡng, bảo hành, tiêu hao nhiên liệu, lịch sử đỗ xe và các tin tức sự kiện của Honda Việt Nam. Công nghệ này còn hỗ trợ gửi thông điệp về ngày có sự kiện đặc biệt của khách hàng tới màn hình phụ trên mặt đồng hồ khi khách hàng cài đặt ngày này trên ứng dụng.\nĐặc biệt, khách hàng sẽ được cảnh báo trong trường hợp quên tắt khóa điện và khi xe gặp lỗi trên ứng dụng My Honda+.\nSH160i mới còn trang bị tính năng OTA update (một phương thức truyền tải dữ liệu) cho phép khách hàng chủ động cập nhật phần mềm cho thiết bị Bluetooth của xe thông qua ứng dụng My Honda+ nhằm đảm bảo kết nối bluetooth ổn định.\n(*) Chức năng được trang bị trên phiên bản SH160i.\nVui lòng đọc kỹ sách hướng dẫn sử dụng xe để đảm bảo an toàn.\"</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/w0XGxGw9BNGD96PIXYeM.jpg\" alt=\"Kết nối điện thoại qua Bluetooth (*)\" width=\"650\" height=\"490\"></p><h3>Tiện ích - An toàn</h3><p>Lấy cảm hứng từ sự thoải mái của khoang chuyên cơ hạng nhất, tiện nghi của SH160i/125i mang đến những trải nghiệm đáng nhớ trên từng chặng đường.</p><h4>Hệ thống chống bó cứng phanh (ABS)</h4><p>Hệ thống phanh ABS được trang bị trên cả 2 bánh cho phép người lái tự tin trong mọi tình huống như phanh gấp khi đang đi ở tốc độ cao hay trên mặt đường trơn trượt</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/cq64xWxBozd51SAaKzLX.jpg\" alt=\"Hệ thống chống bó cứng phanh (ABS)\" width=\"650\" height=\"490\"></p><h4>Hộc chứa đồ &amp; cổng sạc USB</h4><p>Dung tích hộc chứa đồ lên đến 28L, cho phép người lái mang thêm được nhiều vật dụng. Ngoài ra, hộc còn tích hợp thêm cổng USB tiện dụng cho phép sạc pin điện thoại khi cần.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/4TRisUXhmFe7coZjrNOF.jpg\" alt=\"Hộc chứa đồ &amp; cổng sạc USB\" width=\"650\" height=\"490\"></p><h4>Nắp bình xăng phía trước</h4><p>Được thiết kế ở phía trước, giúp việc đổ xăng thuận tiện hơn khi không cần mở yên xe.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/December2022/IsPLri2zV7iESk4p3SXH.jpg\" alt=\"Nắp bình xăng phía trước\" width=\"650\" height=\"490\"></p><h4>Hệ thống khóa thông minh Smart Key</h4><p>Hệ thống khóa thông minh hiện đại giúp xác định vị trí xe và mở khóa thông minh từ xa tiện lợi, tích hợp báo động chống trộm đem lại sự an tâm cho khách hàng khi sử dụng.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/8jL9BZ8YbbtCMlsU245r.jpg\" alt=\"Hệ thống khóa thông minh Smart Key\" width=\"650\" height=\"490\"></p><h4>Đèn chiếu sáng phía trước luôn sáng</h4><p>Đèn chiếu sáng phía trước luôn sáng giúp nâng cao khả năng hiện diện của xe khi lưu thông trên đường phố.</p><p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"http://localhost:8001/storage/product/motorbike-strong-points/August2023/FPDBZ6pAP12D7iNDC7rb.jpg\" alt=\"Đèn chiếu sáng phía trước luôn sáng\" width=\"650\" height=\"490\"></p>"
+                      reviews_count: 80
+                      reviews_avg_rate: 3.0400
+                      options_min_price:
+                        raw: 161105278.00
+                        preview: 161.105.278,00 VND
+                      options_max_price:
+                        raw: 968519527.76
+                        preview: 968.519.527,76 VND
+                      images:
+                        - image: http://localhost:8001/storage/product/motorbikes/August2023/ysNjFYeAUAMLeWs4mu6L.png
+                          alt: SH 160i/125i
+                      videos:
+                        - image: d100d8f7ac62cc4743d57b6900bb895a.png
+                          title: Aut beatae quas eum id minima.
+                          description: Sed dolorem ut saepe enim. Pariatur et amet provident laboriosam. Dignissimos veritatis dolorem soluta commodi. Soluta excepturi quod veritatis. Accusantium repellendus cupiditate neque eligendi et ut iste. Recusandae non possimus aut reiciendis.
+                          video:
+                            provider: youtube
+                            id: e1811b11-43d6-3c9c-906f-b16ce611bd87
+                            url: https://www.youtube.com/watch?v=e1811b11-43d6-3c9c-906f-b16ce611bd87
+                      enabled: true
+                      visibility: Catalog và Tìm kiếm
+                      type: Xe máy
+                      manufacturer: Honda
+                      specifications:
+                        - key: Khối lượng bản thân
+                          value:
+                            SH125i/160i CBS: 133kg
+                            SH125i/160i ABS: 133kg
+                      options:
+                        - id: 11
+                          sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
+                          price:
+                            raw: 73921091.00
+                            preview: 73.921.091,00 VND
+                          value_added_tax: 10
+                          images:
+                            - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
+                              alt: SH125i Tiêu Chuẩn
+                          color: Đỏ Đen
+                          version: SH125i Tiêu Chuẩn
+                          type: Sản phẩm mới
+                          status: Còn hàng
+                          quantity: 414
+                          weight: 139
+                          length: 40
+                          width: 40
+                          height: 40
+                          specifications:
+                            - key: Pariatur nam deleniti sit molestiae fugiat.
+                              value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.
+                          product_id: 2
+                          deleted_at: 11:53:58 21/06/2024
+                          created_at: 11:53:58 21/06/2024
+                          updated_at: 11:53:58 21/06/2024
+                      categories:
+                        - id: 1
+                          name: Xe tay ga
+                          pivot:
+                            product_id: 2
+                            category_id: 1
+                          deleted_at: 11:53:58 21/06/2024
+                          created_at: 11:53:58 21/06/2024
+                          updated_at: 11:53:58 21/06/2024
+                      deleted_at: 11:53:58 21/06/2024
+                      created_at: 11:53:58 21/06/2024
+                      updated_at: 11:53:58 21/06/2024
                     deleted_at: 11:53:58 21/06/2024
                     created_at: 11:53:58 21/06/2024
                     updated_at: 11:53:58 21/06/2024
+                  vehicle_id: null
+                  created_at: 11:53:58 21/06/2024
+                  updated_at: 11:53:58 21/06/2024
               created_at:
                 title: Thời gian tạo
                 example: 11:53:58 21/06/2024

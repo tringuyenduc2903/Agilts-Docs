@@ -3,9 +3,10 @@ get:
   tags:
     - Sản phẩm
   parameters:
+    - $ref: "../../../../components/parameters/productType.yaml"
     - name: product_id
       in: path
-      description: Id/URL tìm kiếm sản phẩm
+      description: Id sản phẩm (2) hoặc URL tìm kiếm (sh-350i)
       example: 2
       required: true
   responses:
@@ -98,6 +99,9 @@ get:
                     status: Còn hàng
                     quantity: 414
                     weight: 139
+                    length: 40
+                    width: 40
+                    height: 40
                     specifications:
                       - key: Pariatur nam deleniti sit molestiae fugiat.
                         value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.

@@ -76,6 +76,9 @@ get:
                         status: Còn hàng
                         quantity: 414
                         weight: 139
+                        length: 40
+                        width: 40
+                        height: 40
                         specifications:
                           - key: Pariatur nam deleniti sit molestiae fugiat.
                             value: Aperiam voluptas aut sapiente perspiciatis impedit. Ut rem est minima eum ut quidem. Nostrum eaque porro sed delectus.

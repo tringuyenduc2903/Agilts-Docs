@@ -15,6 +15,7 @@ servers:
           - api-dev
           - api-staging
           - api
+          - admin-dev
 paths:
   /auth/redirect/{driver_name}:
     $ref: "./paths/auth/redirect/{driver_name}.yaml"
@@ -76,8 +77,8 @@ paths:
     $ref: "./paths/api/filter/product/{product_type}.yaml"
   /api/product/{product_type}:
     $ref: "./paths/api/product/{product_type}.yaml"
-  /api/product/{product_id}:
-    $ref: "./paths/api/product/{product_id}.yaml"
+  /api/product/{product_type}/{product_id}:
+    $ref: "./paths/api/product/{product_type}/{product_id}.yaml"
   /api/cart:
     $ref: "./paths/api/cart.yaml"
   /api/cart/{cart_id}:
