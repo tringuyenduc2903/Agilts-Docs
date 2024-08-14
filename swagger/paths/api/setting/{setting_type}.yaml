@@ -5,7 +5,7 @@ get:
   parameters:
     - name: setting_type
       description: homepage, header, footer, auth
-      in: query
+      in: path
       example: homepage
   responses:
     200:
