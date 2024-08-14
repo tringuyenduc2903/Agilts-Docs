@@ -4,7 +4,7 @@ get:
     - Xác thực OAuth
   parameters:
     - name: driver_name
-      in: query
+      in: path
       description: Tên Driver
       example: google
       required: true

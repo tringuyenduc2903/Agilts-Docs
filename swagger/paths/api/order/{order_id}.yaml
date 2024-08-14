@@ -145,6 +145,7 @@ get:
                         alt: SH125i Tiêu Chuẩn
                     color: Đỏ Đen
                     version: SH125i Tiêu Chuẩn
+                    volume: null
                     type: Sản phẩm mới
                     status: Còn hàng
                     quantity: 414
@@ -193,6 +194,7 @@ get:
                               alt: SH125i Tiêu Chuẩn
                           color: Đỏ Đen
                           version: SH125i Tiêu Chuẩn
+                          volume: null
                           type: Sản phẩm mới
                           status: Còn hàng
                           quantity: 414

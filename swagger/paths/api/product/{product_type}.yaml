@@ -7,15 +7,15 @@ get:
     - $ref: "../../../components/parameters/page.yaml"
     - $ref: "../../../components/parameters/perPage.yaml"
     - name: sortColumn
-      in: path
+      in: query
       description: "Cột cần sắp xếp (giá trị: name, price, review, latest, oldest)"
       example: price
     - name: sortDirection
-      in: path
+      in: query
       description: "Hướng sắp xếp (giá trị: asc, desc. Không khả dụng với cột: review, latest, oldest)"
       example: desc
     - name: search
-      in: path
+      in: query
       description: Từ khoá tìm kiếm sản phẩm
       example: SH
   responses:
@@ -72,6 +72,7 @@ get:
                             alt: SH125i Tiêu Chuẩn
                         color: Đỏ Đen
                         version: SH125i Tiêu Chuẩn
+                        volume: null
                         type: Sản phẩm mới
                         status: Còn hàng
                         quantity: 414
