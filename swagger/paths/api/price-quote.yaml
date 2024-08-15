@@ -55,7 +55,7 @@ post:
                     option: 11
                     price:
                       raw: 92490000
-                      preview: 92.490.000,00 VND
+                      preview: 92.490.000 VND
                     amount: 1
                     value_added_tax: 10
                 type: array
@@ -63,7 +63,7 @@ post:
                 title: Thành tiền
                 example:
                   raw: 92490000
-                  preview: 92.490.000,00 VND
+                  preview: 92.490.000 VND
                 type: object
               tax:
                 title: Thuế
@@ -75,37 +75,37 @@ post:
                 title: Phí giao hàng
                 example:
                   raw: 0
-                  preview: 0,00 VND
+                  preview: 0 VND
                 type: object
               vehicle_registration_support_fee:
                 title: Phí hỗ trợ đăng ký xe
                 example:
                   raw: 400000
-                  preview: 400.000,00 VND
+                  preview: 400.000 VND
                 type: object
               registration_fee:
                 title: Lệ phí trước bạ
                 example:
                   raw: 4624500
-                  preview: 4.624.500,00 VND
+                  preview: 4.624.500 VND
                 type: object
               license_plate_registration_fee:
                 title: Lệ phí đăng ký biển số
                 example:
                   raw: 4000000
-                  preview: 4.000.000,00 VND
+                  preview: 4.000.000 VND
                 type: object
               handling_fee:
                 title: Phí xử lý
                 example:
                   raw: 9024500
-                  preview: 9.024.500,00 VND
+                  preview: 9.024.500 VND
                 type: object
               total:
                 title: Tổng tiền
                 example:
                   raw: 101514500
-                  preview: 101.514.500,00 VND
+                  preview: 101.514.500 VND
                 type: object
             type: object
     422:

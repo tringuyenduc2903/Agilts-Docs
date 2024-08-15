@@ -88,7 +88,7 @@ get:
                     sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
                     price:
                       raw: 73921091.00
-                      preview: 73.921.091,00 VND
+                      preview: 73.921.091 VND
                     value_added_tax: 10
                     images:
                       - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png

@@ -27,12 +27,12 @@ get:
                 label: Giá thấp nhất
                 data:
                   raw: 17859273
-                  preview: 17.859.273,00 VND
+                  preview: 17.859.273 VND
               - name: maxPrice
                 label: Giá cao nhất
                 data:
                   raw: 1231500000
-                  preview: 1.231.500.000,00 VND
+                  preview: 1.231.500.000 VND
               - name: color
                 label: Màu sắc
                 data:

@@ -36,7 +36,7 @@ get:
                     reviews_avg_rate: 3.0400
                     options_min_price:
                       raw: 161105278.00
-                      preview: 161.105.278,00 VND
+                      preview: 161.105.278 VND
                     options_max_price:
                       raw: 968519527.76
                       preview: 968.519.527,76 VND
@@ -65,7 +65,7 @@ get:
                         sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
                         price:
                           raw: 73921091.00
-                          preview: 73.921.091,00 VND
+                          preview: 73.921.091 VND
                         value_added_tax: 10
                         images:
                           - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png

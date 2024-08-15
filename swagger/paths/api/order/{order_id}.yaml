@@ -29,7 +29,7 @@ get:
                 title: Phí giao hàng
                 example:
                   raw: 0.00
-                  preview: 0,00 VND
+                  preview: 0 VND
                 type: object
               handling_fee:
                 title: Phí xử lý
@@ -42,13 +42,13 @@ get:
                 example:
                   vehicle_registration_support_fee:
                     raw: 400000.00
-                    preview: 400.000,00 VND
+                    preview: 400.000 VND
                   registration_fee:
                     raw: 3696054.55
                     preview: 3.696.054,55 VND
                   license_plate_registration_fee:
                     raw: 4000000.00
-                    preview: 4.000.000,00 VND
+                    preview: 4.000.000 VND
                 type: object
               total:
                 title: Tổng tiền
@@ -113,14 +113,14 @@ get:
                   issued_name: Lãnh sự quán Việt Nam
                   issuance_date: 19/07/2018
                   expiry_date: 25/07/2032
-                  customer_id: 3
+                  customer_id: 1
                   deleted_at: 11:53:58 21/06/2024
                   created_at: 11:53:58 21/06/2024
                   updated_at: 11:53:58 21/06/2024
                 type: object
               customer_id:
                 title: Id khách hàng
-                example: 3
+                example: 1
                 type: number
               invoice_products:
                 title: Các sản phẩm đặt hàng
@@ -128,7 +128,7 @@ get:
                   id: 13
                   price:
                     raw: 73921091.00
-                    preview: 73.921.091,00 VND
+                    preview: 73.921.091 VND
                   value_added_tax: 10
                   amount: 1
                   invoice_id: 14
@@ -138,7 +138,7 @@ get:
                     sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
                     price:
                       raw: 73921091.00
-                      preview: 73.921.091,00 VND
+                      preview: 73.921.091 VND
                     value_added_tax: 10
                     images:
                       - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
@@ -187,7 +187,7 @@ get:
                           sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
                           price:
                             raw: 73921091.00
-                            preview: 73.921.091,00 VND
+                            preview: 73.921.091 VND
                           value_added_tax: 10
                           images:
                             - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png

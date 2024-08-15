@@ -1,13 +1,56 @@
+put:
+  description: Đổi số lượng sản phẩm trong giỏ hàng
+  tags:
+    - Giỏ hàng
+  parameters:
+    - $ref: "../../../components/parameters/cart.yaml"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          properties:
+            amount:
+              title: Số lượng
+              example: 1
+              type: number
+          type: object
+          required:
+            - amount
+  responses:
+    200:
+      description: Đổi số lượng sản phẩm trong giỏ hàng thành công
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/Dữ liệu rỗng.yaml"
+    401:
+      $ref: "../../../components/responses/401.yaml"
+    404:
+      $ref: "../../../components/responses/404/cart.yaml"
+    422:
+      description: Dữ liệu khách hàng đã nhập không được chấp nhận
+      content:
+        application/json:
+          schema:
+            properties:
+              message:
+                title: Thông báo ngắn
+                type: string
+                example: Trường số lượng là bắt buộc.
+              errors:
+                properties:
+                  amount:
+                    title: Số lượng
+                    example:
+                      - Trường số lượng là bắt buộc.
+                    type: array
+            type: object
 delete:
   description: Xoá sản phẩm cũ khỏi giỏ hàng
   tags:
     - Giỏ hàng
   parameters:
-    - name: cart_id
-      in: path
-      description: Id giỏ hàng
-      example: 1
-      required: true
+    - $ref: "../../../components/parameters/cart.yaml"
   responses:
     200:
       description: Xoá sản phẩm cũ khỏi giỏ hàng thành công
@@ -18,14 +61,4 @@ delete:
     401:
       $ref: "../../../components/responses/401.yaml"
     404:
-      description: Id không trùng khớp với giỏ hàng nào
-      content:
-        application/json:
-          schema:
-            properties:
-              message:
-                title: Thông báo ngắn
-                type: string
-                description: Không có kết quả truy vấn nào cho mô hình [App\Models\ProductList] 1
-                example: No query results for model [App\Models\ProductList] 1
-            type: object
+      $ref: "../../../components/responses/404/cart.yaml"
