@@ -1,7 +1,7 @@
 post:
   description: Nhận báo giá đơn hàng
   tags:
-    - Đặt hàng
+    - Báo giá
   requestBody:
     content:
       application/json:

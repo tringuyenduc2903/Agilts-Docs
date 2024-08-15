@@ -1,7 +1,7 @@
 get:
   description: "Lấy danh sách đánh giá của sản phẩm: Sắp xếp theo Đánh giá mới nhất. Lấy thêm các trường bộ lọc tại [API Filter](/#/Đánh%20giá/get_api_filter_review__product_id_)"
   tags:
-    - Đánh giá
+    - Đánh giá (Sản phẩm)
   parameters:
     - $ref: "../../../components/parameters/product.yaml"
   responses:
@@ -20,8 +20,8 @@ get:
                     images:
                       - http://localhost:8000/storage/review/4aGDXHdy5E8wKcEQif0X.png
                     parent_preview:
-                      name: SH 160i/125i
-                      sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
+                      name: SH350i
+                      sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
                       color: Đỏ Đen
                     reviewable_preview:
                       name: Nguyễn Văn Hải

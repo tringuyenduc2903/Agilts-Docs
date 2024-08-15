@@ -1,5 +1,5 @@
 get:
-  description: Lấy danh sách hồ sơ
+  description: "Lấy danh sách hồ sơ: Sắp xếp theo Hồ sơ mới nhất"
   tags:
     - Hồ sơ
   responses:

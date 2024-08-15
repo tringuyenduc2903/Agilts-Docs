@@ -1,10 +1,13 @@
 get:
   description: "Lấy danh sách đánh giá của khách hàng: Sắp xếp theo Đánh giá mới nhất"
   tags:
-    - Đánh giá
+    - Đánh giá (Người dùng)
   parameters:
     - $ref: "../../components/parameters/page.yaml"
     - $ref: "../../components/parameters/perPage.yaml"
+    - name: option_id
+      in: query
+      example: 11
   responses:
     200:
       description: Lấy danh sách đánh giá của khách hàng thành công
@@ -21,11 +24,13 @@ get:
                     reviewable_preview:
                       name: Nguyễn Văn Hải
                     parent_preview:
-                      id: 2
-                      name: SH 350i
+                      search_url: sh-350i
+                      name: SH350i
                       option_id: 11
                       sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
-                      color: Trắng Đen
+                      color: Đỏ Đen
+                      version: SH350i Tiêu Chuẩn
+                      volume: null
                     created_at: 11:49:56 18/07/2024
                     updated_at: 11:49:56 18/07/2024
                 type: array
@@ -59,9 +64,9 @@ get:
 post:
   description: Tạo đánh giá mới
   tags:
-    - Đánh giá
+    - Đánh giá (Người dùng)
   requestBody:
-    $ref: "../../components/requestBodies/review.yaml"
+    $ref: "../../components/requestBodies/review-store.yaml"
   responses:
     201:
       description: Tạo đánh giá mới thành công
@@ -72,4 +77,4 @@ post:
     401:
       $ref: "../../components/responses/401.yaml"
     422:
-      $ref: "../../components/responses/422/review.yaml"
+      $ref: "../../components/responses/422/review-store.yaml"

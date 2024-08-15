@@ -1,0 +1,27 @@
+description: Dữ liệu khách hàng đã nhập không được chấp nhận
+content:
+  application/json:
+    schema:
+      properties:
+        message:
+          title: Thông báo ngắn
+          type: string
+          example: Trường nội dung là bắt buộc. (và 2 lỗi khác)
+        errors:
+          properties:
+            content:
+              title: Nội dung
+              example:
+                - Trường nội dung là bắt buộc.
+              type: array
+            rate:
+              title: Đánh giá
+              example:
+                - Trường đánh giá là bắt buộc.
+              type: array
+            option:
+              title: Tuỳ chọn (option_id)
+              example:
+                - Trường tuỳ chọn là bắt buộc.
+              type: array
+      type: object

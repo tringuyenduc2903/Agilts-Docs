@@ -12,8 +12,8 @@ content:
           maximum: 5
           minimum: 1
           type: number
-        version:
-          title: Phiên bản (product option id)
+        option:
+          title: Tuỳ chọn (option_id)
           example: 11
           type: number
         images:
@@ -27,4 +27,4 @@ content:
       required:
         - content
         - rate
-        - version
+        - option

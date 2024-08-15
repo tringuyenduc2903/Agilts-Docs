@@ -1,7 +1,7 @@
 get:
   description: Lấy đánh giá
   tags:
-    - Đánh giá
+    - Đánh giá (Người dùng)
   parameters:
     - $ref: "../../../components/parameters/review.yaml"
   responses:
@@ -37,9 +37,9 @@ get:
                 title: Sản phẩm
                 example:
                   id: 2
-                  name: SH 160i/125i
+                  name: SH350i
                   option_id: 11
-                  sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
+                  sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
                   color: Đỏ Đen
                 type: object
               response:
@@ -67,11 +67,11 @@ get:
 put:
   description: Đổi thông tin đánh giá
   tags:
-    - Đánh giá
+    - Đánh giá (Người dùng)
   parameters:
     - $ref: "../../../components/parameters/review.yaml"
   requestBody:
-    $ref: '../../../components/requestBodies/review.yaml'
+    $ref: '../../../components/requestBodies/review-update.yaml'
   responses:
     200:
       description: Đổi thông tin đánh giá thành công
@@ -84,11 +84,11 @@ put:
     404:
       $ref: "../../../components/responses/404/review.yaml"
     422:
-      $ref: "../../../components/responses/422/review.yaml"
+      $ref: "../../../components/responses/422/review-update.yaml"
 delete:
   description: Xoá đánh giá cũ
   tags:
-    - Đánh giá
+    - Đánh giá (Người dùng)
   parameters:
     - $ref: "../../../components/parameters/review.yaml"
   responses:

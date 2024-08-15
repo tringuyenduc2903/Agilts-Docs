@@ -26,7 +26,7 @@ get:
                 type: string
               name:
                 title: Tên
-                example: SH 350i
+                example: SH350i
                 type: string
               description:
                 title: Mô tả
@@ -44,7 +44,7 @@ get:
                 title: Danh sách ảnh
                 example:
                   - image: http://localhost:8001/storage/product/motorbikes/August2023/ysNjFYeAUAMLeWs4mu6L.png
-                    alt: SH 160i/125i
+                    alt: SH350i
                 type: array
               videos:
                 title: Danh sách video
@@ -85,16 +85,16 @@ get:
                 title: Danh sách tuỳ chọn
                 example:
                   - id: 11
-                    sku: SH_160I/125I_ĐỎ_ĐEN_SH125I_TIÊU_CH_SBYOJGZRU5C
+                    sku: SH_350I_TRẮNG_ĐEN_CAO_CẤP_JQSZDJMI7KOCUEID8NYY
                     price:
                       raw: 73921091.00
                       preview: 73.921.091 VND
                     value_added_tax: 10
                     images:
                       - image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
-                        alt: SH125i Tiêu Chuẩn
+                        alt: SH350i Tiêu Chuẩn
                     color: Đỏ Đen
-                    version: SH125i Tiêu Chuẩn
+                    version: SH350i Tiêu Chuẩn
                     volume: null
                     type: Sản phẩm mới
                     status: Còn hàng
@@ -127,7 +127,7 @@ get:
                 title: Danh sách danh mục
                 example:
                   id: 1
-                  title: SH 350i
+                  title: SH350i
                   description: Tại Việt Nam, hình ảnh mẫu xe SH từ lâu đã trở thành biểu tượng cho tính đẳng cấp, sang trọng và sự hoàn hảo. Kế thừa những nét đặc trưng đó, mẫu xe SH350i ...
                   image: http://localhost:8001/storage/product/motorbike-versions/August2023/M5xWeHyAkGPy8aJAZCDu.png
                   author: null

@@ -1,5 +1,5 @@
 get:
-  description: Lấy danh sách mạng xã hội
+  description: "Lấy danh sách mạng xã hội: Sắp xếp theo Mạng xã hội mới nhất"
   tags:
     - Mạng xã hội
   responses:

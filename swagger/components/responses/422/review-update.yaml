@@ -6,7 +6,7 @@ content:
         message:
           title: Thông báo ngắn
           type: string
-          example: Trường nội dung là bắt buộc. (và 2 lỗi khác)
+          example: Trường nội dung là bắt buộc. (và 1 lỗi khác)
         errors:
           properties:
             content:
@@ -18,10 +18,5 @@ content:
               title: Đánh giá
               example:
                 - Trường đánh giá là bắt buộc.
-              type: array
-            version:
-              title: Phiên bản
-              example:
-                - Trường phiên bản là bắt buộc.
               type: array
       type: object

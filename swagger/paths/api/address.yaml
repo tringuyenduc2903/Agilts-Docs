@@ -1,5 +1,5 @@
 get:
-  description: Lấy danh sách địa chỉ
+  description: "Lấy danh sách địa chỉ: Sắp xếp theo Địa chỉ mới nhất"
   tags:
     - Địa chỉ
   responses:
